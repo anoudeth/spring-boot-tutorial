@@ -1,0 +1,51 @@
+2021-09-07 10:41:39.236  INFO [,,] 1264 --- [main] com.ib.template.TemplateApplication      : Starting TemplateApplication using Java 11.0.11 on IBWKVT010141 with PID 1264 (D:\dev\spring\spring-boot-tutorial\template\target\classes started by AX2106010 in D:\dev\spring\spring-boot-tutorial\template)
+2021-09-07 10:41:39.239 DEBUG [,,] 1264 --- [main] com.ib.template.TemplateApplication      : Running with Spring Boot v2.5.4, Spring v5.3.9
+2021-09-07 10:41:39.240  INFO [,,] 1264 --- [main] com.ib.template.TemplateApplication      : The following profiles are active: dev
+2021-09-07 10:41:40.622  INFO [,,] 1264 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=3ea93f4e-ee68-3fc2-b4b7-fac0e7dab89d
+2021-09-07 10:41:41.354  INFO [,,] 1264 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8888 (http)
+2021-09-07 10:41:41.366  INFO [,,] 1264 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-09-07 10:41:41.367  INFO [,,] 1264 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.52]
+2021-09-07 10:41:41.514  INFO [,,] 1264 --- [main] o.a.c.c.C.[.[.[/service-name/api]        : Initializing Spring embedded WebApplicationContext
+2021-09-07 10:41:41.515  INFO [,,] 1264 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2218 ms
+2021-09-07 10:41:43.909  INFO [,,] 1264 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2021-09-07 10:41:44.143  INFO [,,] 1264 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8888 (http) with context path '/service-name/api'
+2021-09-07 10:41:44.330  INFO [,,] 1264 --- [main] com.ib.template.TemplateApplication      : Started TemplateApplication in 6.228 seconds (JVM running for 7.886)
+2021-09-07 10:41:45.220  INFO [,,] 1264 --- [RMI TCP Connection(2)-172.18.112.1] o.a.c.c.C.[.[.[/service-name/api]        : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-09-07 10:41:45.222  INFO [,,] 1264 --- [RMI TCP Connection(2)-172.18.112.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-09-07 10:41:45.224  INFO [,,] 1264 --- [RMI TCP Connection(2)-172.18.112.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2021-09-07 10:42:43.284  INFO [,ac9b7eeb8149f641,ac9b7eeb8149f641] 1264 --- [http-nio-8888-exec-6] c.i.template.controller.HelloController  : hello how are you log
+2021-09-07 10:43:54.041  INFO [,,] 21004 --- [main] com.ib.template.TemplateApplication      : Starting TemplateApplication using Java 11.0.11 on IBWKVT010141 with PID 21004 (D:\dev\spring\spring-boot-tutorial\template\target\classes started by AX2106010 in D:\dev\spring\spring-boot-tutorial\template)
+2021-09-07 10:43:54.047 DEBUG [,,] 21004 --- [main] com.ib.template.TemplateApplication      : Running with Spring Boot v2.5.4, Spring v5.3.9
+2021-09-07 10:43:54.047  INFO [,,] 21004 --- [main] com.ib.template.TemplateApplication      : The following profiles are active: dev
+2021-09-07 10:43:55.504  INFO [,,] 21004 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=3ea93f4e-ee68-3fc2-b4b7-fac0e7dab89d
+2021-09-07 10:43:56.179  INFO [,,] 21004 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8888 (http)
+2021-09-07 10:43:56.192  INFO [,,] 21004 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-09-07 10:43:56.192  INFO [,,] 21004 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.52]
+2021-09-07 10:43:56.329  INFO [,,] 21004 --- [main] o.a.c.c.C.[.[.[/service-name/api]        : Initializing Spring embedded WebApplicationContext
+2021-09-07 10:43:56.330  INFO [,,] 21004 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2206 ms
+2021-09-07 10:43:58.333  INFO [,,] 21004 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2021-09-07 10:43:58.453  INFO [,,] 21004 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8888 (http) with context path '/service-name/api'
+2021-09-07 10:43:58.611  INFO [,,] 21004 --- [main] com.ib.template.TemplateApplication      : Started TemplateApplication in 5.997 seconds (JVM running for 7.913)
+2021-09-07 10:43:58.938  INFO [,,] 21004 --- [RMI TCP Connection(1)-172.18.112.1] o.a.c.c.C.[.[.[/service-name/api]        : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-09-07 10:43:58.939  INFO [,,] 21004 --- [RMI TCP Connection(1)-172.18.112.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-09-07 10:43:58.941  INFO [,,] 21004 --- [RMI TCP Connection(1)-172.18.112.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2021-09-07 10:44:13.750  INFO [,388380ed41026ac7,388380ed41026ac7] 21004 --- [http-nio-8888-exec-1] c.i.template.controller.HelloController  : hello world
+2021-09-07 10:44:30.269  INFO [,,] 10856 --- [main] com.ib.template.TemplateApplication      : Starting TemplateApplication using Java 11.0.11 on IBWKVT010141 with PID 10856 (D:\dev\spring\spring-boot-tutorial\template\target\classes started by AX2106010 in D:\dev\spring\spring-boot-tutorial\template)
+2021-09-07 10:44:30.273 DEBUG [,,] 10856 --- [main] com.ib.template.TemplateApplication      : Running with Spring Boot v2.5.4, Spring v5.3.9
+2021-09-07 10:44:30.273  INFO [,,] 10856 --- [main] com.ib.template.TemplateApplication      : The following profiles are active: dev
+2021-09-07 10:44:31.663  INFO [,,] 10856 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=3ea93f4e-ee68-3fc2-b4b7-fac0e7dab89d
+2021-09-07 10:44:32.329  INFO [,,] 10856 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8888 (http)
+2021-09-07 10:44:32.339  INFO [,,] 10856 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-09-07 10:44:32.339  INFO [,,] 10856 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.52]
+2021-09-07 10:44:32.483  INFO [,,] 10856 --- [main] o.a.c.c.C.[.[.[/service-name/api]        : Initializing Spring embedded WebApplicationContext
+2021-09-07 10:44:32.484  INFO [,,] 10856 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2150 ms
+2021-09-07 10:44:34.684  INFO [,,] 10856 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2021-09-07 10:44:34.821  INFO [,,] 10856 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8888 (http) with context path '/service-name/api'
+2021-09-07 10:44:35.006  INFO [,,] 10856 --- [main] com.ib.template.TemplateApplication      : Started TemplateApplication in 5.694 seconds (JVM running for 7.075)
+2021-09-07 10:44:35.502  INFO [,,] 10856 --- [RMI TCP Connection(3)-172.18.112.1] o.a.c.c.C.[.[.[/service-name/api]        : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-09-07 10:44:35.504  INFO [,,] 10856 --- [RMI TCP Connection(3)-172.18.112.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-09-07 10:44:35.506  INFO [,,] 10856 --- [RMI TCP Connection(3)-172.18.112.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2021-09-07 10:44:36.366  INFO [,51f6f43cfe38bb1b,51f6f43cfe38bb1b] 10856 --- [http-nio-8888-exec-1] c.i.template.controller.HelloController  : hello world
+2021-09-07 10:44:39.031  INFO [,d9324782393a4629,d9324782393a4629] 10856 --- [http-nio-8888-exec-2] c.i.template.controller.HelloController  : hello test
+2021-09-07 10:44:40.902  INFO [,c92ad8538ae5a11e,c92ad8538ae5a11e] 10856 --- [http-nio-8888-exec-3] c.i.template.controller.HelloController  : hello test
+2021-09-07 10:44:43.281  INFO [,306cdf3420e19f29,306cdf3420e19f29] 10856 --- [http-nio-8888-exec-5] c.i.template.controller.HelloController  : hello world
