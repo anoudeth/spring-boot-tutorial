@@ -18,6 +18,10 @@ import org.json.JSONObject;
 
 public class EncryptDecrypt {
 
+
+
+    // #################
+
     public static String encrypt(String Data, String secret) throws Exception {
         Key key = generateKey(secret);
         Cipher c = Cipher.getInstance("AES");
@@ -37,7 +41,6 @@ public class EncryptDecrypt {
             return null;
         }
     }
-
     public static String encodeKey(String str) {
         byte[] encoded = Base64.getEncoder().encode(str.getBytes());
         return new String(encoded);
@@ -74,17 +77,17 @@ public class EncryptDecrypt {
         try {
             String encryptedString = encrypt(originalString, encodeKey(secretKey));
             String decryptedString = decrypt(encryptedString, encodeKey(secretKey));
-            System.out.println("origin: " + originalString);
-            System.out.println("encrypt: " + encryptedString);
-            System.out.println("decrypt: " + decryptedString);
+            System.out.println("original message: " + originalString);
+            System.out.println("after encrypted : " + encryptedString);
+            System.out.println("after decrypted : " + decryptedString);
         } catch (Exception e) {
             System.out.println("error: " + e.toString());
             e.printStackTrace();
         }
 
         System.out.println("\n\n\n-- decrypt response msg");
-        String msg = "bBvKv2qGH8qZlw0Q94htjhMcHVIZAdXmNnYcRIsHY6PR4vUNVayxc8Bq7ccg8y1tSlYJRGjX0lmSwO620KimP4xNAbZsQZEUnDlfi98Q0tsr4j+ws9+pnG1Z5WEUCycCNTtv/JnyUCvxCyemT4h/n9r6lAwAMYNE5igUEGwXN++/jF4/NwM98YjBeS3YDIMdEvMA4d+DuY0EcB1Tg4Q6pdW9YFSt4iQieNCM/EC4AyiVn/aehxMTVXGZfS6K2E/uxt8vDKuI2PYVVXS/buY4n5IV5HeX45fk4ev161cuJDZr0EAhMotREZ0ydYNQGAOERO3XqvLK8ZjYeuK9mcupu1HHOEn3VSQBoogIyG9V+SxJUPPounIsdnpbaXacxG1TSkaCWJ8J9vVS8TGmdHTJGNJg1RRkjOeL4weGIgWFW1h1O0Thof/PTQmDdNvVZBD8e29ZC/5XngKSgjuJhqAJwe4icjv6C6Ogwcfehok4Bhc=";
-        System.out.println("response decrypt: " + decrypt(msg, encodeKey("WRONG_SECRET_KEY")));
+        String msg = "T7vc/YH0VgWsF9JHvsrz5iAwsBGlThL1jDqDpeGzZNquOYBxOUEHk0lmTtsJCQy6pIG3p49XgcOYbz00BuFtJdo6UlHotqPOluXlGC0jVFlNu1wYTCZoWg9m4DvpfVNJTp2jIxusORJmNQ6KOFExKCPgnZ9QpX+ge8rskJXNE1bCP78q39Rcqyma78FFNTfVm+DD1ywt40DBJoaSQBrScH5JjMfWi0SQN9WhDjVWSS4/mSvkH5AFjph1JMUeN0/YJXFTUauKwSb0vu13WO48z+Ixd/MgxLpa4DZv9659x4AkU2q8l04AwRO6DEhYyK2Mo91m8eo4eeBEZ46zCHFQaKXTfwPYoT87ppctgaVCBIIGh2UogbjK2C8Knl2ffsmRwVOoT1rKwY8Xww8AkbWmUA==";
+        System.out.println("response decrypt: " + decrypt(msg, encodeKey("IB20185362111111")));
 
 
     }
