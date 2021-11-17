@@ -43,36 +43,40 @@ public class EncryptDecrypt {
     }
     public static String encodeKey(String str) {
         byte[] encoded = Base64.getEncoder().encode(str.getBytes());
+        System.out.println("encodeSecretKey: " + new String(encoded));
         return new String(encoded);
     }
 
     public static Key generateKey(String secret) throws Exception {
         byte[] decoded = Base64.getDecoder().decode(secret.getBytes());
+        System.out.println("decodeSecretKey: " + new String(decoded));
         Key key = new SecretKeySpec(decoded, "AES");
+        System.out.println("generateKey: " + key);
         return key;
     }
 
 
     public static void main(String[] args) throws ParseException, NoSuchAlgorithmException {
         System.out.println("--- test encrypt ---");
-        String secretKey = "30F958A8260B3730C547AD520F723AAE";
+        String secretKey = "9EF9323CC26D0015BC81F870C3A6CFFB";
 
-        String originalString = "{\n" +
-                "\t\"instid\":\"IB\",              \n" +
-                "\t\"callbackurl\":\"http://merchant.com:7000/ib/callback\",        \n" +
-                "\t\"redirecturl\":\"https://merchant.com/\",\n" +
-                "\t\"merchrefno\":\"ref123456\",\n" +
-                "\t\"merchantid\":\"010920211000234\",\n" +
-                "\t\"txnamount\":\"100\",\n" +
-                "\t\"paymode\":\"ON\",\n" +
-                "\t\"txnccy\":\"418\",\n" +
-                "\t\"customer\":{\n" +
-                "\t\t\"mobile\":\"2059555555\",\n" +
-                "\t\t\"name\":\"anoudeth\",\n" +
-                "\t\t\"address\":\"vientiane\",\n" +
-                "\t\t\"email\":\"noh@ib.com\"\n" +
-                "\t}\n" +
-                "}";
+//        String originalString = "{\n" +
+//                "\t\"instid\":\"IB\",              \n" +
+//                "\t\"callbackurl\":\"https://ibcooluat.iblaos.com/ibecommerce/home\",        \n" +
+//                "\t\"redirecturl\":\"https://merchant.com/\",\n" +
+//                "\t\"merchrefno\":\"ref123456\",\n" +
+//                "\t\"merchantid\":\"140920211000235\",\n" +
+//                "\t\"txnamount\":\"100\",\n" +
+//                "\t\"paymode\":\"ON\",\n" +
+//                "\t\"txnccy\":\"418\",\n" +
+//                "\t\"customer\":{\n" +
+//                "\t\t\"mobile\":\"2059366665\",\n" +
+//                "\t\t\"name\":\"noh der\",\n" +
+//                "\t\t\"address\":\"vientiane\",\n" +
+//                "\t\t\"email\":\"noh@gmail.com\"\n" +
+//                "\t}\n" +
+//                "}";
+        String originalString = "{\"instid\":\"IB\",\"callbackurl\":\"http://192.168.33.29:8894/core/api/callback/test\", \"redirecturl\":\"https://www.google.com\", \"merchrefno\":\"00000000001\",\"merchantid\":\"140920211000235\",\"txnamount\":\"10000\",\"paymode\":\"ON\",\"txnccy\":\"418\",\"customer\":{\"mobile\":\"2055555555\",\"name\":\"AnoudethDer\",\"address\":\"Vientiane, Laos\",\"email\":\"nohder@gmail.com\"}}";
 
         try {
             String encryptedString = encrypt(originalString, encodeKey(secretKey));
@@ -86,8 +90,8 @@ public class EncryptDecrypt {
         }
 
         System.out.println("\n\n\n-- decrypt response msg");
-        String msg = "T7vc/YH0VgWsF9JHvsrz5iAwsBGlThL1jDqDpeGzZNquOYBxOUEHk0lmTtsJCQy6pIG3p49XgcOYbz00BuFtJdo6UlHotqPOluXlGC0jVFlNu1wYTCZoWg9m4DvpfVNJTp2jIxusORJmNQ6KOFExKCPgnZ9QpX+ge8rskJXNE1bCP78q39Rcqyma78FFNTfVm+DD1ywt40DBJoaSQBrScH5JjMfWi0SQN9WhDjVWSS4/mSvkH5AFjph1JMUeN0/YJXFTUauKwSb0vu13WO48z+Ixd/MgxLpa4DZv9659x4AkU2q8l04AwRO6DEhYyK2Mo91m8eo4eeBEZ46zCHFQaKXTfwPYoT87ppctgaVCBIIGh2UogbjK2C8Knl2ffsmRwVOoT1rKwY8Xww8AkbWmUA==";
-        System.out.println("response decrypt: " + decrypt(msg, encodeKey("IB20185362111111")));
+        String msg = "ECoxGxB8AMGSIlzSG76dHCVWvZjjfpaXKn/uqiKYkoITkJGMXFM0PXsbOy7a+mpARbcS7ux8mpZwwbRM0HNda8ITjCMoA81hIZ2w2rXi5nYXtS5Po/I38canuJgB/0AYjvaY/+avrhGNOH1hvH278GqSgLbGFHzphnaioajZxtZxlJjpwz9tRyRHa5smR1BnbYHlOchDkDrS5AHF7at2sWPnpiMWUIiEr2kA6eNdcQJTlEJC0C/9wjgNCV7ucNRYk8izJp7UrMZ4JpUD3da7f+4ELAWPp9/deELsom+KnnNYNTvPctsFTPn8q2UT3fbCpR9/jVZouTl3p1BD/to+UcalBgY9HVQWtjobbJP1YtYykye2BzAkP9PVQ9MbURhXyYpEbwJuspEsCtHqwSxznFdBEuyfbG2Y9bpfVuagm2lm1u9rgWsJtQkyweOIg7IkRcuXKzbVZbLp2syDmKOpdlD9Ty4nOJ+4ZkS18sSDCdXrvvBkJUt+Q+qTaJ3ZLDlK";
+        System.out.println("response decrypt: " + decrypt(msg, encodeKey(secretKey)));
 
 
     }
