@@ -6,9 +6,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-
-@RefreshScope
 @RequestMapping("/rest")
+@RefreshScope
 @RestController
 public class MessageController {
 
@@ -17,7 +16,7 @@ public class MessageController {
 
     @GetMapping("/msg")
     public String message() {
-        System.out.println("hello");
+        System.out.println("hello " + this.msg);
         return msg;
     }
 
