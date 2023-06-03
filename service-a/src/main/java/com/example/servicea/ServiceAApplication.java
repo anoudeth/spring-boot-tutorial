@@ -17,6 +17,7 @@ public class ServiceAApplication {
 
     @GetMapping("/service-a")
     public String test() throws Exception {
+        // just to show that we are running on different hosts
         String hostname  = InetAddress.getLocalHost().getHostName();
         return "Service A from host: " + hostname;
     }

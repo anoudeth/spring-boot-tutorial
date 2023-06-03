@@ -17,6 +17,8 @@ public class ServiceBApplication {
 
     @GetMapping("/service-b")
     public String test() throws Exception {
+
+        // to print the hostname of the host where the service is running
         String hostname  = InetAddress.getLocalHost().getHostName();
         return "Service B from host: " + hostname;
     }

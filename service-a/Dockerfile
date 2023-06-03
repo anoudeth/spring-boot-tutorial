@@ -1,4 +1,4 @@
-FROM amazoncorretto:17.0.3-alpine as corretto-jdk
+FROM amazoncorretto:17.0.6-alpine3.17 as corretto-jdk
 
 #--- required for strip-debug to work
 RUN apk add --no-cache binutils
