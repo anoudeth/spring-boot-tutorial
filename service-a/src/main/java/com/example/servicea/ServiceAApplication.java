@@ -19,6 +19,7 @@ public class ServiceAApplication {
     public String test() throws Exception {
         // just to show that we are running on different hosts
         String hostname  = InetAddress.getLocalHost().getHostName();
+        System.out.println("Service A from host: " + hostname);
         return "Service A from host: " + hostname;
     }
 }

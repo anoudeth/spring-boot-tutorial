@@ -40,12 +40,12 @@ COPY --from=corretto-jdk /customjre $JAVA_HOME
 
 WORKDIR /usr/apps
 COPY target/*.jar ./
-#COPY AppMain.class ./
-#RUN jar xf *.jar
-#RUN rm -rf *.jar
-#RUN mkdir ./config_props
+COPY AppMain.class ./
+RUN jar xf *.jar
+RUN rm -rf *.jar
+RUN mkdir ./config_props
 #----- COPY src/main/resources/* ./config_props
-#COPY config_props/* ./config_props
+COPY src/main/resources/* ./config_props
 ENTRYPOINT ["sh", "-c"]
-#CMD ["exec java -cp . -Dspring.config.location=./config_props/application.properties AppMain"]
-CMD ["exec java -jar $(ls | grep .jar -m 1)"]
+CMD ["exec java -cp . -Dspring.config.location=./config_props/application.properties AppMain"]
+#CMD ["exec java -jar $(ls | grep .jar -m 1)"]
