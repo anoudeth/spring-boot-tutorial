@@ -1,5 +1,6 @@
 package com.example.serviceb;
 
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -9,6 +10,7 @@ import java.net.InetAddress;
 
 @SpringBootApplication
 @RestController
+@Slf4j
 public class ServiceBApplication {
 
     public static void main(String[] args) {
@@ -20,6 +22,7 @@ public class ServiceBApplication {
 
         // to print the hostname of the host where the service is running
         String hostname  = InetAddress.getLocalHost().getHostName();
+        log.info("Service B from host: " + hostname);
         return "Service B from host: " + hostname;
     }
 }
