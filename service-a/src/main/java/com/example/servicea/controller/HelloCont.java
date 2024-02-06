@@ -19,6 +19,6 @@ public class HelloCont {
         String res = apiServiceB.callServiceB();
         log.info("> final response: " + res);
         log.info(">>> END");
-        return "Service A calling Service B: ";
+        return "Service A calling Service B: " + res;
     }
 }
