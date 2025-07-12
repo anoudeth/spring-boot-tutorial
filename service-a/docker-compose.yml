@@ -1,0 +1,28 @@
+version: "3.1"
+services:
+  a:
+    deploy:
+      replicas: 2
+      restart_policy:
+        condition: on-failure
+    environment:
+      SPRING_PROFILES_ACTIVE: pro
+    image: "service-a:latest"
+    #    logging:
+    #      driver: loki
+    #      options:
+    #        loki-url: "http://10.10.20.68:3100/loki/api/v1/push"
+    #        loki-batch-size: 400
+
+    ports:
+      - "6001:6001"
+    #    volumes:
+    #      - "/home/admindev/docker/app/direct_kkm/logs:/usr/apps/logs"
+    #      - "/home/admindev/docker/app/direct_kkm/config_props:/usr/apps/config_props"
+    #    env_file:
+    #      - "/home/admindev/docker/app/teller/.teller_uat.conf"
+    networks:
+      - noh-network
+networks:
+  noh-network:
+    external: true

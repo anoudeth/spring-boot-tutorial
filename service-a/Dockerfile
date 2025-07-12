@@ -1,4 +1,4 @@
-FROM amazoncorretto:17.0.6-alpine3.17 as corretto-jdk
+FROM amazoncorretto:21.0.2-alpine3.17 as corretto-jdk
 
 #--- required for strip-debug to work
 RUN apk add --no-cache binutils
@@ -35,17 +35,17 @@ COPY --from=corretto-jdk /customjre $JAVA_HOME
 #COPY --chown=1000:1000 ./target/teller-service.jar /app/teller-service.jar
 #WORKDIR /app
 
-#--- EXPOSE 8080
+EXPOSE 6001
 #ENTRYPOINT [ "/jre/bin/java", "-jar", "/app/teller-service.jar" ]
 
 WORKDIR /usr/apps
 COPY target/*.jar ./
-COPY AppMain.class ./
-RUN jar xf *.jar
-RUN rm -rf *.jar
-RUN mkdir ./config_props
+#RUN jar xf *.jar
+#RUN rm -rf *.jar
+#RUN mkdir ./config_props
 #----- COPY src/main/resources/* ./config_props
-COPY src/main/resources/* ./config_props
+#COPY src/main/resources/* ./config_props
 ENTRYPOINT ["sh", "-c"]
-CMD ["exec java -cp . -Dspring.config.location=./config_props/application.properties AppMain"]
+CMD ["exec java -jar $(ls | grep .jar -m 1)"]
+#CMD ["exec java -cp . -Dspring.config.location=./config_props/application.properties AppMain"]
 #CMD ["exec java -jar $(ls | grep .jar -m 1)"]

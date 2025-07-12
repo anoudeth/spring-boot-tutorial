@@ -8,7 +8,7 @@ echo "==> running command 'mvn clean compile package'"
 mvn clean compile package -DskipTests
 
 echo "==> docker build on Apple silicon"
-docker build --platform linux/amd64 -f Dockerfile -t service-a:latest .
+docker build --platform linux/amd64 -f Dockerfile -t service-b:latest .
 
 #echo "==> docker push to server"
 #docker push ubuntu-prdapi.indochinabank.com:5000/teller:latest
