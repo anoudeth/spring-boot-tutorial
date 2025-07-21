@@ -21,7 +21,7 @@ ENV PATH="${JAVA_HOME}/bin:${PATH}"
 
 #--- copy JRE from the base image
 COPY --from=corretto-jdk /customjre $JAVA_HOME
-
+RUN apk update && apk add curl
 #--- Add app user
 #ARG APPLICATION_USER=appuser
 #RUN adduser --no-create-home -u 1000 -D $APPLICATION_USER

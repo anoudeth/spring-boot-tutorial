@@ -13,7 +13,11 @@ services:
 #      options:
 #        loki-url: "http://10.10.20.68:3100/loki/api/v1/push"
 #        loki-batch-size: 400
-
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:6002/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
     ports:
       - "6002:6002"
 #    volumes:
