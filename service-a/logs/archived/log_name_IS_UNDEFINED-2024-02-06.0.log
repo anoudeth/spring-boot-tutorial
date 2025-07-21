@@ -1,0 +1,316 @@
+2024-02-06T20:40:11.065+07:00  INFO 6535 --- [main] c.example.servicea.ServiceAApplication   : Starting ServiceAApplication using Java 17.0.3-ea with PID 6535 (/Users/nohder/dev/spring/spring-boot-tutorial/service-a/target/classes started by nohder in /Users/nohder/dev/spring/spring-boot-tutorial/service-a)
+2024-02-06T20:40:11.068+07:00 DEBUG 6535 --- [main] c.example.servicea.ServiceAApplication   : Running with Spring Boot v3.1.0, Spring v6.0.9
+2024-02-06T20:40:11.069+07:00  INFO 6535 --- [main] c.example.servicea.ServiceAApplication   : The following 1 profile is active: "dev"
+2024-02-06T20:40:11.692+07:00  INFO 6535 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=aa84b6fb-2cf7-3c26-af6c-54b7f490dff2
+2024-02-06T20:40:11.872+07:00  INFO 6535 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 6001 (http)
+2024-02-06T20:40:11.877+07:00  INFO 6535 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-02-06T20:40:11.877+07:00  INFO 6535 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.8]
+2024-02-06T20:40:11.934+07:00  INFO 6535 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-02-06T20:40:11.935+07:00  INFO 6535 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 825 ms
+2024-02-06T20:40:12.174+07:00  WARN 6535 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'helloCont' defined in file [/Users/nohder/dev/spring/spring-boot-tutorial/service-a/target/classes/com/example/servicea/controller/HelloCont.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'apiServiceB' defined in file [/Users/nohder/dev/spring/spring-boot-tutorial/service-a/target/classes/com/example/servicea/remote/ApiServiceB.class]: Unsatisfied dependency expressed through constructor parameter 0: No qualifying bean of type 'com.example.servicea.remote.ApiServiceBInterface' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2024-02-06T20:40:12.176+07:00  INFO 6535 --- [main] i.o.sdk.trace.SdkTracerProvider          : Calling shutdown() multiple times.
+2024-02-06T20:40:12.176+07:00  INFO 6535 --- [main] i.o.e.internal.okhttp.OkHttpExporter     : Calling shutdown() multiple times.
+2024-02-06T20:40:12.178+07:00  INFO 6535 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2024-02-06T20:40:12.181+07:00  WARN 6535 --- [main] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [BatchSpanProcessor_WorkerThread-1] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:252)
+ java.base/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1672)
+ java.base/java.util.concurrent.ArrayBlockingQueue.poll(ArrayBlockingQueue.java:435)
+ io.opentelemetry.sdk.trace.export.BatchSpanProcessor$Worker.run(BatchSpanProcessor.java:252)
+ java.base/java.lang.Thread.run(Thread.java:889)
+2024-02-06T20:40:12.193+07:00  INFO 6535 --- [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-02-06T20:40:12.205+07:00 ERROR 6535 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in com.example.servicea.remote.ApiServiceB required a bean of type 'com.example.servicea.remote.ApiServiceBInterface' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.example.servicea.remote.ApiServiceBInterface' in your configuration.
+
+2024-02-06T20:41:34.913+07:00  INFO 6545 --- [main] c.example.servicea.ServiceAApplication   : Starting ServiceAApplication using Java 17.0.3-ea with PID 6545 (/Users/nohder/dev/spring/spring-boot-tutorial/service-a/target/classes started by nohder in /Users/nohder/dev/spring/spring-boot-tutorial/service-a)
+2024-02-06T20:41:34.915+07:00 DEBUG 6545 --- [main] c.example.servicea.ServiceAApplication   : Running with Spring Boot v3.1.0, Spring v6.0.9
+2024-02-06T20:41:34.916+07:00  INFO 6545 --- [main] c.example.servicea.ServiceAApplication   : The following 1 profile is active: "dev"
+2024-02-06T20:41:35.516+07:00  INFO 6545 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=aa84b6fb-2cf7-3c26-af6c-54b7f490dff2
+2024-02-06T20:41:35.723+07:00  INFO 6545 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 6001 (http)
+2024-02-06T20:41:35.728+07:00  INFO 6545 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-02-06T20:41:35.728+07:00  INFO 6545 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.8]
+2024-02-06T20:41:35.777+07:00  INFO 6545 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-02-06T20:41:35.778+07:00  INFO 6545 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 823 ms
+2024-02-06T20:41:36.013+07:00  WARN 6545 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'helloCont' defined in file [/Users/nohder/dev/spring/spring-boot-tutorial/service-a/target/classes/com/example/servicea/controller/HelloCont.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'apiServiceB' defined in file [/Users/nohder/dev/spring/spring-boot-tutorial/service-a/target/classes/com/example/servicea/remote/ApiServiceB.class]: Unsatisfied dependency expressed through constructor parameter 0: No qualifying bean of type 'com.example.servicea.remote.ApiServiceBInterface' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2024-02-06T20:41:36.015+07:00  INFO 6545 --- [main] i.o.sdk.trace.SdkTracerProvider          : Calling shutdown() multiple times.
+2024-02-06T20:41:36.015+07:00  INFO 6545 --- [main] i.o.e.internal.okhttp.OkHttpExporter     : Calling shutdown() multiple times.
+2024-02-06T20:41:36.017+07:00  INFO 6545 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2024-02-06T20:41:36.019+07:00  WARN 6545 --- [main] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [BatchSpanProcessor_WorkerThread-1] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:252)
+ java.base/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1672)
+ java.base/java.util.concurrent.ArrayBlockingQueue.poll(ArrayBlockingQueue.java:435)
+ io.opentelemetry.sdk.trace.export.BatchSpanProcessor$Worker.run(BatchSpanProcessor.java:252)
+ java.base/java.lang.Thread.run(Thread.java:889)
+2024-02-06T20:41:36.031+07:00  INFO 6545 --- [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-02-06T20:41:36.044+07:00 ERROR 6545 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in com.example.servicea.remote.ApiServiceB required a bean of type 'com.example.servicea.remote.ApiServiceBInterface' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.example.servicea.remote.ApiServiceBInterface' in your configuration.
+
+2024-02-06T20:43:58.213+07:00  INFO 6577 --- [main] c.example.servicea.ServiceAApplication   : Starting ServiceAApplication using Java 17.0.3-ea with PID 6577 (/Users/nohder/dev/spring/spring-boot-tutorial/service-a/target/classes started by nohder in /Users/nohder/dev/spring/spring-boot-tutorial/service-a)
+2024-02-06T20:43:58.215+07:00 DEBUG 6577 --- [main] c.example.servicea.ServiceAApplication   : Running with Spring Boot v3.1.0, Spring v6.0.9
+2024-02-06T20:43:58.216+07:00  INFO 6577 --- [main] c.example.servicea.ServiceAApplication   : The following 1 profile is active: "dev"
+2024-02-06T20:43:58.843+07:00  INFO 6577 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=aa84b6fb-2cf7-3c26-af6c-54b7f490dff2
+2024-02-06T20:43:59.036+07:00  INFO 6577 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 6001 (http)
+2024-02-06T20:43:59.041+07:00  INFO 6577 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-02-06T20:43:59.041+07:00  INFO 6577 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.8]
+2024-02-06T20:43:59.110+07:00  INFO 6577 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-02-06T20:43:59.111+07:00  INFO 6577 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 859 ms
+2024-02-06T20:43:59.344+07:00  WARN 6577 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'helloCont' defined in file [/Users/nohder/dev/spring/spring-boot-tutorial/service-a/target/classes/com/example/servicea/controller/HelloCont.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'apiServiceB' defined in file [/Users/nohder/dev/spring/spring-boot-tutorial/service-a/target/classes/com/example/servicea/remote/ApiServiceB.class]: Unsatisfied dependency expressed through constructor parameter 0: No qualifying bean of type 'com.example.servicea.remote.ApiServiceBInterface' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2024-02-06T20:43:59.345+07:00  INFO 6577 --- [main] i.o.sdk.trace.SdkTracerProvider          : Calling shutdown() multiple times.
+2024-02-06T20:43:59.345+07:00  INFO 6577 --- [main] i.o.e.internal.okhttp.OkHttpExporter     : Calling shutdown() multiple times.
+2024-02-06T20:43:59.347+07:00  INFO 6577 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2024-02-06T20:43:59.350+07:00  WARN 6577 --- [main] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [BatchSpanProcessor_WorkerThread-1] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:252)
+ java.base/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1672)
+ java.base/java.util.concurrent.ArrayBlockingQueue.poll(ArrayBlockingQueue.java:435)
+ io.opentelemetry.sdk.trace.export.BatchSpanProcessor$Worker.run(BatchSpanProcessor.java:252)
+ java.base/java.lang.Thread.run(Thread.java:889)
+2024-02-06T20:43:59.360+07:00  INFO 6577 --- [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-02-06T20:43:59.373+07:00 ERROR 6577 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in com.example.servicea.remote.ApiServiceB required a bean of type 'com.example.servicea.remote.ApiServiceBInterface' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.example.servicea.remote.ApiServiceBInterface' in your configuration.
+
+2024-02-06T20:54:26.403+07:00  INFO 6711 --- [main] c.example.servicea.ServiceAApplication   : Starting ServiceAApplication using Java 17.0.3-ea with PID 6711 (/Users/nohder/dev/spring/spring-boot-tutorial/service-a/target/classes started by nohder in /Users/nohder/dev/spring/spring-boot-tutorial/service-a)
+2024-02-06T20:54:26.405+07:00 DEBUG 6711 --- [main] c.example.servicea.ServiceAApplication   : Running with Spring Boot v3.1.0, Spring v6.0.9
+2024-02-06T20:54:26.405+07:00  INFO 6711 --- [main] c.example.servicea.ServiceAApplication   : The following 1 profile is active: "dev"
+2024-02-06T20:54:27.023+07:00  INFO 6711 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=1e34a643-8226-3def-aa42-105cca1f197e
+2024-02-06T20:54:27.218+07:00  INFO 6711 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 6001 (http)
+2024-02-06T20:54:27.231+07:00  INFO 6711 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-02-06T20:54:27.232+07:00  INFO 6711 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.8]
+2024-02-06T20:54:27.290+07:00  INFO 6711 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-02-06T20:54:27.291+07:00  INFO 6711 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 845 ms
+2024-02-06T20:54:27.511+07:00  WARN 6711 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'helloCont' defined in file [/Users/nohder/dev/spring/spring-boot-tutorial/service-a/target/classes/com/example/servicea/controller/HelloCont.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'apiServiceB' defined in file [/Users/nohder/dev/spring/spring-boot-tutorial/service-a/target/classes/com/example/servicea/remote/ApiServiceB.class]: Unsatisfied dependency expressed through constructor parameter 0: No qualifying bean of type 'com.example.servicea.remote.ApiServiceBInterface' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2024-02-06T20:54:27.512+07:00  INFO 6711 --- [main] i.o.sdk.trace.SdkTracerProvider          : Calling shutdown() multiple times.
+2024-02-06T20:54:27.513+07:00  INFO 6711 --- [main] i.o.e.internal.okhttp.OkHttpExporter     : Calling shutdown() multiple times.
+2024-02-06T20:54:27.514+07:00  INFO 6711 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2024-02-06T20:54:27.516+07:00  WARN 6711 --- [main] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [BatchSpanProcessor_WorkerThread-1] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:252)
+ java.base/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1672)
+ java.base/java.util.concurrent.ArrayBlockingQueue.poll(ArrayBlockingQueue.java:435)
+ io.opentelemetry.sdk.trace.export.BatchSpanProcessor$Worker.run(BatchSpanProcessor.java:252)
+ java.base/java.lang.Thread.run(Thread.java:889)
+2024-02-06T20:54:27.527+07:00  INFO 6711 --- [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-02-06T20:54:27.540+07:00 ERROR 6711 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in com.example.servicea.remote.ApiServiceB required a bean of type 'com.example.servicea.remote.ApiServiceBInterface' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.example.servicea.remote.ApiServiceBInterface' in your configuration.
+
+2024-02-06T20:55:31.086+07:00  INFO 6767 --- [main] c.example.servicea.ServiceAApplication   : Starting ServiceAApplication using Java 17.0.3-ea with PID 6767 (/Users/nohder/dev/spring/spring-boot-tutorial/service-a/target/classes started by nohder in /Users/nohder/dev/spring/spring-boot-tutorial/service-a)
+2024-02-06T20:55:31.088+07:00 DEBUG 6767 --- [main] c.example.servicea.ServiceAApplication   : Running with Spring Boot v3.1.0, Spring v6.0.9
+2024-02-06T20:55:31.089+07:00  INFO 6767 --- [main] c.example.servicea.ServiceAApplication   : The following 1 profile is active: "dev"
+2024-02-06T20:55:31.700+07:00  INFO 6767 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=7e8910c5-0993-3490-a669-434429112590
+2024-02-06T20:55:31.743+07:00  INFO 6767 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'com.example.servicea.remote.ApiServiceBInterface' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-02-06T20:55:31.871+07:00  INFO 6767 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 6001 (http)
+2024-02-06T20:55:31.875+07:00  INFO 6767 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-02-06T20:55:31.875+07:00  INFO 6767 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.8]
+2024-02-06T20:55:31.927+07:00  INFO 6767 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-02-06T20:55:31.929+07:00  INFO 6767 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 793 ms
+2024-02-06T20:55:32.505+07:00  INFO 6767 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2024-02-06T20:55:32.550+07:00  INFO 6767 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 6001 (http) with context path ''
+2024-02-06T20:55:32.563+07:00  INFO 6767 --- [main] c.example.servicea.ServiceAApplication   : Started ServiceAApplication in 1.844 seconds (process running for 2.112)
+2024-02-06T20:56:04.139+07:00  INFO 6767 --- [http-nio-6001-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-02-06T20:56:04.140+07:00  INFO 6767 --- [http-nio-6001-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-02-06T20:56:04.141+07:00  INFO 6767 --- [http-nio-6001-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-02-06T20:56:08.171+07:00  INFO 6767 --- [http-nio-6001-exec-3] c.example.servicea.ServiceAApplication   : Service A from host: Anoudeths-MacBook-Pro.local
+2024-02-06T20:56:32.266+07:00  INFO 6767 --- [http-nio-6001-exec-4] c.example.servicea.controller.HelloCont  : >>> START
+2024-02-06T20:56:32.266+07:00  INFO 6767 --- [http-nio-6001-exec-4] c.example.servicea.remote.ApiServiceB    : > calling service B
+2024-02-06T20:56:32.283+07:00 ERROR 6767 --- [http-nio-6001-exec-4] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: feign.RetryableException: Connection refused executing GET http://127.0.0.1/service-b] with root cause
+
+java.net.ConnectException: Connection refused
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at java.base/sun.net.NetworkClient.doConnect(NetworkClient.java:178)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:498)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:603)
+	at java.base/sun.net.www.http.HttpClient.<init>(HttpClient.java:246)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:351)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:373)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1309)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1242)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1128)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:1057)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1665)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1589)
+	at java.base/java.net.HttpURLConnection.getResponseCode(HttpURLConnection.java:529)
+	at feign.Client$Default.convertResponse(Client.java:110)
+	at feign.Client$Default.execute(Client.java:106)
+	at feign.micrometer.MeteredClient.execute(MeteredClient.java:48)
+	at feign.micrometer.MicrometerObservationCapability.lambda$enrich$1(MicrometerObservationCapability.java:53)
+	at feign.SynchronousMethodHandler.executeAndDecode(SynchronousMethodHandler.java:100)
+	at feign.SynchronousMethodHandler.invoke(SynchronousMethodHandler.java:70)
+	at feign.ReflectiveFeign$FeignInvocationHandler.invoke(ReflectiveFeign.java:96)
+	at feign.micrometer.MeteredInvocationHandleFactory.lambda$create$0(MeteredInvocationHandleFactory.java:70)
+	at jdk.proxy2/jdk.proxy2.$Proxy88.sendSms(Unknown Source)
+	at com.example.servicea.remote.ApiServiceB.callServiceB(ApiServiceB.java:19)
+	at com.example.servicea.controller.HelloCont.callServiceB(HelloCont.java:19)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:207)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:152)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:884)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1081)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:974)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1011)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:109)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:166)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:889)
+
+2024-02-06T20:57:22.517+07:00  INFO 7162 --- [main] c.example.servicea.ServiceAApplication   : Starting ServiceAApplication using Java 17.0.3-ea with PID 7162 (/Users/nohder/dev/spring/spring-boot-tutorial/service-a/target/classes started by nohder in /Users/nohder/dev/spring/spring-boot-tutorial/service-a)
+2024-02-06T20:57:22.518+07:00 DEBUG 7162 --- [main] c.example.servicea.ServiceAApplication   : Running with Spring Boot v3.1.0, Spring v6.0.9
+2024-02-06T20:57:22.519+07:00  INFO 7162 --- [main] c.example.servicea.ServiceAApplication   : The following 1 profile is active: "dev"
+2024-02-06T20:57:23.136+07:00  INFO 7162 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=7e8910c5-0993-3490-a669-434429112590
+2024-02-06T20:57:23.182+07:00  INFO 7162 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'com.example.servicea.remote.ApiServiceBInterface' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-02-06T20:57:23.325+07:00  INFO 7162 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 6001 (http)
+2024-02-06T20:57:23.330+07:00  INFO 7162 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-02-06T20:57:23.331+07:00  INFO 7162 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.8]
+2024-02-06T20:57:23.386+07:00  INFO 7162 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-02-06T20:57:23.388+07:00  INFO 7162 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 828 ms
+2024-02-06T20:57:23.983+07:00  INFO 7162 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2024-02-06T20:57:24.031+07:00  INFO 7162 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 6001 (http) with context path ''
+2024-02-06T20:57:24.044+07:00  INFO 7162 --- [main] c.example.servicea.ServiceAApplication   : Started ServiceAApplication in 1.889 seconds (process running for 2.36)
+2024-02-06T20:57:31.567+07:00  INFO 7162 --- [http-nio-6001-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-02-06T20:57:31.567+07:00  INFO 7162 --- [http-nio-6001-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-02-06T20:57:31.568+07:00  INFO 7162 --- [http-nio-6001-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-02-06T20:57:31.606+07:00  INFO 7162 --- [http-nio-6001-exec-1] c.example.servicea.controller.HelloCont  : >>> START
+2024-02-06T20:57:31.606+07:00  INFO 7162 --- [http-nio-6001-exec-1] c.example.servicea.remote.ApiServiceB    : > calling service B
+2024-02-06T20:57:31.744+07:00  INFO 7162 --- [http-nio-6001-exec-1] c.example.servicea.remote.ApiServiceB    : resServiceB: Service B from host: Anoudeths-MacBook-Pro.local
+2024-02-06T20:57:31.745+07:00  INFO 7162 --- [http-nio-6001-exec-1] c.example.servicea.controller.HelloCont  : > final response: Service B from host: Anoudeths-MacBook-Pro.local
+2024-02-06T20:57:31.746+07:00  INFO 7162 --- [http-nio-6001-exec-1] c.example.servicea.controller.HelloCont  : >>> END
+2024-02-06T20:57:37.367+07:00  INFO 7162 --- [http-nio-6001-exec-3] c.example.servicea.controller.HelloCont  : >>> START
+2024-02-06T20:57:37.367+07:00  INFO 7162 --- [http-nio-6001-exec-3] c.example.servicea.remote.ApiServiceB    : > calling service B
+2024-02-06T20:57:37.374+07:00  INFO 7162 --- [http-nio-6001-exec-3] c.example.servicea.remote.ApiServiceB    : resServiceB: Service B from host: Anoudeths-MacBook-Pro.local
+2024-02-06T20:57:37.374+07:00  INFO 7162 --- [http-nio-6001-exec-3] c.example.servicea.controller.HelloCont  : > final response: Service B from host: Anoudeths-MacBook-Pro.local
+2024-02-06T20:57:37.374+07:00  INFO 7162 --- [http-nio-6001-exec-3] c.example.servicea.controller.HelloCont  : >>> END
+2024-02-06T20:58:10.375+07:00  INFO 7162 --- [http-nio-6001-exec-4] c.example.servicea.ServiceAApplication   : Service A from host: Anoudeths-MacBook-Pro.local
+2024-02-06T20:59:37.259+07:00  INFO 7162 --- [http-nio-6001-exec-5] c.example.servicea.controller.HelloCont  : >>> START
+2024-02-06T20:59:37.260+07:00  INFO 7162 --- [http-nio-6001-exec-5] c.example.servicea.remote.ApiServiceB    : > calling service B
+2024-02-06T20:59:37.401+07:00  INFO 7162 --- [http-nio-6001-exec-5] c.example.servicea.remote.ApiServiceB    : resServiceB: Service B from host: Anoudeths-MacBook-Pro.local
+2024-02-06T20:59:37.402+07:00  INFO 7162 --- [http-nio-6001-exec-5] c.example.servicea.controller.HelloCont  : > final response: Service B from host: Anoudeths-MacBook-Pro.local
+2024-02-06T20:59:37.402+07:00  INFO 7162 --- [http-nio-6001-exec-5] c.example.servicea.controller.HelloCont  : >>> END
+2024-02-06T20:59:53.306+07:00  INFO 7162 --- [http-nio-6001-exec-6] c.example.servicea.controller.HelloCont  : >>> START
+2024-02-06T20:59:53.307+07:00  INFO 7162 --- [http-nio-6001-exec-6] c.example.servicea.remote.ApiServiceB    : > calling service B
+2024-02-06T20:59:53.320+07:00  INFO 7162 --- [http-nio-6001-exec-6] c.example.servicea.remote.ApiServiceB    : resServiceB: Service B from host: Anoudeths-MacBook-Pro.local
+2024-02-06T20:59:53.320+07:00  INFO 7162 --- [http-nio-6001-exec-6] c.example.servicea.controller.HelloCont  : > final response: Service B from host: Anoudeths-MacBook-Pro.local
+2024-02-06T20:59:53.320+07:00  INFO 7162 --- [http-nio-6001-exec-6] c.example.servicea.controller.HelloCont  : >>> END
+2024-02-06T21:00:22.065+07:00  INFO 7320 --- [main] c.example.servicea.ServiceAApplication   : Starting ServiceAApplication using Java 17.0.3-ea with PID 7320 (/Users/nohder/dev/spring/spring-boot-tutorial/service-a/target/classes started by nohder in /Users/nohder/dev/spring/spring-boot-tutorial/service-a)
+2024-02-06T21:00:22.069+07:00 DEBUG 7320 --- [main] c.example.servicea.ServiceAApplication   : Running with Spring Boot v3.1.0, Spring v6.0.9
+2024-02-06T21:00:22.072+07:00  INFO 7320 --- [main] c.example.servicea.ServiceAApplication   : The following 1 profile is active: "dev"
+2024-02-06T21:00:22.705+07:00  INFO 7320 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=7e8910c5-0993-3490-a669-434429112590
+2024-02-06T21:00:22.754+07:00  INFO 7320 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'com.example.servicea.remote.ApiServiceBInterface' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-02-06T21:00:22.885+07:00  INFO 7320 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 6001 (http)
+2024-02-06T21:00:22.889+07:00  INFO 7320 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-02-06T21:00:22.889+07:00  INFO 7320 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.8]
+2024-02-06T21:00:22.955+07:00  INFO 7320 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-02-06T21:00:22.956+07:00  INFO 7320 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 836 ms
+2024-02-06T21:00:23.545+07:00  INFO 7320 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2024-02-06T21:00:23.590+07:00  INFO 7320 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 6001 (http) with context path ''
+2024-02-06T21:00:23.601+07:00  INFO 7320 --- [main] c.example.servicea.ServiceAApplication   : Started ServiceAApplication in 1.92 seconds (process running for 2.214)
+2024-02-06T21:00:41.825+07:00  INFO 7320 --- [http-nio-6001-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-02-06T21:00:41.825+07:00  INFO 7320 --- [http-nio-6001-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-02-06T21:00:41.826+07:00  INFO 7320 --- [http-nio-6001-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2024-02-06T21:00:41.867+07:00  INFO 7320 --- [http-nio-6001-exec-1] c.example.servicea.controller.HelloCont  : >>> START
+2024-02-06T21:00:41.867+07:00  INFO 7320 --- [http-nio-6001-exec-1] c.example.servicea.remote.ApiServiceB    : > calling service B
+2024-02-06T21:00:41.910+07:00  INFO 7320 --- [http-nio-6001-exec-1] c.example.servicea.remote.ApiServiceB    : resServiceB: Service B from host: Anoudeths-MacBook-Pro.local
+2024-02-06T21:00:41.911+07:00  INFO 7320 --- [http-nio-6001-exec-1] c.example.servicea.controller.HelloCont  : > final response: Service B from host: Anoudeths-MacBook-Pro.local
+2024-02-06T21:00:41.912+07:00  INFO 7320 --- [http-nio-6001-exec-1] c.example.servicea.controller.HelloCont  : >>> END

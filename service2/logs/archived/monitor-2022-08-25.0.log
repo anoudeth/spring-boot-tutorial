@@ -1,0 +1,210 @@
+2022-08-25 16:28:47.688  INFO [service2,,] 59079 --- [main] com.noh.service2.Service2Application     : Starting Service2Application using Java 1.8.0_312 on Anoudeths-MacBook-Pro.local with PID 59079 (/Users/nohder/dev/spring/spring-boot-tutorial/service2/target/classes started by nohder in /Users/nohder/dev/spring/spring-boot-tutorial/service2)
+2022-08-25 16:28:47.689 DEBUG [service2,,] 59079 --- [main] com.noh.service2.Service2Application     : Running with Spring Boot v2.6.11, Spring v5.3.22
+2022-08-25 16:28:47.689  INFO [service2,,] 59079 --- [main] com.noh.service2.Service2Application     : The following 1 profile is active: "dev"
+2022-08-25 16:28:48.038  INFO [service2,,] 59079 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=c420a984-a975-3a46-8120-1593d6535231
+2022-08-25 16:28:48.274  INFO [service2,,] 59079 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8082 (http)
+2022-08-25 16:28:48.277  INFO [service2,,] 59079 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-08-25 16:28:48.277  INFO [service2,,] 59079 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-08-25 16:28:48.323  INFO [service2,,] 59079 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-08-25 16:28:48.323  INFO [service2,,] 59079 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 612 ms
+2022-08-25 16:28:48.859  INFO [service2,,] 59079 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8082 (http) with context path ''
+2022-08-25 16:28:48.868  INFO [service2,,] 59079 --- [main] com.noh.service2.Service2Application     : Started Service2Application in 1.406 seconds (JVM running for 1.983)
+2022-08-25 16:29:13.212  INFO [service2,,] 59079 --- [Thread-4] o.s.c.s.a.z.ZipkinAutoConfiguration      : Flushing remaining spans on shutdown
+2022-08-25 16:29:18.027  INFO [service2,,] 59170 --- [main] com.noh.service2.Service2Application     : Starting Service2Application using Java 1.8.0_312 on Anoudeths-MacBook-Pro.local with PID 59170 (/Users/nohder/dev/spring/spring-boot-tutorial/service2/target/classes started by nohder in /Users/nohder/dev/spring/spring-boot-tutorial/service2)
+2022-08-25 16:29:18.028 DEBUG [service2,,] 59170 --- [main] com.noh.service2.Service2Application     : Running with Spring Boot v2.6.11, Spring v5.3.22
+2022-08-25 16:29:18.028  INFO [service2,,] 59170 --- [main] com.noh.service2.Service2Application     : The following 1 profile is active: "dev"
+2022-08-25 16:29:18.373  INFO [service2,,] 59170 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=c420a984-a975-3a46-8120-1593d6535231
+2022-08-25 16:29:18.601  INFO [service2,,] 59170 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8082 (http)
+2022-08-25 16:29:18.604  INFO [service2,,] 59170 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-08-25 16:29:18.604  INFO [service2,,] 59170 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-08-25 16:29:18.646  INFO [service2,,] 59170 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-08-25 16:29:18.646  INFO [service2,,] 59170 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 597 ms
+2022-08-25 16:29:19.124  INFO [service2,,] 59170 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8082 (http) with context path ''
+2022-08-25 16:29:19.134  INFO [service2,,] 59170 --- [main] com.noh.service2.Service2Application     : Started Service2Application in 1.33 seconds (JVM running for 1.604)
+2022-08-25 16:29:35.779  INFO [service2,d4bf6d3f47e299a8,064c77582be26a3a] 59170 --- [http-nio-8082-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-08-25 16:29:35.780  INFO [service2,d4bf6d3f47e299a8,064c77582be26a3a] 59170 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-08-25 16:29:35.781  INFO [service2,d4bf6d3f47e299a8,064c77582be26a3a] 59170 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-08-25 16:29:35.794  INFO [service2,d4bf6d3f47e299a8,064c77582be26a3a] 59170 --- [http-nio-8082-exec-1] com.noh.service2.controller.HomeCont     : Inside microservice#2
+2022-08-25 16:30:08.920  INFO [service2,b71e328b34105bbb,b71e328b34105bbb] 59170 --- [http-nio-8082-exec-2] com.noh.service2.controller.HomeCont     : Inside microservice#2
+2022-08-25 16:34:57.219  INFO [service2,72491899eede3343,72491899eede3343] 59170 --- [http-nio-8082-exec-7] com.noh.service2.controller.HomeCont     : Inside microservice#2
+2022-08-25 16:37:28.461  INFO [service2,c75a47973f1666f6,f4b0a54db9fd4dab] 59170 --- [http-nio-8082-exec-10] com.noh.service2.controller.HomeCont     : Inside microservice#2
+2022-08-25 16:37:28.635  WARN [service2,,] 59170 --- [AsyncReporter{RestTemplateSender{http://localhost:9411/api/v2/spans}}] z.r.AsyncReporter$BoundedAsyncReporter   : Spans were dropped due to exceptions. All subsequent errors will be logged at FINE level.
+2022-08-25 16:37:28.655  WARN [service2,,] 59170 --- [AsyncReporter{RestTemplateSender{http://localhost:9411/api/v2/spans}}] z.r.AsyncReporter$BoundedAsyncReporter   : Dropped 1 spans due to ResourceAccessException(I/O error on POST request for "http://localhost:9411/api/v2/spans": Connection refused (Connection refused); nested exception is java.net.ConnectException: Connection refused (Connection refused))
+
+org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://localhost:9411/api/v2/spans": Connection refused (Connection refused); nested exception is java.net.ConnectException: Connection refused (Connection refused)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:785)
+	at org.springframework.cloud.sleuth.zipkin2.ZipkinRestTemplateWrapper.doExecute(ZipkinRestTemplateWrapper.java:67)
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:660)
+	at org.springframework.cloud.sleuth.zipkin2.RestTemplateSender.post(RestTemplateSender.java:51)
+	at org.springframework.cloud.sleuth.zipkin2.RestTemplateSender.lambda$new$0(RestTemplateSender.java:44)
+	at org.springframework.cloud.sleuth.zipkin2.HttpSender.post(HttpSender.java:137)
+	at org.springframework.cloud.sleuth.zipkin2.HttpSender$HttpPostCall.doExecute(HttpSender.java:150)
+	at org.springframework.cloud.sleuth.zipkin2.HttpSender$HttpPostCall.doExecute(HttpSender.java:140)
+	at zipkin2.Call$Base.execute(Call.java:391)
+	at zipkin2.reporter.AsyncReporter$BoundedAsyncReporter.flush(AsyncReporter.java:299)
+	at zipkin2.reporter.AsyncReporter$Flusher.run(AsyncReporter.java:378)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.net.ConnectException: Connection refused (Connection refused)
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:607)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:242)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:339)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:357)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1228)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1162)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1056)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:990)
+	at org.springframework.http.client.SimpleBufferingClientHttpRequest.executeInternal(SimpleBufferingClientHttpRequest.java:76)
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:776)
+	... 11 common frames omitted
+
+2022-08-25 16:37:29.274  INFO [service2,81832fa6d36d4c7f,e8e4477c918a9464] 59170 --- [http-nio-8082-exec-1] com.noh.service2.controller.HomeCont     : Inside microservice#2
+2022-08-25 16:37:33.137  INFO [service2,900dab3ec4118c27,a6fd6f7fa5d27caf] 59170 --- [http-nio-8082-exec-2] com.noh.service2.controller.HomeCont     : Inside microservice#2
+2022-08-25 16:37:33.339  INFO [service2,c21d9164a36bd2d2,51e47ae65f96d4c5] 59170 --- [http-nio-8082-exec-3] com.noh.service2.controller.HomeCont     : Inside microservice#2
+2022-08-25 16:37:33.513  INFO [service2,1236ebf2f5743b79,63f4599811fc28ef] 59170 --- [http-nio-8082-exec-4] com.noh.service2.controller.HomeCont     : Inside microservice#2
+2022-08-25 16:37:33.687  INFO [service2,70281b7b7dadf078,7e3c76f1db9d6b0c] 59170 --- [http-nio-8082-exec-5] com.noh.service2.controller.HomeCont     : Inside microservice#2
+2022-08-25 16:37:33.857  INFO [service2,64bb6c5cb1b02400,f3d4d07534cf7f4e] 59170 --- [http-nio-8082-exec-6] com.noh.service2.controller.HomeCont     : Inside microservice#2
+2022-08-25 16:37:34.027  INFO [service2,16f4210c5675c4dc,f7537afaf3bd7e94] 59170 --- [http-nio-8082-exec-7] com.noh.service2.controller.HomeCont     : Inside microservice#2
+2022-08-25 16:37:34.187  INFO [service2,7896866b8981f0ba,981c1bd5cfb4858f] 59170 --- [http-nio-8082-exec-9] com.noh.service2.controller.HomeCont     : Inside microservice#2
+2022-08-25 16:37:34.341  INFO [service2,ffe30c1aba28aa92,0f2a9938ac3402c7] 59170 --- [http-nio-8082-exec-8] com.noh.service2.controller.HomeCont     : Inside microservice#2
+2022-08-25 16:38:18.951  INFO [service2,dcd1fa9b7c637dae,136ae98c009ec1cb] 59170 --- [http-nio-8082-exec-10] com.noh.service2.controller.HomeCont     : Inside microservice#2
+2022-08-25 16:38:19.561  INFO [service2,f75c528e0a13d402,daaca7752bd753be] 59170 --- [http-nio-8082-exec-1] com.noh.service2.controller.HomeCont     : Inside microservice#2
+2022-08-25 16:38:19.726  INFO [service2,0abd23298363bab9,8a9702977681ea6f] 59170 --- [http-nio-8082-exec-2] com.noh.service2.controller.HomeCont     : Inside microservice#2
+2022-08-25 16:38:19.886  INFO [service2,d70d658ad7c079f3,8474778e76e58313] 59170 --- [http-nio-8082-exec-3] com.noh.service2.controller.HomeCont     : Inside microservice#2
+2022-08-25 17:03:11.484  INFO [service2,,] 59170 --- [Thread-4] o.s.c.s.a.z.ZipkinAutoConfiguration      : Flushing remaining spans on shutdown
+2022-08-25 17:03:16.847  INFO [service2,,] 61309 --- [main] com.noh.service2.Service2Application     : Starting Service2Application using Java 1.8.0_312 on Anoudeths-MacBook-Pro.local with PID 61309 (/Users/nohder/dev/spring/spring-boot-tutorial/service2/target/classes started by nohder in /Users/nohder/dev/spring/spring-boot-tutorial/service2)
+2022-08-25 17:03:16.849 DEBUG [service2,,] 61309 --- [main] com.noh.service2.Service2Application     : Running with Spring Boot v2.6.11, Spring v5.3.22
+2022-08-25 17:03:16.849  INFO [service2,,] 61309 --- [main] com.noh.service2.Service2Application     : The following 1 profile is active: "dev"
+2022-08-25 17:03:17.441  INFO [service2,,] 61309 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=fa1d2ddb-624b-398c-a6ba-0ebeb4a727f4
+2022-08-25 17:03:17.834  INFO [service2,,] 61309 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8082 (http)
+2022-08-25 17:03:17.839  INFO [service2,,] 61309 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-08-25 17:03:17.841  INFO [service2,,] 61309 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-08-25 17:03:17.921  INFO [service2,,] 61309 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-08-25 17:03:17.921  INFO [service2,,] 61309 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1046 ms
+2022-08-25 17:03:18.598  INFO [service2,,] 61309 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8082 (http) with context path ''
+2022-08-25 17:03:18.614  INFO [service2,,] 61309 --- [main] com.noh.service2.Service2Application     : Started Service2Application in 1.997 seconds (JVM running for 2.469)
+2022-08-25 17:09:55.232  INFO [service2,91def7b8eae00204,91def7b8eae00204] 61309 --- [http-nio-8082-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-08-25 17:09:55.234  INFO [service2,91def7b8eae00204,91def7b8eae00204] 61309 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-08-25 17:09:55.235  INFO [service2,91def7b8eae00204,91def7b8eae00204] 61309 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-08-25 17:09:55.295  INFO [service2,91def7b8eae00204,91def7b8eae00204] 61309 --- [http-nio-8082-exec-1] com.noh.service2.controller.HomeCont     : Inside microservice#2
+2022-08-25 17:09:55.977  INFO [service2,7deeb7811fe46e61,7deeb7811fe46e61] 61309 --- [http-nio-8082-exec-2] com.noh.service2.controller.HomeCont     : Inside microservice#2
+2022-08-25 17:10:06.586  INFO [service2,19ade0964a34dc39,19ade0964a34dc39] 61309 --- [http-nio-8082-exec-3] com.noh.service2.controller.HomeCont     : Inside microservice#2
+2022-08-25 17:10:06.777  INFO [service2,5fd50190d7fcf5a5,5fd50190d7fcf5a5] 61309 --- [http-nio-8082-exec-4] com.noh.service2.controller.HomeCont     : Inside microservice#2
+2022-08-25 17:10:06.935  INFO [service2,51b8b3247f652c57,51b8b3247f652c57] 61309 --- [http-nio-8082-exec-5] com.noh.service2.controller.HomeCont     : Inside microservice#2
+2022-08-25 17:10:07.080  INFO [service2,88728229feda6a60,88728229feda6a60] 61309 --- [http-nio-8082-exec-6] com.noh.service2.controller.HomeCont     : Inside microservice#2
+2022-08-25 17:10:07.170  INFO [service2,8fa442a6232612d6,8fa442a6232612d6] 61309 --- [http-nio-8082-exec-7] com.noh.service2.controller.HomeCont     : Inside microservice#2
+2022-08-25 17:10:07.315  INFO [service2,c1bba0500570e38f,c1bba0500570e38f] 61309 --- [http-nio-8082-exec-8] com.noh.service2.controller.HomeCont     : Inside microservice#2
+2022-08-25 17:10:23.278  INFO [service2,c869c796eeabd3a0,2495cf3acd5b6936] 61309 --- [http-nio-8082-exec-9] com.noh.service2.controller.HomeCont     : Inside microservice#2
+2022-08-25 17:10:23.432  INFO [service2,48da641e8a16985a,09551b5d90d174d7] 61309 --- [http-nio-8082-exec-10] com.noh.service2.controller.HomeCont     : Inside microservice#2
+2022-08-25 17:10:23.593  INFO [service2,94dfc5c7b4d71b9e,4319c20689aa1f2b] 61309 --- [http-nio-8082-exec-1] com.noh.service2.controller.HomeCont     : Inside microservice#2
+2022-08-25 17:10:23.746  INFO [service2,692984cd7db959e2,48711edd03e82169] 61309 --- [http-nio-8082-exec-2] com.noh.service2.controller.HomeCont     : Inside microservice#2
+2022-08-25 17:15:30.094  INFO [service2,d9ab403b8c296e15,2c64a4b6ab408344] 61309 --- [http-nio-8082-exec-6] com.noh.service2.controller.HomeCont     : Inside microservice#2
+2022-08-25 17:15:30.453  INFO [service2,ff9134a4a36c747d,666fec5553b3fb9a] 61309 --- [http-nio-8082-exec-7] com.noh.service2.controller.HomeCont     : Inside microservice#2
+2022-08-25 17:15:30.626  INFO [service2,7f43611ac930e27b,e8b353b8adeec432] 61309 --- [http-nio-8082-exec-8] com.noh.service2.controller.HomeCont     : Inside microservice#2
+2022-08-25 17:15:30.772  INFO [service2,d7f4a71530346638,a9c01221582dca0f] 61309 --- [http-nio-8082-exec-9] com.noh.service2.controller.HomeCont     : Inside microservice#2
+2022-08-25 17:15:30.942  INFO [service2,b717b2d04a1f6618,9ce2d81d9968279e] 61309 --- [http-nio-8082-exec-10] com.noh.service2.controller.HomeCont     : Inside microservice#2
+2022-08-25 17:15:31.105  INFO [service2,75f40275a5dc9f67,9939a7cb5f225003] 61309 --- [http-nio-8082-exec-1] com.noh.service2.controller.HomeCont     : Inside microservice#2
+2022-08-25 17:16:08.958  INFO [service2,5f120ab808090c30,bb7010bbae5db7fe] 61309 --- [http-nio-8082-exec-2] com.noh.service2.controller.HomeCont     : Inside microservice#2
+2022-08-25 17:20:51.642  INFO [service2,1ee56515b130a412,1ee56515b130a412] 61309 --- [http-nio-8082-exec-4] com.noh.service2.controller.HomeCont     : Inside microservice#2
+2022-08-25 17:20:51.808  INFO [service2,cac2058fc86af6a0,cac2058fc86af6a0] 61309 --- [http-nio-8082-exec-5] com.noh.service2.controller.HomeCont     : Inside microservice#2
+2022-08-25 17:20:51.977  INFO [service2,dc4a88ec2a5909e5,dc4a88ec2a5909e5] 61309 --- [http-nio-8082-exec-6] com.noh.service2.controller.HomeCont     : Inside microservice#2
+2022-08-25 17:20:52.135  INFO [service2,162e54678715d32f,162e54678715d32f] 61309 --- [http-nio-8082-exec-7] com.noh.service2.controller.HomeCont     : Inside microservice#2
+2022-08-25 17:20:52.317  INFO [service2,8d7f97611e4c694e,8d7f97611e4c694e] 61309 --- [http-nio-8082-exec-8] com.noh.service2.controller.HomeCont     : Inside microservice#2
+2022-08-25 17:20:52.472  INFO [service2,90d0ab2f59c46799,90d0ab2f59c46799] 61309 --- [http-nio-8082-exec-9] com.noh.service2.controller.HomeCont     : Inside microservice#2
+2022-08-25 17:21:02.579  INFO [service2,30f1a98f1d8dc37d,30f1a98f1d8dc37d] 61309 --- [http-nio-8082-exec-10] com.noh.service2.controller.HomeCont     : Inside microservice#2
+2022-08-25 17:21:14.163  INFO [service2,3f26c4bba4fb2934,3f26c4bba4fb2934] 61309 --- [http-nio-8082-exec-1] com.noh.service2.controller.HomeCont     : Inside microservice#2
+2022-08-25 17:21:14.332  INFO [service2,fcc20bab5e4e2c27,fcc20bab5e4e2c27] 61309 --- [http-nio-8082-exec-2] com.noh.service2.controller.HomeCont     : Inside microservice#2
+2022-08-25 17:21:14.499  INFO [service2,feca6a32e1f1c8e2,feca6a32e1f1c8e2] 61309 --- [http-nio-8082-exec-3] com.noh.service2.controller.HomeCont     : Inside microservice#2
+2022-08-25 17:21:14.661  INFO [service2,e63388135d66478a,e63388135d66478a] 61309 --- [http-nio-8082-exec-4] com.noh.service2.controller.HomeCont     : Inside microservice#2
+2022-08-25 17:21:14.812  INFO [service2,04b118421e6e2e1f,04b118421e6e2e1f] 61309 --- [http-nio-8082-exec-5] com.noh.service2.controller.HomeCont     : Inside microservice#2
+2022-08-25 17:21:14.957  INFO [service2,464edac11dfd46b9,464edac11dfd46b9] 61309 --- [http-nio-8082-exec-6] com.noh.service2.controller.HomeCont     : Inside microservice#2
+2022-08-25 17:21:15.113  INFO [service2,b165c29c63ac0a51,b165c29c63ac0a51] 61309 --- [http-nio-8082-exec-7] com.noh.service2.controller.HomeCont     : Inside microservice#2
+2022-08-25 17:21:15.300  INFO [service2,61617461765d5e3d,61617461765d5e3d] 61309 --- [http-nio-8082-exec-8] com.noh.service2.controller.HomeCont     : Inside microservice#2
+2022-08-25 17:21:40.233  INFO [service2,8aaaf9b504dae0d4,50a3d93e5d512c67] 61309 --- [http-nio-8082-exec-9] com.noh.service2.controller.HomeCont     : Inside microservice#2
+2022-08-25 17:21:40.532  INFO [service2,04fc408ba2ec4c7a,a170b5a51e02d260] 61309 --- [http-nio-8082-exec-10] com.noh.service2.controller.HomeCont     : Inside microservice#2
+2022-08-25 17:21:40.737  INFO [service2,5d1c586815c9dbae,324f8c82b461c6ec] 61309 --- [http-nio-8082-exec-1] com.noh.service2.controller.HomeCont     : Inside microservice#2
+2022-08-25 17:21:40.901  INFO [service2,e2f07ac81a68253a,4f2ba136bd830797] 61309 --- [http-nio-8082-exec-2] com.noh.service2.controller.HomeCont     : Inside microservice#2
+2022-08-25 17:21:41.080  INFO [service2,8d8deddceb7b334c,96e1f94e70857c79] 61309 --- [http-nio-8082-exec-3] com.noh.service2.controller.HomeCont     : Inside microservice#2
+2022-08-25 17:21:41.253  INFO [service2,c8eab8c343b5e2c9,1577d2596d30dbfa] 61309 --- [http-nio-8082-exec-4] com.noh.service2.controller.HomeCont     : Inside microservice#2
+2022-08-25 17:21:41.420  INFO [service2,2063cd2a6469074d,25c30079b72d253b] 61309 --- [http-nio-8082-exec-5] com.noh.service2.controller.HomeCont     : Inside microservice#2
+2022-08-25 17:21:41.595  INFO [service2,fb5cc89c09c8ef34,dc4414af86c893c9] 61309 --- [http-nio-8082-exec-6] com.noh.service2.controller.HomeCont     : Inside microservice#2
+2022-08-25 17:21:41.763  INFO [service2,c216b4e53679bded,b52fd78fdf320859] 61309 --- [http-nio-8082-exec-7] com.noh.service2.controller.HomeCont     : Inside microservice#2
+2022-08-25 17:21:41.929  INFO [service2,4836e290017c0ac3,1c2f20514c6c5d13] 61309 --- [http-nio-8082-exec-8] com.noh.service2.controller.HomeCont     : Inside microservice#2
+2022-08-25 17:21:42.100  INFO [service2,4a82424d9e436cca,9e8276b441d09a1b] 61309 --- [http-nio-8082-exec-9] com.noh.service2.controller.HomeCont     : Inside microservice#2
+2022-08-25 17:21:42.259  INFO [service2,067407e9d016391c,fdb0b988f8dc913a] 61309 --- [http-nio-8082-exec-10] com.noh.service2.controller.HomeCont     : Inside microservice#2
+2022-08-25 17:21:42.414  INFO [service2,d999a1ba852ffebd,9e9419292f425e23] 61309 --- [http-nio-8082-exec-1] com.noh.service2.controller.HomeCont     : Inside microservice#2
+2022-08-25 17:21:42.571  INFO [service2,888cfddbf0d006b1,71dfd0b8a30db6a0] 61309 --- [http-nio-8082-exec-2] com.noh.service2.controller.HomeCont     : Inside microservice#2
+2022-08-25 17:21:42.759  INFO [service2,b80acf785d65f380,6c1227a6333bfe6b] 61309 --- [http-nio-8082-exec-3] com.noh.service2.controller.HomeCont     : Inside microservice#2
+2022-08-25 17:21:42.935  INFO [service2,378da3c0f9df99bf,6fa2f56d0df1b112] 61309 --- [http-nio-8082-exec-4] com.noh.service2.controller.HomeCont     : Inside microservice#2
+2022-08-25 17:21:43.100  INFO [service2,e6c7f2d692dba446,f25e2c03f1eb0089] 61309 --- [http-nio-8082-exec-5] com.noh.service2.controller.HomeCont     : Inside microservice#2
+2022-08-25 17:21:43.277  INFO [service2,a8814a9d42a1cf48,0302d54f25c9a0ef] 61309 --- [http-nio-8082-exec-6] com.noh.service2.controller.HomeCont     : Inside microservice#2
+2022-08-25 17:21:43.466  INFO [service2,70e03cbff51f6e7b,a978c4f33dca4e1f] 61309 --- [http-nio-8082-exec-7] com.noh.service2.controller.HomeCont     : Inside microservice#2
+2022-08-25 17:21:43.642  INFO [service2,132aee4ece808779,12e7810bcd557d9a] 61309 --- [http-nio-8082-exec-8] com.noh.service2.controller.HomeCont     : Inside microservice#2
+2022-08-25 17:21:43.809  INFO [service2,418547c79a38cd30,9671cd2a6f01a0b9] 61309 --- [http-nio-8082-exec-9] com.noh.service2.controller.HomeCont     : Inside microservice#2
+2022-08-25 17:21:43.985  INFO [service2,3a1299b24ee653f8,140e9c493d1c8f90] 61309 --- [http-nio-8082-exec-10] com.noh.service2.controller.HomeCont     : Inside microservice#2
+2022-08-25 17:21:44.169  INFO [service2,62c67c3a51dbc953,c67222e0f059264d] 61309 --- [http-nio-8082-exec-1] com.noh.service2.controller.HomeCont     : Inside microservice#2
+2022-08-25 17:21:44.355  INFO [service2,f385c76692d63da4,36ad002f85b84629] 61309 --- [http-nio-8082-exec-2] com.noh.service2.controller.HomeCont     : Inside microservice#2
+2022-08-25 17:21:44.536  INFO [service2,3a7e79b6dab43a1b,70f1513c8c220ae4] 61309 --- [http-nio-8082-exec-3] com.noh.service2.controller.HomeCont     : Inside microservice#2
+2022-08-25 17:21:44.716  INFO [service2,785e55510bba25f3,df4ed4f5b2df6398] 61309 --- [http-nio-8082-exec-4] com.noh.service2.controller.HomeCont     : Inside microservice#2
+2022-08-25 17:21:44.896  INFO [service2,604bf1ccc28712bd,cf5203db629a778e] 61309 --- [http-nio-8082-exec-5] com.noh.service2.controller.HomeCont     : Inside microservice#2
+2022-08-25 17:21:45.075  INFO [service2,d688c6dd47d24d92,360a4e751afbfcf4] 61309 --- [http-nio-8082-exec-6] com.noh.service2.controller.HomeCont     : Inside microservice#2
+2022-08-25 17:21:45.255  INFO [service2,2cf03bd446b754a8,7f866d626853a9a1] 61309 --- [http-nio-8082-exec-7] com.noh.service2.controller.HomeCont     : Inside microservice#2
+2022-08-25 17:21:45.418  INFO [service2,07e8925e463f1db5,6734a95b2383d3e7] 61309 --- [http-nio-8082-exec-8] com.noh.service2.controller.HomeCont     : Inside microservice#2
+2022-08-25 17:21:45.599  INFO [service2,1384fc694f41b38c,d7a13684d713f1ba] 61309 --- [http-nio-8082-exec-9] com.noh.service2.controller.HomeCont     : Inside microservice#2
+2022-08-25 17:21:45.779  INFO [service2,d957b69ead705694,2efcaa9e78c7ff33] 61309 --- [http-nio-8082-exec-10] com.noh.service2.controller.HomeCont     : Inside microservice#2
+2022-08-25 17:21:45.953  INFO [service2,d221149b0053e444,c72d47ece92bd43b] 61309 --- [http-nio-8082-exec-1] com.noh.service2.controller.HomeCont     : Inside microservice#2
+2022-08-25 17:21:46.141  INFO [service2,2a603d1955f015c7,4158792653fa4b3e] 61309 --- [http-nio-8082-exec-2] com.noh.service2.controller.HomeCont     : Inside microservice#2
+2022-08-25 17:21:46.317  INFO [service2,e4d8624f9471dae9,7b0b3847a8c6ebdd] 61309 --- [http-nio-8082-exec-3] com.noh.service2.controller.HomeCont     : Inside microservice#2
+2022-08-25 17:21:46.517  INFO [service2,6c530223c5b66684,e08273c9fdde229d] 61309 --- [http-nio-8082-exec-4] com.noh.service2.controller.HomeCont     : Inside microservice#2
+2022-08-25 17:21:46.691  INFO [service2,6b1343889621f66c,8f358a9f1a0300a3] 61309 --- [http-nio-8082-exec-5] com.noh.service2.controller.HomeCont     : Inside microservice#2
+2022-08-25 17:21:47.008  INFO [service2,9ab60c657466cbf1,a5200a70a7993f1d] 61309 --- [http-nio-8082-exec-6] com.noh.service2.controller.HomeCont     : Inside microservice#2
+2022-08-25 17:21:47.209  INFO [service2,0dc45ef225b96795,ca49a482c44d3509] 61309 --- [http-nio-8082-exec-7] com.noh.service2.controller.HomeCont     : Inside microservice#2
+2022-08-25 17:21:47.403  INFO [service2,01677a4fcc951d2d,68527183f64d4e9a] 61309 --- [http-nio-8082-exec-8] com.noh.service2.controller.HomeCont     : Inside microservice#2
+2022-08-25 17:21:47.575  INFO [service2,6cac1da2f8eb0fa8,ba098adcc29cab4f] 61309 --- [http-nio-8082-exec-9] com.noh.service2.controller.HomeCont     : Inside microservice#2
+2022-08-25 17:21:47.784  INFO [service2,54940d4519b45038,7b463bab724c05f2] 61309 --- [http-nio-8082-exec-10] com.noh.service2.controller.HomeCont     : Inside microservice#2
+2022-08-25 17:21:47.972  INFO [service2,31c1950b23715f78,8dc1ba9e07127ef9] 61309 --- [http-nio-8082-exec-1] com.noh.service2.controller.HomeCont     : Inside microservice#2
+2022-08-25 17:21:48.317  INFO [service2,2eadc7c634948ac6,48fc350fffcf8845] 61309 --- [http-nio-8082-exec-2] com.noh.service2.controller.HomeCont     : Inside microservice#2
+2022-08-25 17:21:48.502  INFO [service2,743260cc3e598109,b120681e8876ebfa] 61309 --- [http-nio-8082-exec-3] com.noh.service2.controller.HomeCont     : Inside microservice#2
+2022-08-25 17:21:48.675  INFO [service2,8574bb488582520e,10f0587cff2326e4] 61309 --- [http-nio-8082-exec-4] com.noh.service2.controller.HomeCont     : Inside microservice#2
+2022-08-25 17:21:48.867  INFO [service2,b9cd123e51d6faf9,162767d4ab642d7b] 61309 --- [http-nio-8082-exec-5] com.noh.service2.controller.HomeCont     : Inside microservice#2
+2022-08-25 17:21:49.058  INFO [service2,595ed7a248776fd2,a3b9906fbd22395f] 61309 --- [http-nio-8082-exec-6] com.noh.service2.controller.HomeCont     : Inside microservice#2
+2022-08-25 17:21:49.242  INFO [service2,26315dede6914a23,5ec80b5dab8c5017] 61309 --- [http-nio-8082-exec-7] com.noh.service2.controller.HomeCont     : Inside microservice#2
+2022-08-25 17:21:49.435  INFO [service2,3915d3a8222a581f,1298d53af6481fa5] 61309 --- [http-nio-8082-exec-8] com.noh.service2.controller.HomeCont     : Inside microservice#2
+2022-08-25 17:21:49.611  INFO [service2,16052b9af3b1cf10,e1080ce8724cd6db] 61309 --- [http-nio-8082-exec-9] com.noh.service2.controller.HomeCont     : Inside microservice#2
+2022-08-25 17:21:49.806  INFO [service2,d010cd6602ef29ac,69fe0f83e108c974] 61309 --- [http-nio-8082-exec-10] com.noh.service2.controller.HomeCont     : Inside microservice#2
+2022-08-25 17:24:02.258  INFO [service2,d3521f3c10f042cc,d3521f3c10f042cc] 61309 --- [http-nio-8082-exec-4] com.noh.service2.controller.HomeCont     : Inside microservice#2
+2022-08-25 17:24:02.558  INFO [service2,733a1d975846ef4a,733a1d975846ef4a] 61309 --- [http-nio-8082-exec-5] com.noh.service2.controller.HomeCont     : Inside microservice#2
+2022-08-25 17:24:02.895  INFO [service2,c2c7e7d4adc6de07,c2c7e7d4adc6de07] 61309 --- [http-nio-8082-exec-6] com.noh.service2.controller.HomeCont     : Inside microservice#2
+2022-08-25 17:24:32.345  INFO [service2,83c5eb402d4cbb3f,1fe5fa22f20ec8f0] 61309 --- [http-nio-8082-exec-7] com.noh.service2.controller.HomeCont     : Inside microservice#2
+2022-08-25 17:24:34.126  INFO [service2,c7768ca7eea071b5,0cd3901856b1aa87] 61309 --- [http-nio-8082-exec-8] com.noh.service2.controller.HomeCont     : Inside microservice#2
+2022-08-25 17:24:34.529  INFO [service2,608282d331839751,b96eca588aba1b47] 61309 --- [http-nio-8082-exec-9] com.noh.service2.controller.HomeCont     : Inside microservice#2
+2022-08-25 20:57:53.356  INFO [service2,,] 61309 --- [Thread-5] o.s.c.s.a.z.ZipkinAutoConfiguration      : Flushing remaining spans on shutdown
+2022-08-25 20:57:58.779  INFO [service2,,] 71659 --- [main] com.noh.service2.Service2Application     : Starting Service2Application using Java 1.8.0_312 on Anoudeths-MacBook-Pro.local with PID 71659 (/Users/nohder/dev/spring/spring-boot-tutorial/service2/target/classes started by nohder in /Users/nohder/dev/spring/spring-boot-tutorial/service2)
+2022-08-25 20:57:58.780 DEBUG [service2,,] 71659 --- [main] com.noh.service2.Service2Application     : Running with Spring Boot v2.6.11, Spring v5.3.22
+2022-08-25 20:57:58.780  INFO [service2,,] 71659 --- [main] com.noh.service2.Service2Application     : The following 1 profile is active: "dev"
+2022-08-25 20:57:59.150  INFO [service2,,] 71659 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=f751c000-28ed-371b-8c13-dd9cd211553e
+2022-08-25 20:57:59.389  INFO [service2,,] 71659 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8082 (http)
+2022-08-25 20:57:59.393  INFO [service2,,] 71659 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-08-25 20:57:59.393  INFO [service2,,] 71659 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-08-25 20:57:59.435  INFO [service2,,] 71659 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-08-25 20:57:59.435  INFO [service2,,] 71659 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 635 ms
+2022-08-25 20:57:59.917  INFO [service2,,] 71659 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8082 (http) with context path ''
+2022-08-25 20:57:59.926  INFO [service2,,] 71659 --- [main] com.noh.service2.Service2Application     : Started Service2Application in 1.4 seconds (JVM running for 1.689)
+2022-08-25 20:58:10.573  INFO [service2,c4f54ce9ca44ff12,c4f54ce9ca44ff12] 71659 --- [http-nio-8082-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-08-25 20:58:10.573  INFO [service2,c4f54ce9ca44ff12,c4f54ce9ca44ff12] 71659 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-08-25 20:58:10.574  INFO [service2,c4f54ce9ca44ff12,c4f54ce9ca44ff12] 71659 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-08-25 20:58:10.583  INFO [service2,c4f54ce9ca44ff12,c4f54ce9ca44ff12] 71659 --- [http-nio-8082-exec-1] com.noh.service2.controller.HomeCont     : Inside microservice#2
+2022-08-25 20:58:10.738  INFO [service2,5051ba1001cf9228,5051ba1001cf9228] 71659 --- [http-nio-8082-exec-2] com.noh.service2.controller.HomeCont     : Inside microservice#2
+2022-08-25 20:59:17.398  INFO [service2,488a3dd91ed51fff,56d0fbcd1e7b81fd] 71659 --- [http-nio-8082-exec-4] com.noh.service2.controller.HomeCont     : Inside microservice#2
+2022-08-25 20:59:18.917  INFO [service2,7913f9ab8fa4dc1a,2bd2ebbdb7426c5b] 71659 --- [http-nio-8082-exec-6] com.noh.service2.controller.HomeCont     : Inside microservice#2
+2022-08-25 20:59:19.084  INFO [service2,fb45f5351830f39f,387d3b763364f86e] 71659 --- [http-nio-8082-exec-7] com.noh.service2.controller.HomeCont     : Inside microservice#2
+2022-08-25 21:05:56.897  INFO [service2,e2a766b9b6eb5dab,343427be9dd66fe6] 71659 --- [http-nio-8082-exec-9] com.noh.service2.controller.HomeCont     : Inside microservice#2

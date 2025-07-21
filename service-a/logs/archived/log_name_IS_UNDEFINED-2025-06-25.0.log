@@ -1,0 +1,172 @@
+2025-06-25T17:42:43.428+07:00  INFO 42380 --- [main] [                                                 ] c.e.servicea.ServiceAApplicationTests    : Starting ServiceAApplicationTests using Java 21.0.2 with PID 42380 (started by nohder in /Users/nohder/dev/spring/spring-boot-tutorial/service-a)
+2025-06-25T17:42:43.429+07:00 DEBUG 42380 --- [main] [                                                 ] c.e.servicea.ServiceAApplicationTests    : Running with Spring Boot v3.3.0, Spring v6.1.8
+2025-06-25T17:42:43.430+07:00  INFO 42380 --- [main] [                                                 ] c.e.servicea.ServiceAApplicationTests    : The following 1 profile is active: "dev"
+2025-06-25T17:42:43.928+07:00  INFO 42380 --- [main] [                                                 ] o.s.cloud.context.scope.GenericScope     : BeanFactory id=1f673b43-a57b-3782-a462-dc3e3d092066
+2025-06-25T17:42:44.808+07:00  INFO 42380 --- [main] [                                                 ] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2025-06-25T17:42:44.853+07:00  INFO 42380 --- [main] [                                                 ] c.e.servicea.ServiceAApplicationTests    : Started ServiceAApplicationTests in 1.731 seconds (process running for 2.226)
+2025-06-25T17:49:52.897+07:00  INFO 46152 --- [main] [                                                 ] c.example.servicea.ServiceAApplication   : Starting ServiceAApplication using Java 21.0.2 with PID 46152 (/Users/nohder/dev/spring/spring-boot-tutorial/service-a/target/classes started by nohder in /Users/nohder/dev/spring/spring-boot-tutorial/service-a)
+2025-06-25T17:49:52.899+07:00 DEBUG 46152 --- [main] [                                                 ] c.example.servicea.ServiceAApplication   : Running with Spring Boot v3.3.0, Spring v6.1.8
+2025-06-25T17:49:52.900+07:00  INFO 46152 --- [main] [                                                 ] c.example.servicea.ServiceAApplication   : The following 1 profile is active: "dev"
+2025-06-25T17:49:53.490+07:00  INFO 46152 --- [main] [                                                 ] o.s.cloud.context.scope.GenericScope     : BeanFactory id=22d10854-1c6a-3cb4-b5b7-1084dc5d6c67
+2025-06-25T17:49:53.773+07:00  INFO 46152 --- [main] [                                                 ] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 6001 (http)
+2025-06-25T17:49:53.779+07:00  INFO 46152 --- [main] [                                                 ] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-06-25T17:49:53.779+07:00  INFO 46152 --- [main] [                                                 ] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.24]
+2025-06-25T17:49:53.812+07:00  INFO 46152 --- [main] [                                                 ] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-06-25T17:49:53.812+07:00  INFO 46152 --- [main] [                                                 ] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 876 ms
+2025-06-25T17:49:54.630+07:00  INFO 46152 --- [main] [                                                 ] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2025-06-25T17:49:54.773+07:00  INFO 46152 --- [main] [                                                 ] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 6001 (http) with context path '/'
+2025-06-25T17:49:54.793+07:00  INFO 46152 --- [main] [                                                 ] c.example.servicea.ServiceAApplication   : Started ServiceAApplication in 2.261 seconds (process running for 2.727)
+2025-06-25T17:49:56.178+07:00  INFO 46152 --- [RMI TCP Connection(2)-127.0.0.1] [                                                 ] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-06-25T17:49:56.178+07:00  INFO 46152 --- [RMI TCP Connection(2)-127.0.0.1] [                                                 ] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-06-25T17:49:56.178+07:00  INFO 46152 --- [RMI TCP Connection(2)-127.0.0.1] [                                                 ] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2025-06-25T17:50:19.514+07:00  INFO 46152 --- [http-nio-6001-exec-1] [d5d960f577268ee7b9043fc9359117fb-1c8cf0c5fa977206] c.example.servicea.ServiceAApplication   : Service A from host: Anoudeths-MacBook-Pro.local
+2025-06-25T17:50:24.036+07:00  INFO 46152 --- [http-nio-6001-exec-2] [5616c07ceee65a50ade487e78f8e9ab6-e0ece7772a45e8b8] c.example.servicea.ServiceAApplication   : Service A from host: Anoudeths-MacBook-Pro.local
+2025-06-25T17:50:25.406+07:00  INFO 46152 --- [http-nio-6001-exec-3] [82bc40a93c62cb6b0bcaf43c30dc5db2-55ca43f03d0e2282] c.example.servicea.ServiceAApplication   : Service A from host: Anoudeths-MacBook-Pro.local
+2025-06-25T17:50:26.021+07:00  INFO 46152 --- [http-nio-6001-exec-4] [49c809e340f22a15dc8b2cf119c7d762-cc1980f8db44f83d] c.example.servicea.ServiceAApplication   : Service A from host: Anoudeths-MacBook-Pro.local
+2025-06-25T17:50:29.306+07:00 ERROR 46152 --- [OkHttp http://ubuntu-dev.indochinabank.com:4318/...] [                                                 ] i.o.exporter.internal.http.HttpExporter  : Failed to export spans. The request could not be executed. Full error message: ubuntu-dev.indochinabank.com: nodename nor servname provided, or not known
+
+java.net.UnknownHostException: ubuntu-dev.indochinabank.com: nodename nor servname provided, or not known
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Inet6AddressImpl.java:52)
+	at java.base/java.net.InetAddress$PlatformResolver.lookupByName(InetAddress.java:1211)
+	at java.base/java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1828)
+	at java.base/java.net.InetAddress$NameServiceAddresses.get(InetAddress.java:1139)
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1818)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1688)
+	at okhttp3.Dns$Companion$DnsSystem.lookup(Dns.kt:49)
+	at okhttp3.internal.connection.RouteSelector.resetNextInetSocketAddress(RouteSelector.kt:169)
+	at okhttp3.internal.connection.RouteSelector.nextProxy(RouteSelector.kt:131)
+	at okhttp3.internal.connection.RouteSelector.next(RouteSelector.kt:73)
+	at okhttp3.internal.connection.ExchangeFinder.findConnection(ExchangeFinder.kt:205)
+	at okhttp3.internal.connection.ExchangeFinder.findHealthyConnection(ExchangeFinder.kt:106)
+	at okhttp3.internal.connection.ExchangeFinder.find(ExchangeFinder.kt:74)
+	at okhttp3.internal.connection.RealCall.initExchange$okhttp(RealCall.kt:255)
+	at okhttp3.internal.connection.ConnectInterceptor.intercept(ConnectInterceptor.kt:32)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:109)
+	at okhttp3.internal.cache.CacheInterceptor.intercept(CacheInterceptor.kt:95)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:109)
+	at okhttp3.internal.http.BridgeInterceptor.intercept(BridgeInterceptor.kt:83)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:109)
+	at okhttp3.internal.http.RetryAndFollowUpInterceptor.intercept(RetryAndFollowUpInterceptor.kt:76)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:109)
+	at okhttp3.internal.connection.RealCall.getResponseWithInterceptorChain$okhttp(RealCall.kt:201)
+	at okhttp3.internal.connection.RealCall$AsyncCall.run(RealCall.kt:517)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+
+2025-06-25T17:50:30.626+07:00  INFO 46152 --- [http-nio-6001-exec-5] [0a3021a1ad88fbef43e45fd7945e07cb-65614fa7b44705ac] c.example.servicea.controller.HelloCont  : >>> START
+2025-06-25T17:50:30.626+07:00  INFO 46152 --- [http-nio-6001-exec-5] [0a3021a1ad88fbef43e45fd7945e07cb-65614fa7b44705ac] c.example.servicea.controller.HelloCont  :  my world
+2025-06-25T17:50:30.626+07:00  INFO 46152 --- [http-nio-6001-exec-5] [0a3021a1ad88fbef43e45fd7945e07cb-65614fa7b44705ac] c.example.servicea.controller.HelloCont  : Thread: http-nio-6001-exec-5
+2025-06-25T17:50:30.626+07:00  INFO 46152 --- [http-nio-6001-exec-5] [0a3021a1ad88fbef43e45fd7945e07cb-65614fa7b44705ac] c.example.servicea.controller.HelloCont  : Thread ID: 47
+2025-06-25T17:50:30.626+07:00  INFO 46152 --- [http-nio-6001-exec-5] [0a3021a1ad88fbef43e45fd7945e07cb-65614fa7b44705ac] c.example.servicea.controller.HelloCont  : Thread Priority: 5
+2025-06-25T17:50:30.627+07:00  INFO 46152 --- [http-nio-6001-exec-5] [0a3021a1ad88fbef43e45fd7945e07cb-65614fa7b44705ac] c.example.servicea.controller.HelloCont  : Thread State: RUNNABLE
+2025-06-25T17:50:30.627+07:00  INFO 46152 --- [http-nio-6001-exec-5] [0a3021a1ad88fbef43e45fd7945e07cb-65614fa7b44705ac] c.example.servicea.controller.HelloCont  : Date: Wed Jun 25 17:50:30 ICT 2025
+2025-06-25T17:50:30.627+07:00  INFO 46152 --- [http-nio-6001-exec-5] [0a3021a1ad88fbef43e45fd7945e07cb-65614fa7b44705ac] c.example.servicea.controller.HelloCont  : >>> END
+2025-06-25T17:50:32.442+07:00  INFO 46152 --- [http-nio-6001-exec-6] [c3ca492c1323b1be1c790136d2113499-8d961f0e19ce7aa8] c.example.servicea.controller.HelloCont  : >>> START
+2025-06-25T17:50:32.442+07:00  INFO 46152 --- [http-nio-6001-exec-6] [c3ca492c1323b1be1c790136d2113499-8d961f0e19ce7aa8] c.example.servicea.controller.HelloCont  :  my world
+2025-06-25T17:50:32.442+07:00  INFO 46152 --- [http-nio-6001-exec-6] [c3ca492c1323b1be1c790136d2113499-8d961f0e19ce7aa8] c.example.servicea.controller.HelloCont  : Thread: http-nio-6001-exec-6
+2025-06-25T17:50:32.442+07:00  INFO 46152 --- [http-nio-6001-exec-6] [c3ca492c1323b1be1c790136d2113499-8d961f0e19ce7aa8] c.example.servicea.controller.HelloCont  : Thread ID: 48
+2025-06-25T17:50:32.443+07:00  INFO 46152 --- [http-nio-6001-exec-6] [c3ca492c1323b1be1c790136d2113499-8d961f0e19ce7aa8] c.example.servicea.controller.HelloCont  : Thread Priority: 5
+2025-06-25T17:50:32.443+07:00  INFO 46152 --- [http-nio-6001-exec-6] [c3ca492c1323b1be1c790136d2113499-8d961f0e19ce7aa8] c.example.servicea.controller.HelloCont  : Thread State: RUNNABLE
+2025-06-25T17:50:32.443+07:00  INFO 46152 --- [http-nio-6001-exec-6] [c3ca492c1323b1be1c790136d2113499-8d961f0e19ce7aa8] c.example.servicea.controller.HelloCont  : Date: Wed Jun 25 17:50:32 ICT 2025
+2025-06-25T17:50:32.443+07:00  INFO 46152 --- [http-nio-6001-exec-6] [c3ca492c1323b1be1c790136d2113499-8d961f0e19ce7aa8] c.example.servicea.controller.HelloCont  : >>> END
+2025-06-25T17:50:33.506+07:00  INFO 46152 --- [http-nio-6001-exec-7] [43c1d2ac15d18baafdc85e84973a3137-937829e009c194a2] c.example.servicea.controller.HelloCont  : >>> START
+2025-06-25T17:50:33.506+07:00  INFO 46152 --- [http-nio-6001-exec-7] [43c1d2ac15d18baafdc85e84973a3137-937829e009c194a2] c.example.servicea.controller.HelloCont  :  my world
+2025-06-25T17:50:33.506+07:00  INFO 46152 --- [http-nio-6001-exec-7] [43c1d2ac15d18baafdc85e84973a3137-937829e009c194a2] c.example.servicea.controller.HelloCont  : Thread: http-nio-6001-exec-7
+2025-06-25T17:50:33.506+07:00  INFO 46152 --- [http-nio-6001-exec-7] [43c1d2ac15d18baafdc85e84973a3137-937829e009c194a2] c.example.servicea.controller.HelloCont  : Thread ID: 49
+2025-06-25T17:50:33.506+07:00  INFO 46152 --- [http-nio-6001-exec-7] [43c1d2ac15d18baafdc85e84973a3137-937829e009c194a2] c.example.servicea.controller.HelloCont  : Thread Priority: 5
+2025-06-25T17:50:33.506+07:00  INFO 46152 --- [http-nio-6001-exec-7] [43c1d2ac15d18baafdc85e84973a3137-937829e009c194a2] c.example.servicea.controller.HelloCont  : Thread State: RUNNABLE
+2025-06-25T17:50:33.506+07:00  INFO 46152 --- [http-nio-6001-exec-7] [43c1d2ac15d18baafdc85e84973a3137-937829e009c194a2] c.example.servicea.controller.HelloCont  : Date: Wed Jun 25 17:50:33 ICT 2025
+2025-06-25T17:50:33.506+07:00  INFO 46152 --- [http-nio-6001-exec-7] [43c1d2ac15d18baafdc85e84973a3137-937829e009c194a2] c.example.servicea.controller.HelloCont  : >>> END
+2025-06-25T17:50:34.157+07:00  INFO 46152 --- [http-nio-6001-exec-8] [f152f108a7ebbf9505e6aea411e734bf-a1e62b7bc5fc1a6c] c.example.servicea.controller.HelloCont  : >>> START
+2025-06-25T17:50:34.157+07:00  INFO 46152 --- [http-nio-6001-exec-8] [f152f108a7ebbf9505e6aea411e734bf-a1e62b7bc5fc1a6c] c.example.servicea.controller.HelloCont  :  my world
+2025-06-25T17:50:34.157+07:00  INFO 46152 --- [http-nio-6001-exec-8] [f152f108a7ebbf9505e6aea411e734bf-a1e62b7bc5fc1a6c] c.example.servicea.controller.HelloCont  : Thread: http-nio-6001-exec-8
+2025-06-25T17:50:34.157+07:00  INFO 46152 --- [http-nio-6001-exec-8] [f152f108a7ebbf9505e6aea411e734bf-a1e62b7bc5fc1a6c] c.example.servicea.controller.HelloCont  : Thread ID: 50
+2025-06-25T17:50:34.157+07:00  INFO 46152 --- [http-nio-6001-exec-8] [f152f108a7ebbf9505e6aea411e734bf-a1e62b7bc5fc1a6c] c.example.servicea.controller.HelloCont  : Thread Priority: 5
+2025-06-25T17:50:34.157+07:00  INFO 46152 --- [http-nio-6001-exec-8] [f152f108a7ebbf9505e6aea411e734bf-a1e62b7bc5fc1a6c] c.example.servicea.controller.HelloCont  : Thread State: RUNNABLE
+2025-06-25T17:50:34.157+07:00  INFO 46152 --- [http-nio-6001-exec-8] [f152f108a7ebbf9505e6aea411e734bf-a1e62b7bc5fc1a6c] c.example.servicea.controller.HelloCont  : Date: Wed Jun 25 17:50:34 ICT 2025
+2025-06-25T17:50:34.157+07:00  INFO 46152 --- [http-nio-6001-exec-8] [f152f108a7ebbf9505e6aea411e734bf-a1e62b7bc5fc1a6c] c.example.servicea.controller.HelloCont  : >>> END
+2025-06-25T17:50:34.310+07:00 ERROR 46152 --- [OkHttp http://ubuntu-dev.indochinabank.com:4318/...] [                                                 ] i.o.exporter.internal.http.HttpExporter  : Failed to export spans. The request could not be executed. Full error message: ubuntu-dev.indochinabank.com
+
+java.net.UnknownHostException: ubuntu-dev.indochinabank.com
+	at java.base/java.net.InetAddress$CachedLookup.get(InetAddress.java:988)
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1818)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1688)
+	at okhttp3.Dns$Companion$DnsSystem.lookup(Dns.kt:49)
+	at okhttp3.internal.connection.RouteSelector.resetNextInetSocketAddress(RouteSelector.kt:169)
+	at okhttp3.internal.connection.RouteSelector.nextProxy(RouteSelector.kt:131)
+	at okhttp3.internal.connection.RouteSelector.next(RouteSelector.kt:73)
+	at okhttp3.internal.connection.ExchangeFinder.findConnection(ExchangeFinder.kt:205)
+	at okhttp3.internal.connection.ExchangeFinder.findHealthyConnection(ExchangeFinder.kt:106)
+	at okhttp3.internal.connection.ExchangeFinder.find(ExchangeFinder.kt:74)
+	at okhttp3.internal.connection.RealCall.initExchange$okhttp(RealCall.kt:255)
+	at okhttp3.internal.connection.ConnectInterceptor.intercept(ConnectInterceptor.kt:32)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:109)
+	at okhttp3.internal.cache.CacheInterceptor.intercept(CacheInterceptor.kt:95)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:109)
+	at okhttp3.internal.http.BridgeInterceptor.intercept(BridgeInterceptor.kt:83)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:109)
+	at okhttp3.internal.http.RetryAndFollowUpInterceptor.intercept(RetryAndFollowUpInterceptor.kt:76)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:109)
+	at okhttp3.internal.connection.RealCall.getResponseWithInterceptorChain$okhttp(RealCall.kt:201)
+	at okhttp3.internal.connection.RealCall$AsyncCall.run(RealCall.kt:517)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+
+2025-06-25T17:50:34.689+07:00  INFO 46152 --- [http-nio-6001-exec-9] [a0799b0cdd30d955f7bfd96980371bcb-be4166b5f43f5fa7] c.example.servicea.controller.HelloCont  : >>> START
+2025-06-25T17:50:34.689+07:00  INFO 46152 --- [http-nio-6001-exec-9] [a0799b0cdd30d955f7bfd96980371bcb-be4166b5f43f5fa7] c.example.servicea.controller.HelloCont  :  my world
+2025-06-25T17:50:34.689+07:00  INFO 46152 --- [http-nio-6001-exec-9] [a0799b0cdd30d955f7bfd96980371bcb-be4166b5f43f5fa7] c.example.servicea.controller.HelloCont  : Thread: http-nio-6001-exec-9
+2025-06-25T17:50:34.689+07:00  INFO 46152 --- [http-nio-6001-exec-9] [a0799b0cdd30d955f7bfd96980371bcb-be4166b5f43f5fa7] c.example.servicea.controller.HelloCont  : Thread ID: 51
+2025-06-25T17:50:34.689+07:00  INFO 46152 --- [http-nio-6001-exec-9] [a0799b0cdd30d955f7bfd96980371bcb-be4166b5f43f5fa7] c.example.servicea.controller.HelloCont  : Thread Priority: 5
+2025-06-25T17:50:34.689+07:00  INFO 46152 --- [http-nio-6001-exec-9] [a0799b0cdd30d955f7bfd96980371bcb-be4166b5f43f5fa7] c.example.servicea.controller.HelloCont  : Thread State: RUNNABLE
+2025-06-25T17:50:34.689+07:00  INFO 46152 --- [http-nio-6001-exec-9] [a0799b0cdd30d955f7bfd96980371bcb-be4166b5f43f5fa7] c.example.servicea.controller.HelloCont  : Date: Wed Jun 25 17:50:34 ICT 2025
+2025-06-25T17:50:34.689+07:00  INFO 46152 --- [http-nio-6001-exec-9] [a0799b0cdd30d955f7bfd96980371bcb-be4166b5f43f5fa7] c.example.servicea.controller.HelloCont  : >>> END
+2025-06-25T17:50:39.319+07:00 ERROR 46152 --- [OkHttp http://ubuntu-dev.indochinabank.com:4318/...] [                                                 ] i.o.exporter.internal.http.HttpExporter  : Failed to export spans. The request could not be executed. Full error message: ubuntu-dev.indochinabank.com: nodename nor servname provided, or not known
+
+java.net.UnknownHostException: ubuntu-dev.indochinabank.com: nodename nor servname provided, or not known
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Inet6AddressImpl.java:52)
+	at java.base/java.net.InetAddress$PlatformResolver.lookupByName(InetAddress.java:1211)
+	at java.base/java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1828)
+	at java.base/java.net.InetAddress$NameServiceAddresses.get(InetAddress.java:1139)
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1818)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1688)
+	at okhttp3.Dns$Companion$DnsSystem.lookup(Dns.kt:49)
+	at okhttp3.internal.connection.RouteSelector.resetNextInetSocketAddress(RouteSelector.kt:169)
+	at okhttp3.internal.connection.RouteSelector.nextProxy(RouteSelector.kt:131)
+	at okhttp3.internal.connection.RouteSelector.next(RouteSelector.kt:73)
+	at okhttp3.internal.connection.ExchangeFinder.findConnection(ExchangeFinder.kt:205)
+	at okhttp3.internal.connection.ExchangeFinder.findHealthyConnection(ExchangeFinder.kt:106)
+	at okhttp3.internal.connection.ExchangeFinder.find(ExchangeFinder.kt:74)
+	at okhttp3.internal.connection.RealCall.initExchange$okhttp(RealCall.kt:255)
+	at okhttp3.internal.connection.ConnectInterceptor.intercept(ConnectInterceptor.kt:32)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:109)
+	at okhttp3.internal.cache.CacheInterceptor.intercept(CacheInterceptor.kt:95)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:109)
+	at okhttp3.internal.http.BridgeInterceptor.intercept(BridgeInterceptor.kt:83)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:109)
+	at okhttp3.internal.http.RetryAndFollowUpInterceptor.intercept(RetryAndFollowUpInterceptor.kt:76)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:109)
+	at okhttp3.internal.connection.RealCall.getResponseWithInterceptorChain$okhttp(RealCall.kt:201)
+	at okhttp3.internal.connection.RealCall$AsyncCall.run(RealCall.kt:517)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+
+2025-06-25T17:51:28.829+07:00  INFO 47205 --- [main] [                                                 ] c.example.servicea.ServiceAApplication   : Starting ServiceAApplication using Java 21.0.2 with PID 47205 (/Users/nohder/dev/spring/spring-boot-tutorial/service-a/target/classes started by nohder in /Users/nohder/dev/spring/spring-boot-tutorial/service-a)
+2025-06-25T17:51:28.830+07:00 DEBUG 47205 --- [main] [                                                 ] c.example.servicea.ServiceAApplication   : Running with Spring Boot v3.3.0, Spring v6.1.8
+2025-06-25T17:51:28.831+07:00  INFO 47205 --- [main] [                                                 ] c.example.servicea.ServiceAApplication   : The following 1 profile is active: "dev"
+2025-06-25T17:51:29.383+07:00  INFO 47205 --- [main] [                                                 ] o.s.cloud.context.scope.GenericScope     : BeanFactory id=22d10854-1c6a-3cb4-b5b7-1084dc5d6c67
+2025-06-25T17:51:29.652+07:00  INFO 47205 --- [main] [                                                 ] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 6001 (http)
+2025-06-25T17:51:29.658+07:00  INFO 47205 --- [main] [                                                 ] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-06-25T17:51:29.658+07:00  INFO 47205 --- [main] [                                                 ] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.24]
+2025-06-25T17:51:29.686+07:00  INFO 47205 --- [main] [                                                 ] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-06-25T17:51:29.686+07:00  INFO 47205 --- [main] [                                                 ] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 829 ms
+2025-06-25T17:51:30.751+07:00  INFO 47205 --- [main] [                                                 ] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2025-06-25T17:51:30.807+07:00  INFO 47205 --- [main] [                                                 ] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 6001 (http) with context path '/'
+2025-06-25T17:51:30.831+07:00  INFO 47205 --- [main] [                                                 ] c.example.servicea.ServiceAApplication   : Started ServiceAApplication in 2.338 seconds (process running for 2.718)
+2025-06-25T17:51:31.666+07:00  INFO 47205 --- [RMI TCP Connection(2)-127.0.0.1] [                                                 ] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-06-25T17:51:31.666+07:00  INFO 47205 --- [RMI TCP Connection(2)-127.0.0.1] [                                                 ] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-06-25T17:51:31.667+07:00  INFO 47205 --- [RMI TCP Connection(2)-127.0.0.1] [                                                 ] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms

@@ -1,0 +1,152 @@
+2023-10-28T14:28:24.536+07:00  INFO 8852 --- [main] c.example.servicea.ServiceAApplication   : Starting ServiceAApplication using Java 17.0.3-ea with PID 8852 (/Users/nohder/dev/spring/spring-boot-tutorial/service-a/target/classes started by nohder in /Users/nohder/dev/spring/spring-boot-tutorial/service-a)
+2023-10-28T14:28:24.537+07:00 DEBUG 8852 --- [main] c.example.servicea.ServiceAApplication   : Running with Spring Boot v3.1.0, Spring v6.0.9
+2023-10-28T14:28:24.538+07:00  INFO 8852 --- [main] c.example.servicea.ServiceAApplication   : The following 1 profile is active: "dev"
+2023-10-28T14:28:25.225+07:00  INFO 8852 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=4643308d-1318-30fb-85cd-72e3d1bdc8ac
+2023-10-28T14:28:25.471+07:00  INFO 8852 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 6001 (http)
+2023-10-28T14:28:25.476+07:00  INFO 8852 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-10-28T14:28:25.476+07:00  INFO 8852 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.8]
+2023-10-28T14:28:25.545+07:00  INFO 8852 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-10-28T14:28:25.546+07:00  INFO 8852 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 967 ms
+2023-10-28T14:28:25.798+07:00  WARN 8852 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'apiServiceB' defined in file [/Users/nohder/dev/spring/spring-boot-tutorial/service-a/target/classes/com/example/servicea/remote/ApiServiceB.class]: Unsatisfied dependency expressed through constructor parameter 0: No qualifying bean of type 'com.example.servicea.remote.ApiServiceBInterface' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2023-10-28T14:28:25.799+07:00  INFO 8852 --- [main] i.o.sdk.trace.SdkTracerProvider          : Calling shutdown() multiple times.
+2023-10-28T14:28:25.799+07:00  INFO 8852 --- [main] i.o.e.internal.okhttp.OkHttpExporter     : Calling shutdown() multiple times.
+2023-10-28T14:28:25.801+07:00  INFO 8852 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-10-28T14:28:25.803+07:00  WARN 8852 --- [main] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [BatchSpanProcessor_WorkerThread-1] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:252)
+ java.base/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1672)
+ java.base/java.util.concurrent.ArrayBlockingQueue.poll(ArrayBlockingQueue.java:435)
+ io.opentelemetry.sdk.trace.export.BatchSpanProcessor$Worker.run(BatchSpanProcessor.java:252)
+ java.base/java.lang.Thread.run(Thread.java:889)
+2023-10-28T14:28:25.829+07:00  INFO 8852 --- [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-10-28T14:28:25.845+07:00 ERROR 8852 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in com.example.servicea.remote.ApiServiceB required a bean of type 'com.example.servicea.remote.ApiServiceBInterface' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.example.servicea.remote.ApiServiceBInterface' in your configuration.
+
+2023-10-28T14:29:31.421+07:00  INFO 8951 --- [main] c.example.servicea.ServiceAApplication   : Starting ServiceAApplication using Java 17.0.3-ea with PID 8951 (/Users/nohder/dev/spring/spring-boot-tutorial/service-a/target/classes started by nohder in /Users/nohder/dev/spring/spring-boot-tutorial/service-a)
+2023-10-28T14:29:31.424+07:00 DEBUG 8951 --- [main] c.example.servicea.ServiceAApplication   : Running with Spring Boot v3.1.0, Spring v6.0.9
+2023-10-28T14:29:31.425+07:00  INFO 8951 --- [main] c.example.servicea.ServiceAApplication   : The following 1 profile is active: "dev"
+2023-10-28T14:29:32.095+07:00  INFO 8951 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=4643308d-1318-30fb-85cd-72e3d1bdc8ac
+2023-10-28T14:29:32.293+07:00  INFO 8951 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 6001 (http)
+2023-10-28T14:29:32.298+07:00  INFO 8951 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-10-28T14:29:32.298+07:00  INFO 8951 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.8]
+2023-10-28T14:29:32.352+07:00  INFO 8951 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-10-28T14:29:32.354+07:00  INFO 8951 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 886 ms
+2023-10-28T14:29:32.603+07:00  WARN 8951 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'serviceAApplication': Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'apiServiceB' defined in file [/Users/nohder/dev/spring/spring-boot-tutorial/service-a/target/classes/com/example/servicea/remote/ApiServiceB.class]: Unsatisfied dependency expressed through constructor parameter 0: No qualifying bean of type 'com.example.servicea.remote.ApiServiceBInterface' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2023-10-28T14:29:32.604+07:00  INFO 8951 --- [main] i.o.sdk.trace.SdkTracerProvider          : Calling shutdown() multiple times.
+2023-10-28T14:29:32.604+07:00  INFO 8951 --- [main] i.o.e.internal.okhttp.OkHttpExporter     : Calling shutdown() multiple times.
+2023-10-28T14:29:32.605+07:00  INFO 8951 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-10-28T14:29:32.609+07:00  WARN 8951 --- [main] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [BatchSpanProcessor_WorkerThread-1] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:252)
+ java.base/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1672)
+ java.base/java.util.concurrent.ArrayBlockingQueue.poll(ArrayBlockingQueue.java:435)
+ io.opentelemetry.sdk.trace.export.BatchSpanProcessor$Worker.run(BatchSpanProcessor.java:252)
+ java.base/java.lang.Thread.run(Thread.java:889)
+2023-10-28T14:29:32.635+07:00  INFO 8951 --- [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-10-28T14:29:32.653+07:00 ERROR 8951 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in com.example.servicea.remote.ApiServiceB required a bean of type 'com.example.servicea.remote.ApiServiceBInterface' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.example.servicea.remote.ApiServiceBInterface' in your configuration.
+
+2023-10-28T14:31:44.728+07:00  INFO 9139 --- [main] c.example.servicea.ServiceAApplication   : Starting ServiceAApplication using Java 17.0.3-ea with PID 9139 (/Users/nohder/dev/spring/spring-boot-tutorial/service-a/target/classes started by nohder in /Users/nohder/dev/spring/spring-boot-tutorial/service-a)
+2023-10-28T14:31:44.731+07:00 DEBUG 9139 --- [main] c.example.servicea.ServiceAApplication   : Running with Spring Boot v3.1.0, Spring v6.0.9
+2023-10-28T14:31:44.733+07:00  INFO 9139 --- [main] c.example.servicea.ServiceAApplication   : The following 1 profile is active: "dev"
+2023-10-28T14:31:45.640+07:00  INFO 9139 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=aa84b6fb-2cf7-3c26-af6c-54b7f490dff2
+2023-10-28T14:31:46.054+07:00  INFO 9139 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 6001 (http)
+2023-10-28T14:31:46.059+07:00  INFO 9139 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-10-28T14:31:46.059+07:00  INFO 9139 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.8]
+2023-10-28T14:31:46.143+07:00  INFO 9139 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-10-28T14:31:46.144+07:00  INFO 9139 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1349 ms
+2023-10-28T14:31:46.483+07:00  WARN 9139 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'helloCont' defined in file [/Users/nohder/dev/spring/spring-boot-tutorial/service-a/target/classes/com/example/servicea/controller/HelloCont.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'apiServiceB' defined in file [/Users/nohder/dev/spring/spring-boot-tutorial/service-a/target/classes/com/example/servicea/remote/ApiServiceB.class]: Unsatisfied dependency expressed through constructor parameter 0: No qualifying bean of type 'com.example.servicea.remote.ApiServiceBInterface' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2023-10-28T14:31:46.487+07:00  INFO 9139 --- [main] i.o.sdk.trace.SdkTracerProvider          : Calling shutdown() multiple times.
+2023-10-28T14:31:46.487+07:00  INFO 9139 --- [main] i.o.e.internal.okhttp.OkHttpExporter     : Calling shutdown() multiple times.
+2023-10-28T14:31:46.489+07:00  INFO 9139 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-10-28T14:31:46.492+07:00  WARN 9139 --- [main] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [BatchSpanProcessor_WorkerThread-1] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:252)
+ java.base/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1672)
+ java.base/java.util.concurrent.ArrayBlockingQueue.poll(ArrayBlockingQueue.java:435)
+ io.opentelemetry.sdk.trace.export.BatchSpanProcessor$Worker.run(BatchSpanProcessor.java:252)
+ java.base/java.lang.Thread.run(Thread.java:889)
+2023-10-28T14:31:46.505+07:00  INFO 9139 --- [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-10-28T14:31:46.533+07:00 ERROR 9139 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in com.example.servicea.remote.ApiServiceB required a bean of type 'com.example.servicea.remote.ApiServiceBInterface' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.example.servicea.remote.ApiServiceBInterface' in your configuration.
+
+2023-10-28T14:44:00.777+07:00  INFO 10063 --- [main] c.example.servicea.ServiceAApplication   : Starting ServiceAApplication using Java 17.0.3-ea with PID 10063 (/Users/nohder/dev/spring/spring-boot-tutorial/service-a/target/classes started by nohder in /Users/nohder/dev/spring/spring-boot-tutorial/service-a)
+2023-10-28T14:44:00.780+07:00 DEBUG 10063 --- [main] c.example.servicea.ServiceAApplication   : Running with Spring Boot v3.1.0, Spring v6.0.9
+2023-10-28T14:44:00.780+07:00  INFO 10063 --- [main] c.example.servicea.ServiceAApplication   : The following 1 profile is active: "dev"
+2023-10-28T14:44:01.435+07:00  INFO 10063 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=aa84b6fb-2cf7-3c26-af6c-54b7f490dff2
+2023-10-28T14:44:01.629+07:00  INFO 10063 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 6001 (http)
+2023-10-28T14:44:01.634+07:00  INFO 10063 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-10-28T14:44:01.635+07:00  INFO 10063 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.8]
+2023-10-28T14:44:01.691+07:00  INFO 10063 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-10-28T14:44:01.692+07:00  INFO 10063 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 875 ms
+2023-10-28T14:44:01.929+07:00  WARN 10063 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'helloCont' defined in file [/Users/nohder/dev/spring/spring-boot-tutorial/service-a/target/classes/com/example/servicea/controller/HelloCont.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'apiServiceB' defined in file [/Users/nohder/dev/spring/spring-boot-tutorial/service-a/target/classes/com/example/servicea/remote/ApiServiceB.class]: Unsatisfied dependency expressed through constructor parameter 0: No qualifying bean of type 'com.example.servicea.remote.ApiServiceBInterface' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2023-10-28T14:44:01.932+07:00  INFO 10063 --- [main] i.o.sdk.trace.SdkTracerProvider          : Calling shutdown() multiple times.
+2023-10-28T14:44:01.932+07:00  INFO 10063 --- [main] i.o.e.internal.okhttp.OkHttpExporter     : Calling shutdown() multiple times.
+2023-10-28T14:44:01.934+07:00  INFO 10063 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-10-28T14:44:01.937+07:00  WARN 10063 --- [main] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [BatchSpanProcessor_WorkerThread-1] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:252)
+ java.base/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1672)
+ java.base/java.util.concurrent.ArrayBlockingQueue.poll(ArrayBlockingQueue.java:435)
+ io.opentelemetry.sdk.trace.export.BatchSpanProcessor$Worker.run(BatchSpanProcessor.java:252)
+ java.base/java.lang.Thread.run(Thread.java:889)
+2023-10-28T14:44:01.958+07:00  INFO 10063 --- [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-10-28T14:44:01.970+07:00 ERROR 10063 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in com.example.servicea.remote.ApiServiceB required a bean of type 'com.example.servicea.remote.ApiServiceBInterface' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.example.servicea.remote.ApiServiceBInterface' in your configuration.
+

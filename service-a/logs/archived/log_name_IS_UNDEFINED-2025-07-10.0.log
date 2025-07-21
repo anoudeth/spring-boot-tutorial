@@ -1,0 +1,1085 @@
+2025-07-10T18:01:06.117+07:00  INFO 46967 --- [main] [                                                 ] c.example.servicea.ServiceAApplication   : Starting ServiceAApplication using Java 21.0.2 with PID 46967 (/Users/nohder/dev/spring/spring-boot-tutorial/service-a/target/classes started by nohder in /Users/nohder/dev/spring/spring-boot-tutorial/service-a)
+2025-07-10T18:01:06.123+07:00 DEBUG 46967 --- [main] [                                                 ] c.example.servicea.ServiceAApplication   : Running with Spring Boot v3.3.0, Spring v6.1.8
+2025-07-10T18:01:06.124+07:00  INFO 46967 --- [main] [                                                 ] c.example.servicea.ServiceAApplication   : The following 1 profile is active: "dev"
+2025-07-10T18:01:07.382+07:00  INFO 46967 --- [main] [                                                 ] o.s.cloud.context.scope.GenericScope     : BeanFactory id=22d10854-1c6a-3cb4-b5b7-1084dc5d6c67
+2025-07-10T18:01:07.801+07:00  INFO 46967 --- [main] [                                                 ] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 6001 (http)
+2025-07-10T18:01:07.813+07:00  INFO 46967 --- [main] [                                                 ] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-07-10T18:01:07.814+07:00  INFO 46967 --- [main] [                                                 ] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.24]
+2025-07-10T18:01:07.859+07:00  INFO 46967 --- [main] [                                                 ] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-07-10T18:01:07.861+07:00  INFO 46967 --- [main] [                                                 ] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1676 ms
+2025-07-10T18:01:09.211+07:00  INFO 46967 --- [main] [                                                 ] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2025-07-10T18:01:09.262+07:00  INFO 46967 --- [main] [                                                 ] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 6001 (http) with context path '/'
+2025-07-10T18:01:09.289+07:00  INFO 46967 --- [main] [                                                 ] c.example.servicea.ServiceAApplication   : Started ServiceAApplication in 4.268 seconds (process running for 5.575)
+2025-07-10T18:01:09.817+07:00  INFO 46967 --- [RMI TCP Connection(3)-127.0.0.1] [                                                 ] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-07-10T18:01:09.817+07:00  INFO 46967 --- [RMI TCP Connection(3)-127.0.0.1] [                                                 ] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-07-10T18:01:09.819+07:00  INFO 46967 --- [RMI TCP Connection(3)-127.0.0.1] [                                                 ] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-07-10T18:01:51.954+07:00  INFO 46967 --- [http-nio-6001-exec-1] [e1b83d0c3addc5bbfdab82ac5e4902bf-77422bdf5266d82d] c.example.servicea.controller.HelloCont  : >>> START
+2025-07-10T18:01:51.956+07:00  INFO 46967 --- [http-nio-6001-exec-1] [e1b83d0c3addc5bbfdab82ac5e4902bf-77422bdf5266d82d] c.example.servicea.remote.ApiServiceB    : > calling service B
+2025-07-10T18:01:52.001+07:00 ERROR 46967 --- [http-nio-6001-exec-1] [                                                 ] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: feign.RetryableException: Connection refused executing GET http://127.0.0.1:6002/service-b] with root cause
+
+java.net.ConnectException: Connection refused
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:592)
+	at java.base/java.net.Socket.connect(Socket.java:751)
+	at java.base/sun.net.NetworkClient.doConnect(NetworkClient.java:178)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:531)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:636)
+	at java.base/sun.net.www.http.HttpClient.<init>(HttpClient.java:280)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:386)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:408)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1304)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1237)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1123)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:1052)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1675)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1599)
+	at java.base/java.net.HttpURLConnection.getResponseCode(HttpURLConnection.java:531)
+	at feign.Client$Default.convertResponse(Client.java:111)
+	at feign.Client$Default.execute(Client.java:107)
+	at feign.micrometer.MeteredClient.execute(MeteredClient.java:48)
+	at feign.micrometer.MicrometerObservationCapability.lambda$enrich$1(MicrometerObservationCapability.java:53)
+	at feign.SynchronousMethodHandler.executeAndDecode(SynchronousMethodHandler.java:100)
+	at feign.SynchronousMethodHandler.invoke(SynchronousMethodHandler.java:70)
+	at feign.ReflectiveFeign$FeignInvocationHandler.invoke(ReflectiveFeign.java:99)
+	at feign.micrometer.MeteredInvocationHandleFactory.lambda$create$0(MeteredInvocationHandleFactory.java:70)
+	at jdk.proxy2/jdk.proxy2.$Proxy91.sendSms(Unknown Source)
+	at com.example.servicea.remote.ApiServiceB.callServiceB(ApiServiceB.java:19)
+	at com.example.servicea.controller.HelloCont.callServiceB(HelloCont.java:19)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:926)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:831)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:109)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+
+2025-07-10T18:01:53.534+07:00 ERROR 46967 --- [OkHttp http://ubuntu-dev.indochinabank.com:4318/...] [                                                 ] i.o.exporter.internal.http.HttpExporter  : Failed to export spans. The request could not be executed. Full error message: ubuntu-dev.indochinabank.com: nodename nor servname provided, or not known
+
+java.net.UnknownHostException: ubuntu-dev.indochinabank.com: nodename nor servname provided, or not known
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Inet6AddressImpl.java:52)
+	at java.base/java.net.InetAddress$PlatformResolver.lookupByName(InetAddress.java:1211)
+	at java.base/java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1828)
+	at java.base/java.net.InetAddress$NameServiceAddresses.get(InetAddress.java:1139)
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1818)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1688)
+	at okhttp3.Dns$Companion$DnsSystem.lookup(Dns.kt:49)
+	at okhttp3.internal.connection.RouteSelector.resetNextInetSocketAddress(RouteSelector.kt:169)
+	at okhttp3.internal.connection.RouteSelector.nextProxy(RouteSelector.kt:131)
+	at okhttp3.internal.connection.RouteSelector.next(RouteSelector.kt:73)
+	at okhttp3.internal.connection.ExchangeFinder.findConnection(ExchangeFinder.kt:205)
+	at okhttp3.internal.connection.ExchangeFinder.findHealthyConnection(ExchangeFinder.kt:106)
+	at okhttp3.internal.connection.ExchangeFinder.find(ExchangeFinder.kt:74)
+	at okhttp3.internal.connection.RealCall.initExchange$okhttp(RealCall.kt:255)
+	at okhttp3.internal.connection.ConnectInterceptor.intercept(ConnectInterceptor.kt:32)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:109)
+	at okhttp3.internal.cache.CacheInterceptor.intercept(CacheInterceptor.kt:95)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:109)
+	at okhttp3.internal.http.BridgeInterceptor.intercept(BridgeInterceptor.kt:83)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:109)
+	at okhttp3.internal.http.RetryAndFollowUpInterceptor.intercept(RetryAndFollowUpInterceptor.kt:76)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:109)
+	at okhttp3.internal.connection.RealCall.getResponseWithInterceptorChain$okhttp(RealCall.kt:201)
+	at okhttp3.internal.connection.RealCall$AsyncCall.run(RealCall.kt:517)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+
+2025-07-10T18:02:20.455+07:00  INFO 46967 --- [http-nio-6001-exec-2] [95c0777f08aff3e8306321c19c35bfcc-77edc0762794b942] c.example.servicea.controller.HelloCont  : >>> START
+2025-07-10T18:02:20.461+07:00  INFO 46967 --- [http-nio-6001-exec-2] [95c0777f08aff3e8306321c19c35bfcc-77edc0762794b942] c.example.servicea.remote.ApiServiceB    : > calling service B
+2025-07-10T18:02:20.470+07:00 ERROR 46967 --- [http-nio-6001-exec-2] [                                                 ] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: feign.RetryableException: Connection refused executing GET http://127.0.0.1:6002/service-b] with root cause
+
+java.net.ConnectException: Connection refused
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:549)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:592)
+	at java.base/java.net.Socket.connect(Socket.java:751)
+	at java.base/sun.net.NetworkClient.doConnect(NetworkClient.java:178)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:531)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:636)
+	at java.base/sun.net.www.http.HttpClient.<init>(HttpClient.java:280)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:386)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:408)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1304)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1237)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1123)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:1052)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1675)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1599)
+	at java.base/java.net.HttpURLConnection.getResponseCode(HttpURLConnection.java:531)
+	at feign.Client$Default.convertResponse(Client.java:111)
+	at feign.Client$Default.execute(Client.java:107)
+	at feign.micrometer.MeteredClient.execute(MeteredClient.java:48)
+	at feign.micrometer.MicrometerObservationCapability.lambda$enrich$1(MicrometerObservationCapability.java:53)
+	at feign.SynchronousMethodHandler.executeAndDecode(SynchronousMethodHandler.java:100)
+	at feign.SynchronousMethodHandler.invoke(SynchronousMethodHandler.java:70)
+	at feign.ReflectiveFeign$FeignInvocationHandler.invoke(ReflectiveFeign.java:99)
+	at feign.micrometer.MeteredInvocationHandleFactory.lambda$create$0(MeteredInvocationHandleFactory.java:70)
+	at jdk.proxy2/jdk.proxy2.$Proxy91.sendSms(Unknown Source)
+	at com.example.servicea.remote.ApiServiceB.callServiceB(ApiServiceB.java:19)
+	at com.example.servicea.controller.HelloCont.callServiceB(HelloCont.java:19)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:926)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:831)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:109)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+
+2025-07-10T18:04:20.556+07:00  INFO 46967 --- [http-nio-6001-exec-3] [b05b50f25b4ea39970a5059fa6a816a4-a1dc0ea2308319fb] c.example.servicea.controller.HelloCont  : >>> START
+2025-07-10T18:04:20.558+07:00  INFO 46967 --- [http-nio-6001-exec-3] [b05b50f25b4ea39970a5059fa6a816a4-a1dc0ea2308319fb] c.example.servicea.remote.ApiServiceB    : > calling service B
+2025-07-10T18:04:20.684+07:00  INFO 46967 --- [http-nio-6001-exec-3] [b05b50f25b4ea39970a5059fa6a816a4-a1dc0ea2308319fb] c.example.servicea.remote.ApiServiceB    : resServiceB: Service B from host: 810dae2a8587
+2025-07-10T18:04:20.686+07:00  INFO 46967 --- [http-nio-6001-exec-3] [b05b50f25b4ea39970a5059fa6a816a4-a1dc0ea2308319fb] c.example.servicea.controller.HelloCont  : > final response: Service B from host: 810dae2a8587
+2025-07-10T18:04:20.686+07:00  INFO 46967 --- [http-nio-6001-exec-3] [b05b50f25b4ea39970a5059fa6a816a4-a1dc0ea2308319fb] c.example.servicea.controller.HelloCont  : >>> END
+2025-07-10T18:04:22.999+07:00  INFO 46967 --- [http-nio-6001-exec-4] [bcd6f5dde1da54d851a683a20da5e439-4e3675dad9092550] c.example.servicea.controller.HelloCont  : >>> START
+2025-07-10T18:04:23.000+07:00  INFO 46967 --- [http-nio-6001-exec-4] [bcd6f5dde1da54d851a683a20da5e439-4e3675dad9092550] c.example.servicea.remote.ApiServiceB    : > calling service B
+2025-07-10T18:04:23.009+07:00  INFO 46967 --- [http-nio-6001-exec-4] [bcd6f5dde1da54d851a683a20da5e439-4e3675dad9092550] c.example.servicea.remote.ApiServiceB    : resServiceB: Service B from host: 810dae2a8587
+2025-07-10T18:04:23.009+07:00  INFO 46967 --- [http-nio-6001-exec-4] [bcd6f5dde1da54d851a683a20da5e439-4e3675dad9092550] c.example.servicea.controller.HelloCont  : > final response: Service B from host: 810dae2a8587
+2025-07-10T18:04:23.010+07:00  INFO 46967 --- [http-nio-6001-exec-4] [bcd6f5dde1da54d851a683a20da5e439-4e3675dad9092550] c.example.servicea.controller.HelloCont  : >>> END
+2025-07-10T18:04:25.044+07:00  INFO 46967 --- [http-nio-6001-exec-6] [4dd27e943aadaee5bb1120ac9e35734a-608e35300d9dea46] c.example.servicea.controller.HelloCont  : >>> START
+2025-07-10T18:04:25.044+07:00  INFO 46967 --- [http-nio-6001-exec-6] [4dd27e943aadaee5bb1120ac9e35734a-608e35300d9dea46] c.example.servicea.remote.ApiServiceB    : > calling service B
+2025-07-10T18:04:25.056+07:00  INFO 46967 --- [http-nio-6001-exec-6] [4dd27e943aadaee5bb1120ac9e35734a-608e35300d9dea46] c.example.servicea.remote.ApiServiceB    : resServiceB: Service B from host: 810dae2a8587
+2025-07-10T18:04:25.056+07:00  INFO 46967 --- [http-nio-6001-exec-6] [4dd27e943aadaee5bb1120ac9e35734a-608e35300d9dea46] c.example.servicea.controller.HelloCont  : > final response: Service B from host: 810dae2a8587
+2025-07-10T18:04:25.056+07:00  INFO 46967 --- [http-nio-6001-exec-6] [4dd27e943aadaee5bb1120ac9e35734a-608e35300d9dea46] c.example.servicea.controller.HelloCont  : >>> END
+2025-07-10T18:12:58.747+07:00  INFO 46967 --- [http-nio-6001-exec-8] [51f50106af5a9261b87afa036656e969-357f318586f9e2da] c.example.servicea.controller.HelloCont  : >>> START
+2025-07-10T18:12:58.753+07:00  INFO 46967 --- [http-nio-6001-exec-8] [51f50106af5a9261b87afa036656e969-357f318586f9e2da] c.example.servicea.remote.ApiServiceB    : > calling service B
+2025-07-10T18:12:59.375+07:00  INFO 46967 --- [http-nio-6001-exec-8] [51f50106af5a9261b87afa036656e969-357f318586f9e2da] c.example.servicea.remote.ApiServiceB    : resServiceB: Service B from host: 14ea0c96cfd6
+2025-07-10T18:12:59.375+07:00  INFO 46967 --- [http-nio-6001-exec-8] [51f50106af5a9261b87afa036656e969-357f318586f9e2da] c.example.servicea.controller.HelloCont  : > final response: Service B from host: 14ea0c96cfd6
+2025-07-10T18:12:59.375+07:00  INFO 46967 --- [http-nio-6001-exec-8] [51f50106af5a9261b87afa036656e969-357f318586f9e2da] c.example.servicea.controller.HelloCont  : >>> END
+2025-07-10T18:13:00.574+07:00  INFO 46967 --- [http-nio-6001-exec-9] [562596f12dea798d910a6c63cd091357-01f2a0c33cf78580] c.example.servicea.controller.HelloCont  : >>> START
+2025-07-10T18:13:00.574+07:00  INFO 46967 --- [http-nio-6001-exec-9] [562596f12dea798d910a6c63cd091357-01f2a0c33cf78580] c.example.servicea.remote.ApiServiceB    : > calling service B
+2025-07-10T18:13:00.590+07:00  INFO 46967 --- [http-nio-6001-exec-9] [562596f12dea798d910a6c63cd091357-01f2a0c33cf78580] c.example.servicea.remote.ApiServiceB    : resServiceB: Service B from host: 14ea0c96cfd6
+2025-07-10T18:13:00.590+07:00  INFO 46967 --- [http-nio-6001-exec-9] [562596f12dea798d910a6c63cd091357-01f2a0c33cf78580] c.example.servicea.controller.HelloCont  : > final response: Service B from host: 14ea0c96cfd6
+2025-07-10T18:13:00.590+07:00  INFO 46967 --- [http-nio-6001-exec-9] [562596f12dea798d910a6c63cd091357-01f2a0c33cf78580] c.example.servicea.controller.HelloCont  : >>> END
+2025-07-10T18:13:03.197+07:00  INFO 46967 --- [http-nio-6001-exec-10] [2464709763ebb2e6f446140665eb2ad8-c71249115249d4c6] c.example.servicea.controller.HelloCont  : >>> START
+2025-07-10T18:13:03.198+07:00  INFO 46967 --- [http-nio-6001-exec-10] [2464709763ebb2e6f446140665eb2ad8-c71249115249d4c6] c.example.servicea.remote.ApiServiceB    : > calling service B
+2025-07-10T18:13:03.226+07:00  INFO 46967 --- [http-nio-6001-exec-10] [2464709763ebb2e6f446140665eb2ad8-c71249115249d4c6] c.example.servicea.remote.ApiServiceB    : resServiceB: Service B from host: 14ea0c96cfd6
+2025-07-10T18:13:03.226+07:00  INFO 46967 --- [http-nio-6001-exec-10] [2464709763ebb2e6f446140665eb2ad8-c71249115249d4c6] c.example.servicea.controller.HelloCont  : > final response: Service B from host: 14ea0c96cfd6
+2025-07-10T18:13:03.226+07:00  INFO 46967 --- [http-nio-6001-exec-10] [2464709763ebb2e6f446140665eb2ad8-c71249115249d4c6] c.example.servicea.controller.HelloCont  : >>> END
+2025-07-10T18:13:04.071+07:00  INFO 46967 --- [http-nio-6001-exec-1] [ea822f1a2b1459459eba59ab4c19db95-1bff52d32b23dab3] c.example.servicea.controller.HelloCont  : >>> START
+2025-07-10T18:13:04.072+07:00  INFO 46967 --- [http-nio-6001-exec-1] [ea822f1a2b1459459eba59ab4c19db95-1bff52d32b23dab3] c.example.servicea.remote.ApiServiceB    : > calling service B
+2025-07-10T18:13:04.073+07:00 ERROR 46967 --- [OkHttp http://ubuntu-dev.indochinabank.com:4318/...] [                                                 ] i.o.exporter.internal.http.HttpExporter  : Failed to export spans. The request could not be executed. Full error message: ubuntu-dev.indochinabank.com: nodename nor servname provided, or not known
+
+java.net.UnknownHostException: ubuntu-dev.indochinabank.com: nodename nor servname provided, or not known
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Inet6AddressImpl.java:52)
+	at java.base/java.net.InetAddress$PlatformResolver.lookupByName(InetAddress.java:1211)
+	at java.base/java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1828)
+	at java.base/java.net.InetAddress$NameServiceAddresses.get(InetAddress.java:1139)
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1818)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1688)
+	at okhttp3.Dns$Companion$DnsSystem.lookup(Dns.kt:49)
+	at okhttp3.internal.connection.RouteSelector.resetNextInetSocketAddress(RouteSelector.kt:169)
+	at okhttp3.internal.connection.RouteSelector.nextProxy(RouteSelector.kt:131)
+	at okhttp3.internal.connection.RouteSelector.next(RouteSelector.kt:73)
+	at okhttp3.internal.connection.ExchangeFinder.findConnection(ExchangeFinder.kt:205)
+	at okhttp3.internal.connection.ExchangeFinder.findHealthyConnection(ExchangeFinder.kt:106)
+	at okhttp3.internal.connection.ExchangeFinder.find(ExchangeFinder.kt:74)
+	at okhttp3.internal.connection.RealCall.initExchange$okhttp(RealCall.kt:255)
+	at okhttp3.internal.connection.ConnectInterceptor.intercept(ConnectInterceptor.kt:32)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:109)
+	at okhttp3.internal.cache.CacheInterceptor.intercept(CacheInterceptor.kt:95)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:109)
+	at okhttp3.internal.http.BridgeInterceptor.intercept(BridgeInterceptor.kt:83)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:109)
+	at okhttp3.internal.http.RetryAndFollowUpInterceptor.intercept(RetryAndFollowUpInterceptor.kt:76)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:109)
+	at okhttp3.internal.connection.RealCall.getResponseWithInterceptorChain$okhttp(RealCall.kt:201)
+	at okhttp3.internal.connection.RealCall$AsyncCall.run(RealCall.kt:517)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+
+2025-07-10T18:13:04.104+07:00  INFO 46967 --- [http-nio-6001-exec-1] [ea822f1a2b1459459eba59ab4c19db95-1bff52d32b23dab3] c.example.servicea.remote.ApiServiceB    : resServiceB: Service B from host: 14ea0c96cfd6
+2025-07-10T18:13:04.105+07:00  INFO 46967 --- [http-nio-6001-exec-1] [ea822f1a2b1459459eba59ab4c19db95-1bff52d32b23dab3] c.example.servicea.controller.HelloCont  : > final response: Service B from host: 14ea0c96cfd6
+2025-07-10T18:13:04.105+07:00  INFO 46967 --- [http-nio-6001-exec-1] [ea822f1a2b1459459eba59ab4c19db95-1bff52d32b23dab3] c.example.servicea.controller.HelloCont  : >>> END
+2025-07-10T18:13:04.836+07:00  INFO 46967 --- [http-nio-6001-exec-2] [12a0ed2cc42298202f98ab6098b40b41-6f5f1d4bb7004a4f] c.example.servicea.controller.HelloCont  : >>> START
+2025-07-10T18:13:04.836+07:00  INFO 46967 --- [http-nio-6001-exec-2] [12a0ed2cc42298202f98ab6098b40b41-6f5f1d4bb7004a4f] c.example.servicea.remote.ApiServiceB    : > calling service B
+2025-07-10T18:13:04.858+07:00  INFO 46967 --- [http-nio-6001-exec-2] [12a0ed2cc42298202f98ab6098b40b41-6f5f1d4bb7004a4f] c.example.servicea.remote.ApiServiceB    : resServiceB: Service B from host: 14ea0c96cfd6
+2025-07-10T18:13:04.858+07:00  INFO 46967 --- [http-nio-6001-exec-2] [12a0ed2cc42298202f98ab6098b40b41-6f5f1d4bb7004a4f] c.example.servicea.controller.HelloCont  : > final response: Service B from host: 14ea0c96cfd6
+2025-07-10T18:13:04.858+07:00  INFO 46967 --- [http-nio-6001-exec-2] [12a0ed2cc42298202f98ab6098b40b41-6f5f1d4bb7004a4f] c.example.servicea.controller.HelloCont  : >>> END
+2025-07-10T18:13:05.515+07:00  INFO 46967 --- [http-nio-6001-exec-3] [2a4745714272f097512249b635eed4b9-133f51af065c113f] c.example.servicea.controller.HelloCont  : >>> START
+2025-07-10T18:13:05.515+07:00  INFO 46967 --- [http-nio-6001-exec-3] [2a4745714272f097512249b635eed4b9-133f51af065c113f] c.example.servicea.remote.ApiServiceB    : > calling service B
+2025-07-10T18:13:05.538+07:00  INFO 46967 --- [http-nio-6001-exec-3] [2a4745714272f097512249b635eed4b9-133f51af065c113f] c.example.servicea.remote.ApiServiceB    : resServiceB: Service B from host: 14ea0c96cfd6
+2025-07-10T18:13:05.538+07:00  INFO 46967 --- [http-nio-6001-exec-3] [2a4745714272f097512249b635eed4b9-133f51af065c113f] c.example.servicea.controller.HelloCont  : > final response: Service B from host: 14ea0c96cfd6
+2025-07-10T18:13:05.538+07:00  INFO 46967 --- [http-nio-6001-exec-3] [2a4745714272f097512249b635eed4b9-133f51af065c113f] c.example.servicea.controller.HelloCont  : >>> END
+2025-07-10T18:13:06.467+07:00  INFO 46967 --- [http-nio-6001-exec-5] [5200ad04e53fa7e5043a38612ae3604c-469394d10a0d0f97] c.example.servicea.controller.HelloCont  : >>> START
+2025-07-10T18:13:06.468+07:00  INFO 46967 --- [http-nio-6001-exec-5] [5200ad04e53fa7e5043a38612ae3604c-469394d10a0d0f97] c.example.servicea.remote.ApiServiceB    : > calling service B
+2025-07-10T18:13:06.519+07:00  INFO 46967 --- [http-nio-6001-exec-5] [5200ad04e53fa7e5043a38612ae3604c-469394d10a0d0f97] c.example.servicea.remote.ApiServiceB    : resServiceB: Service B from host: 14ea0c96cfd6
+2025-07-10T18:13:06.519+07:00  INFO 46967 --- [http-nio-6001-exec-5] [5200ad04e53fa7e5043a38612ae3604c-469394d10a0d0f97] c.example.servicea.controller.HelloCont  : > final response: Service B from host: 14ea0c96cfd6
+2025-07-10T18:13:06.519+07:00  INFO 46967 --- [http-nio-6001-exec-5] [5200ad04e53fa7e5043a38612ae3604c-469394d10a0d0f97] c.example.servicea.controller.HelloCont  : >>> END
+2025-07-10T18:13:09.083+07:00 ERROR 46967 --- [OkHttp http://ubuntu-dev.indochinabank.com:4318/...] [                                                 ] i.o.exporter.internal.http.HttpExporter  : Failed to export spans. The request could not be executed. Full error message: ubuntu-dev.indochinabank.com
+
+java.net.UnknownHostException: ubuntu-dev.indochinabank.com
+	at java.base/java.net.InetAddress$CachedLookup.get(InetAddress.java:988)
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1818)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1688)
+	at okhttp3.Dns$Companion$DnsSystem.lookup(Dns.kt:49)
+	at okhttp3.internal.connection.RouteSelector.resetNextInetSocketAddress(RouteSelector.kt:169)
+	at okhttp3.internal.connection.RouteSelector.nextProxy(RouteSelector.kt:131)
+	at okhttp3.internal.connection.RouteSelector.next(RouteSelector.kt:73)
+	at okhttp3.internal.connection.ExchangeFinder.findConnection(ExchangeFinder.kt:205)
+	at okhttp3.internal.connection.ExchangeFinder.findHealthyConnection(ExchangeFinder.kt:106)
+	at okhttp3.internal.connection.ExchangeFinder.find(ExchangeFinder.kt:74)
+	at okhttp3.internal.connection.RealCall.initExchange$okhttp(RealCall.kt:255)
+	at okhttp3.internal.connection.ConnectInterceptor.intercept(ConnectInterceptor.kt:32)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:109)
+	at okhttp3.internal.cache.CacheInterceptor.intercept(CacheInterceptor.kt:95)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:109)
+	at okhttp3.internal.http.BridgeInterceptor.intercept(BridgeInterceptor.kt:83)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:109)
+	at okhttp3.internal.http.RetryAndFollowUpInterceptor.intercept(RetryAndFollowUpInterceptor.kt:76)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:109)
+	at okhttp3.internal.connection.RealCall.getResponseWithInterceptorChain$okhttp(RealCall.kt:201)
+	at okhttp3.internal.connection.RealCall$AsyncCall.run(RealCall.kt:517)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+
+2025-07-10T18:13:09.680+07:00  INFO 46967 --- [http-nio-6001-exec-7] [d32883cd630ae0a47076caac4c614cd5-d7361989aed1b50a] c.example.servicea.controller.HelloCont  : >>> START
+2025-07-10T18:13:09.680+07:00  INFO 46967 --- [http-nio-6001-exec-7] [d32883cd630ae0a47076caac4c614cd5-d7361989aed1b50a] c.example.servicea.remote.ApiServiceB    : > calling service B
+2025-07-10T18:13:09.697+07:00  INFO 46967 --- [http-nio-6001-exec-7] [d32883cd630ae0a47076caac4c614cd5-d7361989aed1b50a] c.example.servicea.remote.ApiServiceB    : resServiceB: Service B from host: 14ea0c96cfd6
+2025-07-10T18:13:09.697+07:00  INFO 46967 --- [http-nio-6001-exec-7] [d32883cd630ae0a47076caac4c614cd5-d7361989aed1b50a] c.example.servicea.controller.HelloCont  : > final response: Service B from host: 14ea0c96cfd6
+2025-07-10T18:13:09.697+07:00  INFO 46967 --- [http-nio-6001-exec-7] [d32883cd630ae0a47076caac4c614cd5-d7361989aed1b50a] c.example.servicea.controller.HelloCont  : >>> END
+2025-07-10T18:13:11.595+07:00  INFO 46967 --- [http-nio-6001-exec-8] [45888a5f9f364272d23211ff26e11303-76c05dc5e2082eee] c.example.servicea.controller.HelloCont  : >>> START
+2025-07-10T18:13:11.596+07:00  INFO 46967 --- [http-nio-6001-exec-8] [45888a5f9f364272d23211ff26e11303-76c05dc5e2082eee] c.example.servicea.remote.ApiServiceB    : > calling service B
+2025-07-10T18:13:11.638+07:00  INFO 46967 --- [http-nio-6001-exec-8] [45888a5f9f364272d23211ff26e11303-76c05dc5e2082eee] c.example.servicea.remote.ApiServiceB    : resServiceB: Service B from host: 14ea0c96cfd6
+2025-07-10T18:13:11.638+07:00  INFO 46967 --- [http-nio-6001-exec-8] [45888a5f9f364272d23211ff26e11303-76c05dc5e2082eee] c.example.servicea.controller.HelloCont  : > final response: Service B from host: 14ea0c96cfd6
+2025-07-10T18:13:11.638+07:00  INFO 46967 --- [http-nio-6001-exec-8] [45888a5f9f364272d23211ff26e11303-76c05dc5e2082eee] c.example.servicea.controller.HelloCont  : >>> END
+2025-07-10T18:13:12.654+07:00  INFO 46967 --- [http-nio-6001-exec-9] [99887d4c69b9746e32cf6c47475466ef-65b8db36daa3a89e] c.example.servicea.controller.HelloCont  : >>> START
+2025-07-10T18:13:12.654+07:00  INFO 46967 --- [http-nio-6001-exec-9] [99887d4c69b9746e32cf6c47475466ef-65b8db36daa3a89e] c.example.servicea.remote.ApiServiceB    : > calling service B
+2025-07-10T18:13:12.685+07:00  INFO 46967 --- [http-nio-6001-exec-9] [99887d4c69b9746e32cf6c47475466ef-65b8db36daa3a89e] c.example.servicea.remote.ApiServiceB    : resServiceB: Service B from host: 14ea0c96cfd6
+2025-07-10T18:13:12.686+07:00  INFO 46967 --- [http-nio-6001-exec-9] [99887d4c69b9746e32cf6c47475466ef-65b8db36daa3a89e] c.example.servicea.controller.HelloCont  : > final response: Service B from host: 14ea0c96cfd6
+2025-07-10T18:13:12.686+07:00  INFO 46967 --- [http-nio-6001-exec-9] [99887d4c69b9746e32cf6c47475466ef-65b8db36daa3a89e] c.example.servicea.controller.HelloCont  : >>> END
+2025-07-10T18:13:13.314+07:00  INFO 46967 --- [http-nio-6001-exec-1] [0d389bde2c1ff8189f1e58464877c93b-cc9d118395fed545] c.example.servicea.controller.HelloCont  : >>> START
+2025-07-10T18:13:13.314+07:00  INFO 46967 --- [http-nio-6001-exec-1] [0d389bde2c1ff8189f1e58464877c93b-cc9d118395fed545] c.example.servicea.remote.ApiServiceB    : > calling service B
+2025-07-10T18:13:13.334+07:00  INFO 46967 --- [http-nio-6001-exec-1] [0d389bde2c1ff8189f1e58464877c93b-cc9d118395fed545] c.example.servicea.remote.ApiServiceB    : resServiceB: Service B from host: 14ea0c96cfd6
+2025-07-10T18:13:13.335+07:00  INFO 46967 --- [http-nio-6001-exec-1] [0d389bde2c1ff8189f1e58464877c93b-cc9d118395fed545] c.example.servicea.controller.HelloCont  : > final response: Service B from host: 14ea0c96cfd6
+2025-07-10T18:13:13.335+07:00  INFO 46967 --- [http-nio-6001-exec-1] [0d389bde2c1ff8189f1e58464877c93b-cc9d118395fed545] c.example.servicea.controller.HelloCont  : >>> END
+2025-07-10T18:13:13.734+07:00  INFO 46967 --- [http-nio-6001-exec-2] [f350470e115fede0a62cb872880cbb92-5a60104fab2502a5] c.example.servicea.controller.HelloCont  : >>> START
+2025-07-10T18:13:13.734+07:00  INFO 46967 --- [http-nio-6001-exec-2] [f350470e115fede0a62cb872880cbb92-5a60104fab2502a5] c.example.servicea.remote.ApiServiceB    : > calling service B
+2025-07-10T18:13:13.751+07:00  INFO 46967 --- [http-nio-6001-exec-2] [f350470e115fede0a62cb872880cbb92-5a60104fab2502a5] c.example.servicea.remote.ApiServiceB    : resServiceB: Service B from host: 14ea0c96cfd6
+2025-07-10T18:13:13.751+07:00  INFO 46967 --- [http-nio-6001-exec-2] [f350470e115fede0a62cb872880cbb92-5a60104fab2502a5] c.example.servicea.controller.HelloCont  : > final response: Service B from host: 14ea0c96cfd6
+2025-07-10T18:13:13.751+07:00  INFO 46967 --- [http-nio-6001-exec-2] [f350470e115fede0a62cb872880cbb92-5a60104fab2502a5] c.example.servicea.controller.HelloCont  : >>> END
+2025-07-10T18:13:14.177+07:00  INFO 46967 --- [http-nio-6001-exec-4] [e621fbf8f2d04c9f603beda0d8e800a0-b6382263a40a169f] c.example.servicea.controller.HelloCont  : >>> START
+2025-07-10T18:13:14.177+07:00  INFO 46967 --- [http-nio-6001-exec-4] [e621fbf8f2d04c9f603beda0d8e800a0-b6382263a40a169f] c.example.servicea.remote.ApiServiceB    : > calling service B
+2025-07-10T18:13:14.184+07:00  INFO 46967 --- [http-nio-6001-exec-4] [e621fbf8f2d04c9f603beda0d8e800a0-b6382263a40a169f] c.example.servicea.remote.ApiServiceB    : resServiceB: Service B from host: 14ea0c96cfd6
+2025-07-10T18:13:14.184+07:00  INFO 46967 --- [http-nio-6001-exec-4] [e621fbf8f2d04c9f603beda0d8e800a0-b6382263a40a169f] c.example.servicea.controller.HelloCont  : > final response: Service B from host: 14ea0c96cfd6
+2025-07-10T18:13:14.184+07:00  INFO 46967 --- [http-nio-6001-exec-4] [e621fbf8f2d04c9f603beda0d8e800a0-b6382263a40a169f] c.example.servicea.controller.HelloCont  : >>> END
+2025-07-10T18:13:14.618+07:00  INFO 46967 --- [http-nio-6001-exec-5] [f420c72cdf28a66e81dc5739ed2bafb7-2402ff316421211a] c.example.servicea.controller.HelloCont  : >>> START
+2025-07-10T18:13:14.618+07:00  INFO 46967 --- [http-nio-6001-exec-5] [f420c72cdf28a66e81dc5739ed2bafb7-2402ff316421211a] c.example.servicea.remote.ApiServiceB    : > calling service B
+2025-07-10T18:13:14.625+07:00  INFO 46967 --- [http-nio-6001-exec-5] [f420c72cdf28a66e81dc5739ed2bafb7-2402ff316421211a] c.example.servicea.remote.ApiServiceB    : resServiceB: Service B from host: 14ea0c96cfd6
+2025-07-10T18:13:14.626+07:00  INFO 46967 --- [http-nio-6001-exec-5] [f420c72cdf28a66e81dc5739ed2bafb7-2402ff316421211a] c.example.servicea.controller.HelloCont  : > final response: Service B from host: 14ea0c96cfd6
+2025-07-10T18:13:14.626+07:00  INFO 46967 --- [http-nio-6001-exec-5] [f420c72cdf28a66e81dc5739ed2bafb7-2402ff316421211a] c.example.servicea.controller.HelloCont  : >>> END
+2025-07-10T18:13:15.080+07:00  INFO 46967 --- [http-nio-6001-exec-6] [bbede1b73c9a27c4cfa5d5dabcab0073-9bfd03895e51bfbd] c.example.servicea.controller.HelloCont  : >>> START
+2025-07-10T18:13:15.080+07:00  INFO 46967 --- [http-nio-6001-exec-6] [bbede1b73c9a27c4cfa5d5dabcab0073-9bfd03895e51bfbd] c.example.servicea.remote.ApiServiceB    : > calling service B
+2025-07-10T18:13:15.088+07:00  INFO 46967 --- [http-nio-6001-exec-6] [bbede1b73c9a27c4cfa5d5dabcab0073-9bfd03895e51bfbd] c.example.servicea.remote.ApiServiceB    : resServiceB: Service B from host: 14ea0c96cfd6
+2025-07-10T18:13:15.088+07:00  INFO 46967 --- [http-nio-6001-exec-6] [bbede1b73c9a27c4cfa5d5dabcab0073-9bfd03895e51bfbd] c.example.servicea.controller.HelloCont  : > final response: Service B from host: 14ea0c96cfd6
+2025-07-10T18:13:15.088+07:00  INFO 46967 --- [http-nio-6001-exec-6] [bbede1b73c9a27c4cfa5d5dabcab0073-9bfd03895e51bfbd] c.example.servicea.controller.HelloCont  : >>> END
+2025-07-10T18:13:15.509+07:00  INFO 46967 --- [http-nio-6001-exec-7] [d3f69df0e22ec34f63e9a586280fe5ce-d32b13a93d6d5481] c.example.servicea.controller.HelloCont  : >>> START
+2025-07-10T18:13:15.510+07:00  INFO 46967 --- [http-nio-6001-exec-7] [d3f69df0e22ec34f63e9a586280fe5ce-d32b13a93d6d5481] c.example.servicea.remote.ApiServiceB    : > calling service B
+2025-07-10T18:13:15.520+07:00  INFO 46967 --- [http-nio-6001-exec-7] [d3f69df0e22ec34f63e9a586280fe5ce-d32b13a93d6d5481] c.example.servicea.remote.ApiServiceB    : resServiceB: Service B from host: 14ea0c96cfd6
+2025-07-10T18:13:15.520+07:00  INFO 46967 --- [http-nio-6001-exec-7] [d3f69df0e22ec34f63e9a586280fe5ce-d32b13a93d6d5481] c.example.servicea.controller.HelloCont  : > final response: Service B from host: 14ea0c96cfd6
+2025-07-10T18:13:15.520+07:00  INFO 46967 --- [http-nio-6001-exec-7] [d3f69df0e22ec34f63e9a586280fe5ce-d32b13a93d6d5481] c.example.servicea.controller.HelloCont  : >>> END
+2025-07-10T18:13:15.937+07:00  INFO 46967 --- [http-nio-6001-exec-8] [9aadff98a001eccdd4751ad5c5d59c15-f0e4f0f87f8c6e10] c.example.servicea.controller.HelloCont  : >>> START
+2025-07-10T18:13:15.938+07:00  INFO 46967 --- [http-nio-6001-exec-8] [9aadff98a001eccdd4751ad5c5d59c15-f0e4f0f87f8c6e10] c.example.servicea.remote.ApiServiceB    : > calling service B
+2025-07-10T18:13:15.992+07:00  INFO 46967 --- [http-nio-6001-exec-8] [9aadff98a001eccdd4751ad5c5d59c15-f0e4f0f87f8c6e10] c.example.servicea.remote.ApiServiceB    : resServiceB: Service B from host: 14ea0c96cfd6
+2025-07-10T18:13:15.992+07:00  INFO 46967 --- [http-nio-6001-exec-8] [9aadff98a001eccdd4751ad5c5d59c15-f0e4f0f87f8c6e10] c.example.servicea.controller.HelloCont  : > final response: Service B from host: 14ea0c96cfd6
+2025-07-10T18:13:15.992+07:00  INFO 46967 --- [http-nio-6001-exec-8] [9aadff98a001eccdd4751ad5c5d59c15-f0e4f0f87f8c6e10] c.example.servicea.controller.HelloCont  : >>> END
+2025-07-10T18:13:16.427+07:00  INFO 46967 --- [http-nio-6001-exec-9] [cdaf0cd1b17a48a987ea4ac5385a2f68-6f99cb8a0b3ac58f] c.example.servicea.controller.HelloCont  : >>> START
+2025-07-10T18:13:16.427+07:00  INFO 46967 --- [http-nio-6001-exec-9] [cdaf0cd1b17a48a987ea4ac5385a2f68-6f99cb8a0b3ac58f] c.example.servicea.remote.ApiServiceB    : > calling service B
+2025-07-10T18:13:16.482+07:00  INFO 46967 --- [http-nio-6001-exec-9] [cdaf0cd1b17a48a987ea4ac5385a2f68-6f99cb8a0b3ac58f] c.example.servicea.remote.ApiServiceB    : resServiceB: Service B from host: 14ea0c96cfd6
+2025-07-10T18:13:16.483+07:00  INFO 46967 --- [http-nio-6001-exec-9] [cdaf0cd1b17a48a987ea4ac5385a2f68-6f99cb8a0b3ac58f] c.example.servicea.controller.HelloCont  : > final response: Service B from host: 14ea0c96cfd6
+2025-07-10T18:13:16.483+07:00  INFO 46967 --- [http-nio-6001-exec-9] [cdaf0cd1b17a48a987ea4ac5385a2f68-6f99cb8a0b3ac58f] c.example.servicea.controller.HelloCont  : >>> END
+2025-07-10T18:13:16.854+07:00  INFO 46967 --- [http-nio-6001-exec-10] [f43a1d0587eee0e52e5df3cdf50be7a4-a7286bf1f3de1774] c.example.servicea.controller.HelloCont  : >>> START
+2025-07-10T18:13:16.855+07:00  INFO 46967 --- [http-nio-6001-exec-10] [f43a1d0587eee0e52e5df3cdf50be7a4-a7286bf1f3de1774] c.example.servicea.remote.ApiServiceB    : > calling service B
+2025-07-10T18:13:16.884+07:00  INFO 46967 --- [http-nio-6001-exec-10] [f43a1d0587eee0e52e5df3cdf50be7a4-a7286bf1f3de1774] c.example.servicea.remote.ApiServiceB    : resServiceB: Service B from host: 14ea0c96cfd6
+2025-07-10T18:13:16.884+07:00  INFO 46967 --- [http-nio-6001-exec-10] [f43a1d0587eee0e52e5df3cdf50be7a4-a7286bf1f3de1774] c.example.servicea.controller.HelloCont  : > final response: Service B from host: 14ea0c96cfd6
+2025-07-10T18:13:16.885+07:00  INFO 46967 --- [http-nio-6001-exec-10] [f43a1d0587eee0e52e5df3cdf50be7a4-a7286bf1f3de1774] c.example.servicea.controller.HelloCont  : >>> END
+2025-07-10T18:13:17.316+07:00  INFO 46967 --- [http-nio-6001-exec-2] [162c702d98e23645fb53e41a5bee2cc8-833b7ec19e8cb29d] c.example.servicea.controller.HelloCont  : >>> START
+2025-07-10T18:13:17.317+07:00  INFO 46967 --- [http-nio-6001-exec-2] [162c702d98e23645fb53e41a5bee2cc8-833b7ec19e8cb29d] c.example.servicea.remote.ApiServiceB    : > calling service B
+2025-07-10T18:13:17.344+07:00  INFO 46967 --- [http-nio-6001-exec-2] [162c702d98e23645fb53e41a5bee2cc8-833b7ec19e8cb29d] c.example.servicea.remote.ApiServiceB    : resServiceB: Service B from host: 14ea0c96cfd6
+2025-07-10T18:13:17.344+07:00  INFO 46967 --- [http-nio-6001-exec-2] [162c702d98e23645fb53e41a5bee2cc8-833b7ec19e8cb29d] c.example.servicea.controller.HelloCont  : > final response: Service B from host: 14ea0c96cfd6
+2025-07-10T18:13:17.344+07:00  INFO 46967 --- [http-nio-6001-exec-2] [162c702d98e23645fb53e41a5bee2cc8-833b7ec19e8cb29d] c.example.servicea.controller.HelloCont  : >>> END
+2025-07-10T18:13:17.728+07:00  INFO 46967 --- [http-nio-6001-exec-4] [35d3b4d77c116541abbe05de849bc2f5-46c6cfded52f7183] c.example.servicea.controller.HelloCont  : >>> START
+2025-07-10T18:13:17.728+07:00  INFO 46967 --- [http-nio-6001-exec-4] [35d3b4d77c116541abbe05de849bc2f5-46c6cfded52f7183] c.example.servicea.remote.ApiServiceB    : > calling service B
+2025-07-10T18:13:17.737+07:00  INFO 46967 --- [http-nio-6001-exec-4] [35d3b4d77c116541abbe05de849bc2f5-46c6cfded52f7183] c.example.servicea.remote.ApiServiceB    : resServiceB: Service B from host: 14ea0c96cfd6
+2025-07-10T18:13:17.738+07:00  INFO 46967 --- [http-nio-6001-exec-4] [35d3b4d77c116541abbe05de849bc2f5-46c6cfded52f7183] c.example.servicea.controller.HelloCont  : > final response: Service B from host: 14ea0c96cfd6
+2025-07-10T18:13:17.738+07:00  INFO 46967 --- [http-nio-6001-exec-4] [35d3b4d77c116541abbe05de849bc2f5-46c6cfded52f7183] c.example.servicea.controller.HelloCont  : >>> END
+2025-07-10T18:13:18.195+07:00  INFO 46967 --- [http-nio-6001-exec-5] [d0e1dd5a43ed8307f4e56b1f1f1d6d68-a81b40295c974af9] c.example.servicea.controller.HelloCont  : >>> START
+2025-07-10T18:13:18.196+07:00  INFO 46967 --- [http-nio-6001-exec-5] [d0e1dd5a43ed8307f4e56b1f1f1d6d68-a81b40295c974af9] c.example.servicea.remote.ApiServiceB    : > calling service B
+2025-07-10T18:13:18.241+07:00  INFO 46967 --- [http-nio-6001-exec-5] [d0e1dd5a43ed8307f4e56b1f1f1d6d68-a81b40295c974af9] c.example.servicea.remote.ApiServiceB    : resServiceB: Service B from host: 14ea0c96cfd6
+2025-07-10T18:13:18.241+07:00  INFO 46967 --- [http-nio-6001-exec-5] [d0e1dd5a43ed8307f4e56b1f1f1d6d68-a81b40295c974af9] c.example.servicea.controller.HelloCont  : > final response: Service B from host: 14ea0c96cfd6
+2025-07-10T18:13:18.241+07:00  INFO 46967 --- [http-nio-6001-exec-5] [d0e1dd5a43ed8307f4e56b1f1f1d6d68-a81b40295c974af9] c.example.servicea.controller.HelloCont  : >>> END
+2025-07-10T18:13:19.096+07:00 ERROR 46967 --- [OkHttp http://ubuntu-dev.indochinabank.com:4318/...] [                                                 ] i.o.exporter.internal.http.HttpExporter  : Failed to export spans. The request could not be executed. Full error message: ubuntu-dev.indochinabank.com: nodename nor servname provided, or not known
+
+java.net.UnknownHostException: ubuntu-dev.indochinabank.com: nodename nor servname provided, or not known
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Inet6AddressImpl.java:52)
+	at java.base/java.net.InetAddress$PlatformResolver.lookupByName(InetAddress.java:1211)
+	at java.base/java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1828)
+	at java.base/java.net.InetAddress$NameServiceAddresses.get(InetAddress.java:1139)
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1818)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1688)
+	at okhttp3.Dns$Companion$DnsSystem.lookup(Dns.kt:49)
+	at okhttp3.internal.connection.RouteSelector.resetNextInetSocketAddress(RouteSelector.kt:169)
+	at okhttp3.internal.connection.RouteSelector.nextProxy(RouteSelector.kt:131)
+	at okhttp3.internal.connection.RouteSelector.next(RouteSelector.kt:73)
+	at okhttp3.internal.connection.ExchangeFinder.findConnection(ExchangeFinder.kt:205)
+	at okhttp3.internal.connection.ExchangeFinder.findHealthyConnection(ExchangeFinder.kt:106)
+	at okhttp3.internal.connection.ExchangeFinder.find(ExchangeFinder.kt:74)
+	at okhttp3.internal.connection.RealCall.initExchange$okhttp(RealCall.kt:255)
+	at okhttp3.internal.connection.ConnectInterceptor.intercept(ConnectInterceptor.kt:32)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:109)
+	at okhttp3.internal.cache.CacheInterceptor.intercept(CacheInterceptor.kt:95)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:109)
+	at okhttp3.internal.http.BridgeInterceptor.intercept(BridgeInterceptor.kt:83)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:109)
+	at okhttp3.internal.http.RetryAndFollowUpInterceptor.intercept(RetryAndFollowUpInterceptor.kt:76)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:109)
+	at okhttp3.internal.connection.RealCall.getResponseWithInterceptorChain$okhttp(RealCall.kt:201)
+	at okhttp3.internal.connection.RealCall$AsyncCall.run(RealCall.kt:517)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+
+2025-07-10T18:15:34.280+07:00  INFO 46967 --- [http-nio-6001-exec-7] [baf16dab72fbef0da71cb5e11beb0e22-de2b6a7d2f3bbcd5] c.example.servicea.controller.HelloCont  : >>> START
+2025-07-10T18:15:34.285+07:00  INFO 46967 --- [http-nio-6001-exec-7] [baf16dab72fbef0da71cb5e11beb0e22-de2b6a7d2f3bbcd5] c.example.servicea.remote.ApiServiceB    : > calling service B
+2025-07-10T18:15:34.333+07:00  INFO 46967 --- [http-nio-6001-exec-7] [baf16dab72fbef0da71cb5e11beb0e22-de2b6a7d2f3bbcd5] c.example.servicea.remote.ApiServiceB    : resServiceB: Service B from host: 14ea0c96cfd6
+2025-07-10T18:15:34.334+07:00  INFO 46967 --- [http-nio-6001-exec-7] [baf16dab72fbef0da71cb5e11beb0e22-de2b6a7d2f3bbcd5] c.example.servicea.controller.HelloCont  : > final response: Service B from host: 14ea0c96cfd6
+2025-07-10T18:15:34.334+07:00  INFO 46967 --- [http-nio-6001-exec-7] [baf16dab72fbef0da71cb5e11beb0e22-de2b6a7d2f3bbcd5] c.example.servicea.controller.HelloCont  : >>> END
+2025-07-10T18:15:35.236+07:00  INFO 46967 --- [http-nio-6001-exec-8] [10dd0bf6c23bb4ca61b05187c57545d8-d6bc10358783e350] c.example.servicea.controller.HelloCont  : >>> START
+2025-07-10T18:15:35.236+07:00  INFO 46967 --- [http-nio-6001-exec-8] [10dd0bf6c23bb4ca61b05187c57545d8-d6bc10358783e350] c.example.servicea.remote.ApiServiceB    : > calling service B
+2025-07-10T18:15:35.246+07:00  INFO 46967 --- [http-nio-6001-exec-8] [10dd0bf6c23bb4ca61b05187c57545d8-d6bc10358783e350] c.example.servicea.remote.ApiServiceB    : resServiceB: Service B from host: 14ea0c96cfd6
+2025-07-10T18:15:35.246+07:00  INFO 46967 --- [http-nio-6001-exec-8] [10dd0bf6c23bb4ca61b05187c57545d8-d6bc10358783e350] c.example.servicea.controller.HelloCont  : > final response: Service B from host: 14ea0c96cfd6
+2025-07-10T18:15:35.246+07:00  INFO 46967 --- [http-nio-6001-exec-8] [10dd0bf6c23bb4ca61b05187c57545d8-d6bc10358783e350] c.example.servicea.controller.HelloCont  : >>> END
+2025-07-10T18:15:35.971+07:00  INFO 46967 --- [http-nio-6001-exec-10] [bf27d37240e5a011ddbf6741dec733ec-d2f812063c8b408c] c.example.servicea.controller.HelloCont  : >>> START
+2025-07-10T18:15:35.971+07:00  INFO 46967 --- [http-nio-6001-exec-10] [bf27d37240e5a011ddbf6741dec733ec-d2f812063c8b408c] c.example.servicea.remote.ApiServiceB    : > calling service B
+2025-07-10T18:15:35.983+07:00  INFO 46967 --- [http-nio-6001-exec-10] [bf27d37240e5a011ddbf6741dec733ec-d2f812063c8b408c] c.example.servicea.remote.ApiServiceB    : resServiceB: Service B from host: 14ea0c96cfd6
+2025-07-10T18:15:35.983+07:00  INFO 46967 --- [http-nio-6001-exec-10] [bf27d37240e5a011ddbf6741dec733ec-d2f812063c8b408c] c.example.servicea.controller.HelloCont  : > final response: Service B from host: 14ea0c96cfd6
+2025-07-10T18:15:35.983+07:00  INFO 46967 --- [http-nio-6001-exec-10] [bf27d37240e5a011ddbf6741dec733ec-d2f812063c8b408c] c.example.servicea.controller.HelloCont  : >>> END
+2025-07-10T18:21:18.556+07:00  INFO 46967 --- [http-nio-6001-exec-1] [edcbf2365ac5964c0f219da83a18bb27-923df45b60195076] c.example.servicea.controller.HelloCont  : >>> START
+2025-07-10T18:21:18.560+07:00  INFO 46967 --- [http-nio-6001-exec-1] [edcbf2365ac5964c0f219da83a18bb27-923df45b60195076] c.example.servicea.remote.ApiServiceB    : > calling service B
+2025-07-10T18:21:18.663+07:00  INFO 46967 --- [http-nio-6001-exec-1] [edcbf2365ac5964c0f219da83a18bb27-923df45b60195076] c.example.servicea.remote.ApiServiceB    : resServiceB: Service B from host: 6feddf80440e
+2025-07-10T18:21:18.663+07:00  INFO 46967 --- [http-nio-6001-exec-1] [edcbf2365ac5964c0f219da83a18bb27-923df45b60195076] c.example.servicea.controller.HelloCont  : > final response: Service B from host: 6feddf80440e
+2025-07-10T18:21:18.663+07:00  INFO 46967 --- [http-nio-6001-exec-1] [edcbf2365ac5964c0f219da83a18bb27-923df45b60195076] c.example.servicea.controller.HelloCont  : >>> END
+2025-07-10T18:21:19.784+07:00  INFO 46967 --- [http-nio-6001-exec-2] [0953a41cd17a96cac5ec0a7a4678517d-66cafcfad3e1fa02] c.example.servicea.controller.HelloCont  : >>> START
+2025-07-10T18:21:19.786+07:00  INFO 46967 --- [http-nio-6001-exec-2] [0953a41cd17a96cac5ec0a7a4678517d-66cafcfad3e1fa02] c.example.servicea.remote.ApiServiceB    : > calling service B
+2025-07-10T18:21:19.848+07:00  INFO 46967 --- [http-nio-6001-exec-2] [0953a41cd17a96cac5ec0a7a4678517d-66cafcfad3e1fa02] c.example.servicea.remote.ApiServiceB    : resServiceB: Service B from host: 6feddf80440e
+2025-07-10T18:21:19.848+07:00  INFO 46967 --- [http-nio-6001-exec-2] [0953a41cd17a96cac5ec0a7a4678517d-66cafcfad3e1fa02] c.example.servicea.controller.HelloCont  : > final response: Service B from host: 6feddf80440e
+2025-07-10T18:21:19.848+07:00  INFO 46967 --- [http-nio-6001-exec-2] [0953a41cd17a96cac5ec0a7a4678517d-66cafcfad3e1fa02] c.example.servicea.controller.HelloCont  : >>> END
+2025-07-10T18:21:20.673+07:00  INFO 46967 --- [http-nio-6001-exec-4] [6d8d2f18dfbdd7c64fae3185b048a443-e01577130a50c398] c.example.servicea.controller.HelloCont  : >>> START
+2025-07-10T18:21:20.673+07:00  INFO 46967 --- [http-nio-6001-exec-4] [6d8d2f18dfbdd7c64fae3185b048a443-e01577130a50c398] c.example.servicea.remote.ApiServiceB    : > calling service B
+2025-07-10T18:21:20.690+07:00  INFO 46967 --- [http-nio-6001-exec-4] [6d8d2f18dfbdd7c64fae3185b048a443-e01577130a50c398] c.example.servicea.remote.ApiServiceB    : resServiceB: Service B from host: 6feddf80440e
+2025-07-10T18:21:20.690+07:00  INFO 46967 --- [http-nio-6001-exec-4] [6d8d2f18dfbdd7c64fae3185b048a443-e01577130a50c398] c.example.servicea.controller.HelloCont  : > final response: Service B from host: 6feddf80440e
+2025-07-10T18:21:20.690+07:00  INFO 46967 --- [http-nio-6001-exec-4] [6d8d2f18dfbdd7c64fae3185b048a443-e01577130a50c398] c.example.servicea.controller.HelloCont  : >>> END
+2025-07-10T18:21:21.410+07:00  INFO 46967 --- [http-nio-6001-exec-6] [9208d2d0638ebd8ba24b5ed001d2d57e-60d9c5eb04c42227] c.example.servicea.controller.HelloCont  : >>> START
+2025-07-10T18:21:21.410+07:00  INFO 46967 --- [http-nio-6001-exec-6] [9208d2d0638ebd8ba24b5ed001d2d57e-60d9c5eb04c42227] c.example.servicea.remote.ApiServiceB    : > calling service B
+2025-07-10T18:21:21.428+07:00  INFO 46967 --- [http-nio-6001-exec-6] [9208d2d0638ebd8ba24b5ed001d2d57e-60d9c5eb04c42227] c.example.servicea.remote.ApiServiceB    : resServiceB: Service B from host: 6feddf80440e
+2025-07-10T18:21:21.428+07:00  INFO 46967 --- [http-nio-6001-exec-6] [9208d2d0638ebd8ba24b5ed001d2d57e-60d9c5eb04c42227] c.example.servicea.controller.HelloCont  : > final response: Service B from host: 6feddf80440e
+2025-07-10T18:21:21.429+07:00  INFO 46967 --- [http-nio-6001-exec-6] [9208d2d0638ebd8ba24b5ed001d2d57e-60d9c5eb04c42227] c.example.servicea.controller.HelloCont  : >>> END
+2025-07-10T18:46:13.779+07:00  INFO 53079 --- [main] [                                                 ] c.example.servicea.ServiceAApplication   : Starting ServiceAApplication using Java 21.0.2 with PID 53079 (/Users/nohder/dev/spring/spring-boot-tutorial/service-a/target/classes started by nohder in /Users/nohder/dev/spring/spring-boot-tutorial/service-a)
+2025-07-10T18:46:13.781+07:00 DEBUG 53079 --- [main] [                                                 ] c.example.servicea.ServiceAApplication   : Running with Spring Boot v3.3.0, Spring v6.1.8
+2025-07-10T18:46:13.781+07:00  INFO 53079 --- [main] [                                                 ] c.example.servicea.ServiceAApplication   : The following 1 profile is active: "dev"
+2025-07-10T18:46:14.670+07:00  INFO 53079 --- [main] [                                                 ] o.s.cloud.context.scope.GenericScope     : BeanFactory id=22d10854-1c6a-3cb4-b5b7-1084dc5d6c67
+2025-07-10T18:46:15.051+07:00  INFO 53079 --- [main] [                                                 ] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 6001 (http)
+2025-07-10T18:46:15.060+07:00  INFO 53079 --- [main] [                                                 ] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-07-10T18:46:15.060+07:00  INFO 53079 --- [main] [                                                 ] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.24]
+2025-07-10T18:46:15.094+07:00  INFO 53079 --- [main] [                                                 ] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-07-10T18:46:15.095+07:00  INFO 53079 --- [main] [                                                 ] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1269 ms
+2025-07-10T18:46:16.123+07:00  INFO 53079 --- [main] [                                                 ] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2025-07-10T18:46:16.178+07:00  INFO 53079 --- [main] [                                                 ] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 6001 (http) with context path '/'
+2025-07-10T18:46:16.191+07:00  INFO 53079 --- [main] [                                                 ] c.example.servicea.ServiceAApplication   : Started ServiceAApplication in 3.059 seconds (process running for 3.692)
+2025-07-10T18:46:16.416+07:00  INFO 53079 --- [RMI TCP Connection(2)-127.0.0.1] [                                                 ] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-07-10T18:46:16.416+07:00  INFO 53079 --- [RMI TCP Connection(2)-127.0.0.1] [                                                 ] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-07-10T18:46:16.420+07:00  INFO 53079 --- [RMI TCP Connection(2)-127.0.0.1] [                                                 ] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2025-07-10T18:47:59.007+07:00  INFO 53331 --- [main] [                                                 ] c.example.servicea.ServiceAApplication   : Starting ServiceAApplication using Java 21.0.2 with PID 53331 (/Users/nohder/dev/spring/spring-boot-tutorial/service-a/target/classes started by nohder in /Users/nohder/dev/spring/spring-boot-tutorial/service-a)
+2025-07-10T18:47:59.009+07:00 DEBUG 53331 --- [main] [                                                 ] c.example.servicea.ServiceAApplication   : Running with Spring Boot v3.3.0, Spring v6.1.8
+2025-07-10T18:47:59.009+07:00  INFO 53331 --- [main] [                                                 ] c.example.servicea.ServiceAApplication   : The following 1 profile is active: "dev"
+2025-07-10T18:47:59.925+07:00  INFO 53331 --- [main] [                                                 ] o.s.cloud.context.scope.GenericScope     : BeanFactory id=22d10854-1c6a-3cb4-b5b7-1084dc5d6c67
+2025-07-10T18:48:00.425+07:00  INFO 53331 --- [main] [                                                 ] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 6001 (http)
+2025-07-10T18:48:00.433+07:00  INFO 53331 --- [main] [                                                 ] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-07-10T18:48:00.434+07:00  INFO 53331 --- [main] [                                                 ] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.24]
+2025-07-10T18:48:00.492+07:00  INFO 53331 --- [main] [                                                 ] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-07-10T18:48:00.492+07:00  INFO 53331 --- [main] [                                                 ] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1431 ms
+2025-07-10T18:48:01.546+07:00  INFO 53331 --- [main] [                                                 ] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2025-07-10T18:48:01.643+07:00  INFO 53331 --- [main] [                                                 ] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 6001 (http) with context path '/'
+2025-07-10T18:48:01.660+07:00  INFO 53331 --- [main] [                                                 ] c.example.servicea.ServiceAApplication   : Started ServiceAApplication in 3.465 seconds (process running for 4.554)
+2025-07-10T18:48:02.262+07:00  INFO 53331 --- [RMI TCP Connection(2)-127.0.0.1] [                                                 ] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-07-10T18:48:02.263+07:00  INFO 53331 --- [RMI TCP Connection(2)-127.0.0.1] [                                                 ] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-07-10T18:48:02.264+07:00  INFO 53331 --- [RMI TCP Connection(2)-127.0.0.1] [                                                 ] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-07-10T18:48:08.069+07:00  INFO 53331 --- [http-nio-6001-exec-1] [e7ca7de32ef5248a1e5ca992b0175bc7-f6fa02da7085b3f6] c.example.servicea.controller.HelloCont  : >>> START
+2025-07-10T18:48:08.069+07:00  INFO 53331 --- [http-nio-6001-exec-1] [e7ca7de32ef5248a1e5ca992b0175bc7-f6fa02da7085b3f6] c.example.servicea.remote.ApiServiceB    : > calling service B
+2025-07-10T18:48:08.081+07:00 ERROR 53331 --- [http-nio-6001-exec-1] [                                                 ] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.IllegalArgumentException: [http//127.0.0.1:6002] is not a valid HTTP URL] with root cause
+
+java.lang.IllegalArgumentException: [http//127.0.0.1:6002] is not a valid HTTP URL
+	at org.springframework.web.util.UriComponentsBuilder.fromHttpUrl(UriComponentsBuilder.java:303)
+	at com.example.servicea.remote.ApiServiceB.callServiceB(ApiServiceB.java:40)
+	at com.example.servicea.controller.HelloCont.callServiceB(HelloCont.java:26)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:926)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:831)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:109)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+
+2025-07-10T18:48:39.292+07:00  INFO 53444 --- [main] [                                                 ] c.example.servicea.ServiceAApplication   : Starting ServiceAApplication using Java 21.0.2 with PID 53444 (/Users/nohder/dev/spring/spring-boot-tutorial/service-a/target/classes started by nohder in /Users/nohder/dev/spring/spring-boot-tutorial/service-a)
+2025-07-10T18:48:39.300+07:00 DEBUG 53444 --- [main] [                                                 ] c.example.servicea.ServiceAApplication   : Running with Spring Boot v3.3.0, Spring v6.1.8
+2025-07-10T18:48:39.302+07:00  INFO 53444 --- [main] [                                                 ] c.example.servicea.ServiceAApplication   : The following 1 profile is active: "dev"
+2025-07-10T18:48:39.969+07:00  INFO 53444 --- [main] [                                                 ] o.s.cloud.context.scope.GenericScope     : BeanFactory id=22d10854-1c6a-3cb4-b5b7-1084dc5d6c67
+2025-07-10T18:48:40.229+07:00  INFO 53444 --- [main] [                                                 ] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 6001 (http)
+2025-07-10T18:48:40.235+07:00  INFO 53444 --- [main] [                                                 ] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-07-10T18:48:40.235+07:00  INFO 53444 --- [main] [                                                 ] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.24]
+2025-07-10T18:48:40.260+07:00  INFO 53444 --- [main] [                                                 ] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-07-10T18:48:40.261+07:00  INFO 53444 --- [main] [                                                 ] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 912 ms
+2025-07-10T18:48:41.001+07:00  INFO 53444 --- [main] [                                                 ] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2025-07-10T18:48:41.044+07:00  INFO 53444 --- [main] [                                                 ] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 6001 (http) with context path '/'
+2025-07-10T18:48:41.057+07:00  INFO 53444 --- [main] [                                                 ] c.example.servicea.ServiceAApplication   : Started ServiceAApplication in 2.115 seconds (process running for 2.888)
+2025-07-10T18:48:41.470+07:00  INFO 53444 --- [RMI TCP Connection(3)-127.0.0.1] [                                                 ] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-07-10T18:48:41.470+07:00  INFO 53444 --- [RMI TCP Connection(3)-127.0.0.1] [                                                 ] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-07-10T18:48:41.471+07:00  INFO 53444 --- [RMI TCP Connection(3)-127.0.0.1] [                                                 ] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-07-10T18:58:08.537+07:00  INFO 55320 --- [main] [                                                 ] c.example.servicea.ServiceAApplication   : Starting ServiceAApplication using Java 21.0.2 with PID 55320 (/Users/nohder/dev/spring/spring-boot-tutorial/service-a/target/classes started by nohder in /Users/nohder/dev/spring/spring-boot-tutorial/service-a)
+2025-07-10T18:58:08.539+07:00 DEBUG 55320 --- [main] [                                                 ] c.example.servicea.ServiceAApplication   : Running with Spring Boot v3.3.0, Spring v6.1.8
+2025-07-10T18:58:08.540+07:00  INFO 55320 --- [main] [                                                 ] c.example.servicea.ServiceAApplication   : The following 1 profile is active: "dev"
+2025-07-10T18:58:09.374+07:00  INFO 55320 --- [main] [                                                 ] o.s.cloud.context.scope.GenericScope     : BeanFactory id=22d10854-1c6a-3cb4-b5b7-1084dc5d6c67
+2025-07-10T18:58:09.687+07:00  INFO 55320 --- [main] [                                                 ] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 6001 (http)
+2025-07-10T18:58:09.695+07:00  INFO 55320 --- [main] [                                                 ] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-07-10T18:58:09.695+07:00  INFO 55320 --- [main] [                                                 ] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.24]
+2025-07-10T18:58:09.723+07:00  INFO 55320 --- [main] [                                                 ] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-07-10T18:58:09.723+07:00  INFO 55320 --- [main] [                                                 ] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1145 ms
+2025-07-10T18:58:10.671+07:00  INFO 55320 --- [main] [                                                 ] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2025-07-10T18:58:10.717+07:00  WARN 55320 --- [main] [                                                 ] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2025-07-10T18:58:10.738+07:00  INFO 55320 --- [main] [                                                 ] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-07-10T18:58:10.747+07:00 ERROR 55320 --- [main] [                                                 ] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 6001 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 6001 or configure this application to listen on another port.
+
+2025-07-10T18:58:40.291+07:00  INFO 55784 --- [main] [                                                 ] c.example.servicea.ServiceAApplication   : Starting ServiceAApplication using Java 21.0.2 with PID 55784 (/Users/nohder/dev/spring/spring-boot-tutorial/service-a/target/classes started by nohder in /Users/nohder/dev/spring/spring-boot-tutorial/service-a)
+2025-07-10T18:58:40.298+07:00 DEBUG 55784 --- [main] [                                                 ] c.example.servicea.ServiceAApplication   : Running with Spring Boot v3.3.0, Spring v6.1.8
+2025-07-10T18:58:40.299+07:00  INFO 55784 --- [main] [                                                 ] c.example.servicea.ServiceAApplication   : The following 1 profile is active: "dev"
+2025-07-10T18:58:41.616+07:00  INFO 55784 --- [main] [                                                 ] o.s.cloud.context.scope.GenericScope     : BeanFactory id=22d10854-1c6a-3cb4-b5b7-1084dc5d6c67
+2025-07-10T18:58:42.073+07:00  INFO 55784 --- [main] [                                                 ] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 6001 (http)
+2025-07-10T18:58:42.082+07:00  INFO 55784 --- [main] [                                                 ] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-07-10T18:58:42.082+07:00  INFO 55784 --- [main] [                                                 ] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.24]
+2025-07-10T18:58:42.112+07:00  INFO 55784 --- [main] [                                                 ] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-07-10T18:58:42.113+07:00  INFO 55784 --- [main] [                                                 ] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1746 ms
+2025-07-10T18:58:43.319+07:00  INFO 55784 --- [main] [                                                 ] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2025-07-10T18:58:43.361+07:00  WARN 55784 --- [main] [                                                 ] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2025-07-10T18:58:43.378+07:00  INFO 55784 --- [main] [                                                 ] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-07-10T18:58:43.386+07:00 ERROR 55784 --- [main] [                                                 ] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 6001 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 6001 or configure this application to listen on another port.
+
+2025-07-10T19:00:07.842+07:00  INFO 56308 --- [main] [                                                 ] c.example.servicea.ServiceAApplication   : Starting ServiceAApplication using Java 21.0.2 with PID 56308 (/Users/nohder/dev/spring/spring-boot-tutorial/service-a/target/classes started by nohder in /Users/nohder/dev/spring/spring-boot-tutorial/service-a)
+2025-07-10T19:00:07.844+07:00 DEBUG 56308 --- [main] [                                                 ] c.example.servicea.ServiceAApplication   : Running with Spring Boot v3.3.0, Spring v6.1.8
+2025-07-10T19:00:07.844+07:00  INFO 56308 --- [main] [                                                 ] c.example.servicea.ServiceAApplication   : The following 1 profile is active: "dev"
+2025-07-10T19:00:08.562+07:00  INFO 56308 --- [main] [                                                 ] o.s.cloud.context.scope.GenericScope     : BeanFactory id=22d10854-1c6a-3cb4-b5b7-1084dc5d6c67
+2025-07-10T19:00:08.899+07:00  INFO 56308 --- [main] [                                                 ] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 6001 (http)
+2025-07-10T19:00:08.908+07:00  INFO 56308 --- [main] [                                                 ] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-07-10T19:00:08.909+07:00  INFO 56308 --- [main] [                                                 ] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.24]
+2025-07-10T19:00:08.952+07:00  INFO 56308 --- [main] [                                                 ] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-07-10T19:00:08.953+07:00  INFO 56308 --- [main] [                                                 ] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1073 ms
+2025-07-10T19:00:09.867+07:00  INFO 56308 --- [main] [                                                 ] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2025-07-10T19:00:09.935+07:00  INFO 56308 --- [main] [                                                 ] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 6001 (http) with context path '/'
+2025-07-10T19:00:09.952+07:00  INFO 56308 --- [main] [                                                 ] c.example.servicea.ServiceAApplication   : Started ServiceAApplication in 2.794 seconds (process running for 3.341)
+2025-07-10T19:00:10.481+07:00  INFO 56308 --- [RMI TCP Connection(4)-127.0.0.1] [                                                 ] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-07-10T19:00:10.481+07:00  INFO 56308 --- [RMI TCP Connection(4)-127.0.0.1] [                                                 ] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-07-10T19:00:10.484+07:00  INFO 56308 --- [RMI TCP Connection(4)-127.0.0.1] [                                                 ] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2025-07-10T19:00:26.421+07:00  INFO 56308 --- [http-nio-6001-exec-1] [a52c9989fc8086f55a7333f0fd3e9eaf-b75553b7a846f909] c.example.servicea.controller.HelloCont  : >>> START
+2025-07-10T19:00:26.422+07:00  INFO 56308 --- [http-nio-6001-exec-1] [a52c9989fc8086f55a7333f0fd3e9eaf-b75553b7a846f909] c.example.servicea.remote.ApiServiceB    : > calling service B
+2025-07-10T19:00:26.426+07:00  INFO 56308 --- [http-nio-6001-exec-1] [a52c9989fc8086f55a7333f0fd3e9eaf-b75553b7a846f909] c.example.servicea.remote.ApiServiceB    : > uriComponentsBuilder: http://127.0.0.1:6002/service-b
+2025-07-10T19:00:27.255+07:00 ERROR 56308 --- [http-nio-6001-exec-1] [                                                 ] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.springframework.web.client.HttpClientErrorException$MethodNotAllowed: 405 Method Not Allowed: "{"timestamp":"2025-07-10T12:00:26.910+00:00","status":405,"error":"Method Not Allowed","path":"/service-b"}"] with root cause
+
+org.springframework.web.client.HttpClientErrorException$MethodNotAllowed: 405 Method Not Allowed: "{"timestamp":"2025-07-10T12:00:26.910+00:00","status":405,"error":"Method Not Allowed","path":"/service-b"}"
+	at org.springframework.web.client.HttpClientErrorException.create(HttpClientErrorException.java:115)
+	at org.springframework.web.client.StatusHandler.lambda$defaultHandler$3(StatusHandler.java:86)
+	at org.springframework.web.client.StatusHandler.handle(StatusHandler.java:146)
+	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.applyStatusHandlers(DefaultRestClient.java:701)
+	at org.springframework.web.client.DefaultRestClient.readWithMessageConverters(DefaultRestClient.java:200)
+	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.readBody(DefaultRestClient.java:688)
+	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.toEntityInternal(DefaultRestClient.java:658)
+	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.toEntity(DefaultRestClient.java:647)
+	at com.example.servicea.remote.ApiServiceB.callServiceB(ApiServiceB.java:52)
+	at com.example.servicea.controller.HelloCont.callServiceB(HelloCont.java:26)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:926)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:831)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:109)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+
+2025-07-10T19:01:35.198+07:00  INFO 56518 --- [main] [                                                 ] c.example.servicea.ServiceAApplication   : Starting ServiceAApplication using Java 21.0.2 with PID 56518 (/Users/nohder/dev/spring/spring-boot-tutorial/service-a/target/classes started by nohder in /Users/nohder/dev/spring/spring-boot-tutorial/service-a)
+2025-07-10T19:01:35.200+07:00 DEBUG 56518 --- [main] [                                                 ] c.example.servicea.ServiceAApplication   : Running with Spring Boot v3.3.0, Spring v6.1.8
+2025-07-10T19:01:35.201+07:00  INFO 56518 --- [main] [                                                 ] c.example.servicea.ServiceAApplication   : The following 1 profile is active: "dev"
+2025-07-10T19:01:36.009+07:00  INFO 56518 --- [main] [                                                 ] o.s.cloud.context.scope.GenericScope     : BeanFactory id=22d10854-1c6a-3cb4-b5b7-1084dc5d6c67
+2025-07-10T19:01:36.404+07:00  INFO 56518 --- [main] [                                                 ] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 6001 (http)
+2025-07-10T19:01:36.412+07:00  INFO 56518 --- [main] [                                                 ] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-07-10T19:01:36.412+07:00  INFO 56518 --- [main] [                                                 ] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.24]
+2025-07-10T19:01:36.441+07:00  INFO 56518 --- [main] [                                                 ] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-07-10T19:01:36.441+07:00  INFO 56518 --- [main] [                                                 ] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1192 ms
+2025-07-10T19:01:37.684+07:00  INFO 56518 --- [main] [                                                 ] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2025-07-10T19:01:37.738+07:00  INFO 56518 --- [main] [                                                 ] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 6001 (http) with context path '/'
+2025-07-10T19:01:37.757+07:00  INFO 56518 --- [main] [                                                 ] c.example.servicea.ServiceAApplication   : Started ServiceAApplication in 3.044 seconds (process running for 3.622)
+2025-07-10T19:01:38.276+07:00  INFO 56518 --- [RMI TCP Connection(4)-127.0.0.1] [                                                 ] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-07-10T19:01:38.277+07:00  INFO 56518 --- [RMI TCP Connection(4)-127.0.0.1] [                                                 ] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-07-10T19:01:38.278+07:00  INFO 56518 --- [RMI TCP Connection(4)-127.0.0.1] [                                                 ] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-07-10T19:01:42.614+07:00  INFO 56518 --- [http-nio-6001-exec-1] [ccc4a81a4a86e9828088a5847c962d1a-4c97054ed82fdcad] c.example.servicea.controller.HelloCont  : >>> START
+2025-07-10T19:01:42.617+07:00  INFO 56518 --- [http-nio-6001-exec-1] [ccc4a81a4a86e9828088a5847c962d1a-4c97054ed82fdcad] c.example.servicea.remote.ApiServiceB    : > calling service B
+2025-07-10T19:01:42.628+07:00  INFO 56518 --- [http-nio-6001-exec-1] [ccc4a81a4a86e9828088a5847c962d1a-4c97054ed82fdcad] c.example.servicea.remote.ApiServiceB    : > uriComponentsBuilder: http://127.0.0.1:6002/service-b
+2025-07-10T19:01:43.162+07:00  INFO 56518 --- [http-nio-6001-exec-1] [ccc4a81a4a86e9828088a5847c962d1a-4c97054ed82fdcad] c.example.servicea.remote.ApiServiceB    : >resServiceB: <200 OK OK,Service B from host: 54fb666ef473,[content-length:"33", content-type:"text/plain;charset=UTF-8", date:"Thu, 10 Jul 2025 12:01:43 GMT"]>
+2025-07-10T19:01:43.163+07:00  INFO 56518 --- [http-nio-6001-exec-1] [ccc4a81a4a86e9828088a5847c962d1a-4c97054ed82fdcad] c.example.servicea.controller.HelloCont  : > final response: Service B from host: 54fb666ef473
+2025-07-10T19:01:43.163+07:00  INFO 56518 --- [http-nio-6001-exec-1] [ccc4a81a4a86e9828088a5847c962d1a-4c97054ed82fdcad] c.example.servicea.controller.HelloCont  : >>> END
+2025-07-10T19:01:45.241+07:00  INFO 56518 --- [http-nio-6001-exec-2] [4e8c73ae2847fcf5c6f36f2c075a1491-2fbbbc08c13199fd] c.example.servicea.controller.HelloCont  : >>> START
+2025-07-10T19:01:45.243+07:00  INFO 56518 --- [http-nio-6001-exec-2] [4e8c73ae2847fcf5c6f36f2c075a1491-2fbbbc08c13199fd] c.example.servicea.remote.ApiServiceB    : > calling service B
+2025-07-10T19:01:45.243+07:00  INFO 56518 --- [http-nio-6001-exec-2] [4e8c73ae2847fcf5c6f36f2c075a1491-2fbbbc08c13199fd] c.example.servicea.remote.ApiServiceB    : > uriComponentsBuilder: http://127.0.0.1:6002/service-b
+2025-07-10T19:01:45.350+07:00  INFO 56518 --- [http-nio-6001-exec-2] [4e8c73ae2847fcf5c6f36f2c075a1491-2fbbbc08c13199fd] c.example.servicea.remote.ApiServiceB    : >resServiceB: <200 OK OK,Service B from host: 54fb666ef473,[content-length:"33", content-type:"text/plain;charset=UTF-8", date:"Thu, 10 Jul 2025 12:01:45 GMT"]>
+2025-07-10T19:01:45.351+07:00  INFO 56518 --- [http-nio-6001-exec-2] [4e8c73ae2847fcf5c6f36f2c075a1491-2fbbbc08c13199fd] c.example.servicea.controller.HelloCont  : > final response: Service B from host: 54fb666ef473
+2025-07-10T19:01:45.351+07:00  INFO 56518 --- [http-nio-6001-exec-2] [4e8c73ae2847fcf5c6f36f2c075a1491-2fbbbc08c13199fd] c.example.servicea.controller.HelloCont  : >>> END
+2025-07-10T19:01:46.429+07:00  INFO 56518 --- [http-nio-6001-exec-3] [c14eb4c20c3e8b241116f9df74f7fbcd-38d890fad36f4a7f] c.example.servicea.controller.HelloCont  : >>> START
+2025-07-10T19:01:46.430+07:00  INFO 56518 --- [http-nio-6001-exec-3] [c14eb4c20c3e8b241116f9df74f7fbcd-38d890fad36f4a7f] c.example.servicea.remote.ApiServiceB    : > calling service B
+2025-07-10T19:01:46.430+07:00  INFO 56518 --- [http-nio-6001-exec-3] [c14eb4c20c3e8b241116f9df74f7fbcd-38d890fad36f4a7f] c.example.servicea.remote.ApiServiceB    : > uriComponentsBuilder: http://127.0.0.1:6002/service-b
+2025-07-10T19:01:46.444+07:00  INFO 56518 --- [http-nio-6001-exec-3] [c14eb4c20c3e8b241116f9df74f7fbcd-38d890fad36f4a7f] c.example.servicea.remote.ApiServiceB    : >resServiceB: <200 OK OK,Service B from host: 54fb666ef473,[content-length:"33", content-type:"text/plain;charset=UTF-8", date:"Thu, 10 Jul 2025 12:01:46 GMT"]>
+2025-07-10T19:01:46.444+07:00  INFO 56518 --- [http-nio-6001-exec-3] [c14eb4c20c3e8b241116f9df74f7fbcd-38d890fad36f4a7f] c.example.servicea.controller.HelloCont  : > final response: Service B from host: 54fb666ef473
+2025-07-10T19:01:46.444+07:00  INFO 56518 --- [http-nio-6001-exec-3] [c14eb4c20c3e8b241116f9df74f7fbcd-38d890fad36f4a7f] c.example.servicea.controller.HelloCont  : >>> END
+2025-07-10T19:01:47.013+07:00  INFO 56518 --- [http-nio-6001-exec-4] [ab7dabab28bd062cbd84357219c6257f-40759fee419f6a40] c.example.servicea.controller.HelloCont  : >>> START
+2025-07-10T19:01:47.013+07:00  INFO 56518 --- [http-nio-6001-exec-4] [ab7dabab28bd062cbd84357219c6257f-40759fee419f6a40] c.example.servicea.remote.ApiServiceB    : > calling service B
+2025-07-10T19:01:47.014+07:00  INFO 56518 --- [http-nio-6001-exec-4] [ab7dabab28bd062cbd84357219c6257f-40759fee419f6a40] c.example.servicea.remote.ApiServiceB    : > uriComponentsBuilder: http://127.0.0.1:6002/service-b
+2025-07-10T19:01:47.044+07:00  INFO 56518 --- [http-nio-6001-exec-4] [ab7dabab28bd062cbd84357219c6257f-40759fee419f6a40] c.example.servicea.remote.ApiServiceB    : >resServiceB: <200 OK OK,Service B from host: 54fb666ef473,[content-length:"33", content-type:"text/plain;charset=UTF-8", date:"Thu, 10 Jul 2025 12:01:46 GMT"]>
+2025-07-10T19:01:47.045+07:00  INFO 56518 --- [http-nio-6001-exec-4] [ab7dabab28bd062cbd84357219c6257f-40759fee419f6a40] c.example.servicea.controller.HelloCont  : > final response: Service B from host: 54fb666ef473
+2025-07-10T19:01:47.045+07:00  INFO 56518 --- [http-nio-6001-exec-4] [ab7dabab28bd062cbd84357219c6257f-40759fee419f6a40] c.example.servicea.controller.HelloCont  : >>> END
+2025-07-10T19:01:47.556+07:00  INFO 56518 --- [http-nio-6001-exec-6] [eea191ccaf9c4b0f335863902981ede1-802ef0979ed9bc01] c.example.servicea.controller.HelloCont  : >>> START
+2025-07-10T19:01:47.556+07:00  INFO 56518 --- [http-nio-6001-exec-6] [eea191ccaf9c4b0f335863902981ede1-802ef0979ed9bc01] c.example.servicea.remote.ApiServiceB    : > calling service B
+2025-07-10T19:01:47.556+07:00  INFO 56518 --- [http-nio-6001-exec-6] [eea191ccaf9c4b0f335863902981ede1-802ef0979ed9bc01] c.example.servicea.remote.ApiServiceB    : > uriComponentsBuilder: http://127.0.0.1:6002/service-b
+2025-07-10T19:01:47.582+07:00  INFO 56518 --- [http-nio-6001-exec-6] [eea191ccaf9c4b0f335863902981ede1-802ef0979ed9bc01] c.example.servicea.remote.ApiServiceB    : >resServiceB: <200 OK OK,Service B from host: 54fb666ef473,[content-length:"33", content-type:"text/plain;charset=UTF-8", date:"Thu, 10 Jul 2025 12:01:47 GMT"]>
+2025-07-10T19:01:47.582+07:00  INFO 56518 --- [http-nio-6001-exec-6] [eea191ccaf9c4b0f335863902981ede1-802ef0979ed9bc01] c.example.servicea.controller.HelloCont  : > final response: Service B from host: 54fb666ef473
+2025-07-10T19:01:47.583+07:00  INFO 56518 --- [http-nio-6001-exec-6] [eea191ccaf9c4b0f335863902981ede1-802ef0979ed9bc01] c.example.servicea.controller.HelloCont  : >>> END
+2025-07-10T19:01:48.509+07:00  INFO 56518 --- [http-nio-6001-exec-7] [9cf9c5e07de273b2f5a1aa7dcb9e780f-5f8cdfb6dbb0fb8f] c.example.servicea.controller.HelloCont  : >>> START
+2025-07-10T19:01:48.509+07:00  INFO 56518 --- [http-nio-6001-exec-7] [9cf9c5e07de273b2f5a1aa7dcb9e780f-5f8cdfb6dbb0fb8f] c.example.servicea.remote.ApiServiceB    : > calling service B
+2025-07-10T19:01:48.509+07:00  INFO 56518 --- [http-nio-6001-exec-7] [9cf9c5e07de273b2f5a1aa7dcb9e780f-5f8cdfb6dbb0fb8f] c.example.servicea.remote.ApiServiceB    : > uriComponentsBuilder: http://127.0.0.1:6002/service-b
+2025-07-10T19:01:48.531+07:00  INFO 56518 --- [http-nio-6001-exec-7] [9cf9c5e07de273b2f5a1aa7dcb9e780f-5f8cdfb6dbb0fb8f] c.example.servicea.remote.ApiServiceB    : >resServiceB: <200 OK OK,Service B from host: 54fb666ef473,[content-length:"33", content-type:"text/plain;charset=UTF-8", date:"Thu, 10 Jul 2025 12:01:47 GMT"]>
+2025-07-10T19:01:48.531+07:00  INFO 56518 --- [http-nio-6001-exec-7] [9cf9c5e07de273b2f5a1aa7dcb9e780f-5f8cdfb6dbb0fb8f] c.example.servicea.controller.HelloCont  : > final response: Service B from host: 54fb666ef473
+2025-07-10T19:01:48.532+07:00  INFO 56518 --- [http-nio-6001-exec-7] [9cf9c5e07de273b2f5a1aa7dcb9e780f-5f8cdfb6dbb0fb8f] c.example.servicea.controller.HelloCont  : >>> END
+2025-07-10T19:01:49.427+07:00  INFO 56518 --- [http-nio-6001-exec-8] [787ffc1e19e2db45d3830e6a6e85058b-75a1f1f05893be85] c.example.servicea.controller.HelloCont  : >>> START
+2025-07-10T19:01:49.427+07:00  INFO 56518 --- [http-nio-6001-exec-8] [787ffc1e19e2db45d3830e6a6e85058b-75a1f1f05893be85] c.example.servicea.remote.ApiServiceB    : > calling service B
+2025-07-10T19:01:49.427+07:00  INFO 56518 --- [http-nio-6001-exec-8] [787ffc1e19e2db45d3830e6a6e85058b-75a1f1f05893be85] c.example.servicea.remote.ApiServiceB    : > uriComponentsBuilder: http://127.0.0.1:6002/service-b
+2025-07-10T19:01:49.442+07:00  INFO 56518 --- [http-nio-6001-exec-8] [787ffc1e19e2db45d3830e6a6e85058b-75a1f1f05893be85] c.example.servicea.remote.ApiServiceB    : >resServiceB: <200 OK OK,Service B from host: 54fb666ef473,[content-length:"33", content-type:"text/plain;charset=UTF-8", date:"Thu, 10 Jul 2025 12:01:49 GMT"]>
+2025-07-10T19:01:49.442+07:00  INFO 56518 --- [http-nio-6001-exec-8] [787ffc1e19e2db45d3830e6a6e85058b-75a1f1f05893be85] c.example.servicea.controller.HelloCont  : > final response: Service B from host: 54fb666ef473
+2025-07-10T19:01:49.442+07:00  INFO 56518 --- [http-nio-6001-exec-8] [787ffc1e19e2db45d3830e6a6e85058b-75a1f1f05893be85] c.example.servicea.controller.HelloCont  : >>> END
+2025-07-10T19:01:50.589+07:00  INFO 56518 --- [http-nio-6001-exec-9] [62ab131a6516e6d551dd8e0022fb986f-1958849c20f84ae1] c.example.servicea.controller.HelloCont  : >>> START
+2025-07-10T19:01:50.592+07:00  INFO 56518 --- [http-nio-6001-exec-9] [62ab131a6516e6d551dd8e0022fb986f-1958849c20f84ae1] c.example.servicea.remote.ApiServiceB    : > calling service B
+2025-07-10T19:01:50.594+07:00  INFO 56518 --- [http-nio-6001-exec-9] [62ab131a6516e6d551dd8e0022fb986f-1958849c20f84ae1] c.example.servicea.remote.ApiServiceB    : > uriComponentsBuilder: http://127.0.0.1:6002/service-b
+2025-07-10T19:01:50.716+07:00  INFO 56518 --- [http-nio-6001-exec-9] [62ab131a6516e6d551dd8e0022fb986f-1958849c20f84ae1] c.example.servicea.remote.ApiServiceB    : >resServiceB: <200 OK OK,Service B from host: 54fb666ef473,[content-length:"33", content-type:"text/plain;charset=UTF-8", date:"Thu, 10 Jul 2025 12:01:50 GMT"]>
+2025-07-10T19:01:50.717+07:00  INFO 56518 --- [http-nio-6001-exec-9] [62ab131a6516e6d551dd8e0022fb986f-1958849c20f84ae1] c.example.servicea.controller.HelloCont  : > final response: Service B from host: 54fb666ef473
+2025-07-10T19:01:50.717+07:00  INFO 56518 --- [http-nio-6001-exec-9] [62ab131a6516e6d551dd8e0022fb986f-1958849c20f84ae1] c.example.servicea.controller.HelloCont  : >>> END
+2025-07-10T19:01:51.436+07:00  INFO 56518 --- [http-nio-6001-exec-10] [c2cb450f97eb8004e0b320307b4245d5-ee50f6e83c5d35a0] c.example.servicea.controller.HelloCont  : >>> START
+2025-07-10T19:01:51.436+07:00  INFO 56518 --- [http-nio-6001-exec-10] [c2cb450f97eb8004e0b320307b4245d5-ee50f6e83c5d35a0] c.example.servicea.remote.ApiServiceB    : > calling service B
+2025-07-10T19:01:51.436+07:00  INFO 56518 --- [http-nio-6001-exec-10] [c2cb450f97eb8004e0b320307b4245d5-ee50f6e83c5d35a0] c.example.servicea.remote.ApiServiceB    : > uriComponentsBuilder: http://127.0.0.1:6002/service-b
+2025-07-10T19:01:51.453+07:00  INFO 56518 --- [http-nio-6001-exec-10] [c2cb450f97eb8004e0b320307b4245d5-ee50f6e83c5d35a0] c.example.servicea.remote.ApiServiceB    : >resServiceB: <200 OK OK,Service B from host: 54fb666ef473,[content-length:"33", content-type:"text/plain;charset=UTF-8", date:"Thu, 10 Jul 2025 12:01:50 GMT"]>
+2025-07-10T19:01:51.453+07:00  INFO 56518 --- [http-nio-6001-exec-10] [c2cb450f97eb8004e0b320307b4245d5-ee50f6e83c5d35a0] c.example.servicea.controller.HelloCont  : > final response: Service B from host: 54fb666ef473
+2025-07-10T19:01:51.453+07:00  INFO 56518 --- [http-nio-6001-exec-10] [c2cb450f97eb8004e0b320307b4245d5-ee50f6e83c5d35a0] c.example.servicea.controller.HelloCont  : >>> END
+2025-07-10T19:01:51.810+07:00 ERROR 56518 --- [OkHttp http://ubuntu-dev.indochinabank.com:4318/...] [                                                 ] i.o.exporter.internal.http.HttpExporter  : Failed to export spans. The request could not be executed. Full error message: ubuntu-dev.indochinabank.com: nodename nor servname provided, or not known
+
+java.net.UnknownHostException: ubuntu-dev.indochinabank.com: nodename nor servname provided, or not known
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Inet6AddressImpl.java:52)
+	at java.base/java.net.InetAddress$PlatformResolver.lookupByName(InetAddress.java:1211)
+	at java.base/java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1828)
+	at java.base/java.net.InetAddress$NameServiceAddresses.get(InetAddress.java:1139)
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1818)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1688)
+	at okhttp3.Dns$Companion$DnsSystem.lookup(Dns.kt:49)
+	at okhttp3.internal.connection.RouteSelector.resetNextInetSocketAddress(RouteSelector.kt:169)
+	at okhttp3.internal.connection.RouteSelector.nextProxy(RouteSelector.kt:131)
+	at okhttp3.internal.connection.RouteSelector.next(RouteSelector.kt:73)
+	at okhttp3.internal.connection.ExchangeFinder.findConnection(ExchangeFinder.kt:205)
+	at okhttp3.internal.connection.ExchangeFinder.findHealthyConnection(ExchangeFinder.kt:106)
+	at okhttp3.internal.connection.ExchangeFinder.find(ExchangeFinder.kt:74)
+	at okhttp3.internal.connection.RealCall.initExchange$okhttp(RealCall.kt:255)
+	at okhttp3.internal.connection.ConnectInterceptor.intercept(ConnectInterceptor.kt:32)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:109)
+	at okhttp3.internal.cache.CacheInterceptor.intercept(CacheInterceptor.kt:95)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:109)
+	at okhttp3.internal.http.BridgeInterceptor.intercept(BridgeInterceptor.kt:83)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:109)
+	at okhttp3.internal.http.RetryAndFollowUpInterceptor.intercept(RetryAndFollowUpInterceptor.kt:76)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:109)
+	at okhttp3.internal.connection.RealCall.getResponseWithInterceptorChain$okhttp(RealCall.kt:201)
+	at okhttp3.internal.connection.RealCall$AsyncCall.run(RealCall.kt:517)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+
+2025-07-10T19:01:52.558+07:00  INFO 56518 --- [http-nio-6001-exec-1] [f88c6819326684d636b1504bba08d00d-0e2ac28ada40455b] c.example.servicea.controller.HelloCont  : >>> START
+2025-07-10T19:01:52.559+07:00  INFO 56518 --- [http-nio-6001-exec-1] [f88c6819326684d636b1504bba08d00d-0e2ac28ada40455b] c.example.servicea.remote.ApiServiceB    : > calling service B
+2025-07-10T19:01:52.559+07:00  INFO 56518 --- [http-nio-6001-exec-1] [f88c6819326684d636b1504bba08d00d-0e2ac28ada40455b] c.example.servicea.remote.ApiServiceB    : > uriComponentsBuilder: http://127.0.0.1:6002/service-b
+2025-07-10T19:01:52.592+07:00  INFO 56518 --- [http-nio-6001-exec-1] [f88c6819326684d636b1504bba08d00d-0e2ac28ada40455b] c.example.servicea.remote.ApiServiceB    : >resServiceB: <200 OK OK,Service B from host: 54fb666ef473,[content-length:"33", content-type:"text/plain;charset=UTF-8", date:"Thu, 10 Jul 2025 12:01:52 GMT"]>
+2025-07-10T19:01:52.592+07:00  INFO 56518 --- [http-nio-6001-exec-1] [f88c6819326684d636b1504bba08d00d-0e2ac28ada40455b] c.example.servicea.controller.HelloCont  : > final response: Service B from host: 54fb666ef473
+2025-07-10T19:01:52.592+07:00  INFO 56518 --- [http-nio-6001-exec-1] [f88c6819326684d636b1504bba08d00d-0e2ac28ada40455b] c.example.servicea.controller.HelloCont  : >>> END
+2025-07-10T19:01:53.437+07:00  INFO 56518 --- [http-nio-6001-exec-3] [4c63956809abf016bce4068b87403bb1-337f8eec265bbee3] c.example.servicea.controller.HelloCont  : >>> START
+2025-07-10T19:01:53.437+07:00  INFO 56518 --- [http-nio-6001-exec-3] [4c63956809abf016bce4068b87403bb1-337f8eec265bbee3] c.example.servicea.remote.ApiServiceB    : > calling service B
+2025-07-10T19:01:53.437+07:00  INFO 56518 --- [http-nio-6001-exec-3] [4c63956809abf016bce4068b87403bb1-337f8eec265bbee3] c.example.servicea.remote.ApiServiceB    : > uriComponentsBuilder: http://127.0.0.1:6002/service-b
+2025-07-10T19:01:53.446+07:00  INFO 56518 --- [http-nio-6001-exec-3] [4c63956809abf016bce4068b87403bb1-337f8eec265bbee3] c.example.servicea.remote.ApiServiceB    : >resServiceB: <200 OK OK,Service B from host: 54fb666ef473,[content-length:"33", content-type:"text/plain;charset=UTF-8", date:"Thu, 10 Jul 2025 12:01:52 GMT"]>
+2025-07-10T19:01:53.446+07:00  INFO 56518 --- [http-nio-6001-exec-3] [4c63956809abf016bce4068b87403bb1-337f8eec265bbee3] c.example.servicea.controller.HelloCont  : > final response: Service B from host: 54fb666ef473
+2025-07-10T19:01:53.447+07:00  INFO 56518 --- [http-nio-6001-exec-3] [4c63956809abf016bce4068b87403bb1-337f8eec265bbee3] c.example.servicea.controller.HelloCont  : >>> END
+2025-07-10T19:01:54.383+07:00  INFO 56518 --- [http-nio-6001-exec-4] [1b5685cdebe5aa2a9d8b8300ce36b9f8-f978f40672ae92eb] c.example.servicea.controller.HelloCont  : >>> START
+2025-07-10T19:01:54.384+07:00  INFO 56518 --- [http-nio-6001-exec-4] [1b5685cdebe5aa2a9d8b8300ce36b9f8-f978f40672ae92eb] c.example.servicea.remote.ApiServiceB    : > calling service B
+2025-07-10T19:01:54.384+07:00  INFO 56518 --- [http-nio-6001-exec-4] [1b5685cdebe5aa2a9d8b8300ce36b9f8-f978f40672ae92eb] c.example.servicea.remote.ApiServiceB    : > uriComponentsBuilder: http://127.0.0.1:6002/service-b
+2025-07-10T19:01:54.481+07:00  INFO 56518 --- [http-nio-6001-exec-4] [1b5685cdebe5aa2a9d8b8300ce36b9f8-f978f40672ae92eb] c.example.servicea.remote.ApiServiceB    : >resServiceB: <200 OK OK,Service B from host: 54fb666ef473,[content-length:"33", content-type:"text/plain;charset=UTF-8", date:"Thu, 10 Jul 2025 12:01:54 GMT"]>
+2025-07-10T19:01:54.482+07:00  INFO 56518 --- [http-nio-6001-exec-4] [1b5685cdebe5aa2a9d8b8300ce36b9f8-f978f40672ae92eb] c.example.servicea.controller.HelloCont  : > final response: Service B from host: 54fb666ef473
+2025-07-10T19:01:54.482+07:00  INFO 56518 --- [http-nio-6001-exec-4] [1b5685cdebe5aa2a9d8b8300ce36b9f8-f978f40672ae92eb] c.example.servicea.controller.HelloCont  : >>> END
+2025-07-10T19:01:55.132+07:00  INFO 56518 --- [http-nio-6001-exec-5] [2ca578581b5718cf029d814d1024f45d-f66f6d9b483f8689] c.example.servicea.controller.HelloCont  : >>> START
+2025-07-10T19:01:55.132+07:00  INFO 56518 --- [http-nio-6001-exec-5] [2ca578581b5718cf029d814d1024f45d-f66f6d9b483f8689] c.example.servicea.remote.ApiServiceB    : > calling service B
+2025-07-10T19:01:55.132+07:00  INFO 56518 --- [http-nio-6001-exec-5] [2ca578581b5718cf029d814d1024f45d-f66f6d9b483f8689] c.example.servicea.remote.ApiServiceB    : > uriComponentsBuilder: http://127.0.0.1:6002/service-b
+2025-07-10T19:01:55.147+07:00  INFO 56518 --- [http-nio-6001-exec-5] [2ca578581b5718cf029d814d1024f45d-f66f6d9b483f8689] c.example.servicea.remote.ApiServiceB    : >resServiceB: <200 OK OK,Service B from host: 54fb666ef473,[content-length:"33", content-type:"text/plain;charset=UTF-8", date:"Thu, 10 Jul 2025 12:01:54 GMT"]>
+2025-07-10T19:01:55.147+07:00  INFO 56518 --- [http-nio-6001-exec-5] [2ca578581b5718cf029d814d1024f45d-f66f6d9b483f8689] c.example.servicea.controller.HelloCont  : > final response: Service B from host: 54fb666ef473
+2025-07-10T19:01:55.147+07:00  INFO 56518 --- [http-nio-6001-exec-5] [2ca578581b5718cf029d814d1024f45d-f66f6d9b483f8689] c.example.servicea.controller.HelloCont  : >>> END
+2025-07-10T19:01:56.817+07:00 ERROR 56518 --- [OkHttp http://ubuntu-dev.indochinabank.com:4318/...] [                                                 ] i.o.exporter.internal.http.HttpExporter  : Failed to export spans. The request could not be executed. Full error message: ubuntu-dev.indochinabank.com
+
+java.net.UnknownHostException: ubuntu-dev.indochinabank.com
+	at java.base/java.net.InetAddress$CachedLookup.get(InetAddress.java:988)
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1818)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1688)
+	at okhttp3.Dns$Companion$DnsSystem.lookup(Dns.kt:49)
+	at okhttp3.internal.connection.RouteSelector.resetNextInetSocketAddress(RouteSelector.kt:169)
+	at okhttp3.internal.connection.RouteSelector.nextProxy(RouteSelector.kt:131)
+	at okhttp3.internal.connection.RouteSelector.next(RouteSelector.kt:73)
+	at okhttp3.internal.connection.ExchangeFinder.findConnection(ExchangeFinder.kt:205)
+	at okhttp3.internal.connection.ExchangeFinder.findHealthyConnection(ExchangeFinder.kt:106)
+	at okhttp3.internal.connection.ExchangeFinder.find(ExchangeFinder.kt:74)
+	at okhttp3.internal.connection.RealCall.initExchange$okhttp(RealCall.kt:255)
+	at okhttp3.internal.connection.ConnectInterceptor.intercept(ConnectInterceptor.kt:32)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:109)
+	at okhttp3.internal.cache.CacheInterceptor.intercept(CacheInterceptor.kt:95)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:109)
+	at okhttp3.internal.http.BridgeInterceptor.intercept(BridgeInterceptor.kt:83)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:109)
+	at okhttp3.internal.http.RetryAndFollowUpInterceptor.intercept(RetryAndFollowUpInterceptor.kt:76)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:109)
+	at okhttp3.internal.connection.RealCall.getResponseWithInterceptorChain$okhttp(RealCall.kt:201)
+	at okhttp3.internal.connection.RealCall$AsyncCall.run(RealCall.kt:517)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+
+2025-07-10T19:05:39.699+07:00  INFO 57122 --- [main] [                                                 ] c.example.servicea.ServiceAApplication   : Starting ServiceAApplication using Java 21.0.2 with PID 57122 (/Users/nohder/dev/spring/spring-boot-tutorial/service-a/target/classes started by nohder in /Users/nohder/dev/spring/spring-boot-tutorial/service-a)
+2025-07-10T19:05:39.700+07:00 DEBUG 57122 --- [main] [                                                 ] c.example.servicea.ServiceAApplication   : Running with Spring Boot v3.3.0, Spring v6.1.8
+2025-07-10T19:05:39.700+07:00  INFO 57122 --- [main] [                                                 ] c.example.servicea.ServiceAApplication   : The following 1 profile is active: "pro"
+2025-07-10T19:05:40.343+07:00  INFO 57122 --- [main] [                                                 ] o.s.cloud.context.scope.GenericScope     : BeanFactory id=22d10854-1c6a-3cb4-b5b7-1084dc5d6c67
+2025-07-10T19:05:40.608+07:00  INFO 57122 --- [main] [                                                 ] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 6001 (http)
+2025-07-10T19:05:40.614+07:00  INFO 57122 --- [main] [                                                 ] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-07-10T19:05:40.614+07:00  INFO 57122 --- [main] [                                                 ] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.24]
+2025-07-10T19:05:40.641+07:00  INFO 57122 --- [main] [                                                 ] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-07-10T19:05:40.641+07:00  INFO 57122 --- [main] [                                                 ] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 906 ms
+2025-07-10T19:05:41.432+07:00  INFO 57122 --- [main] [                                                 ] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2025-07-10T19:05:41.476+07:00  INFO 57122 --- [main] [                                                 ] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 6001 (http) with context path '/'
+2025-07-10T19:05:41.490+07:00  INFO 57122 --- [main] [                                                 ] c.example.servicea.ServiceAApplication   : Started ServiceAApplication in 2.168 seconds (process running for 2.739)
+2025-07-10T19:05:41.872+07:00  INFO 57122 --- [RMI TCP Connection(3)-127.0.0.1] [                                                 ] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-07-10T19:05:41.873+07:00  INFO 57122 --- [RMI TCP Connection(3)-127.0.0.1] [                                                 ] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-07-10T19:05:41.875+07:00  INFO 57122 --- [RMI TCP Connection(3)-127.0.0.1] [                                                 ] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-07-10T19:08:35.045+07:00  INFO 57122 --- [http-nio-6001-exec-1] [93b6fa8a8143190c315db8a3e189f91e-7e3e50c213a6dbd2] c.example.servicea.controller.HelloCont  : >>> START
+2025-07-10T19:08:35.047+07:00  INFO 57122 --- [http-nio-6001-exec-1] [93b6fa8a8143190c315db8a3e189f91e-7e3e50c213a6dbd2] c.example.servicea.remote.ApiServiceB    : > calling service B
+2025-07-10T19:08:35.054+07:00  INFO 57122 --- [http-nio-6001-exec-1] [93b6fa8a8143190c315db8a3e189f91e-7e3e50c213a6dbd2] c.example.servicea.remote.ApiServiceB    : > uriComponentsBuilder: http://b-app:6002/service-b
+2025-07-10T19:08:35.125+07:00 ERROR 57122 --- [http-nio-6001-exec-1] [                                                 ] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://b-app:6002/service-b": null] with root cause
+
+java.nio.channels.UnresolvedAddressException: null
+	at java.base/sun.nio.ch.Net.checkAddress(Net.java:137)
+	at java.base/sun.nio.ch.Net.checkAddress(Net.java:145)
+	at java.base/sun.nio.ch.SocketChannelImpl.checkRemote(SocketChannelImpl.java:842)
+	at java.base/sun.nio.ch.SocketChannelImpl.connect(SocketChannelImpl.java:865)
+	at java.net.http/jdk.internal.net.http.PlainHttpConnection.lambda$connectAsync$1(PlainHttpConnection.java:210)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:571)
+	at java.net.http/jdk.internal.net.http.PlainHttpConnection.connectAsync(PlainHttpConnection.java:212)
+	at java.net.http/jdk.internal.net.http.Http1Exchange.sendHeadersAsync(Http1Exchange.java:312)
+	at java.net.http/jdk.internal.net.http.Exchange.lambda$responseAsyncImpl0$8(Exchange.java:567)
+	at java.net.http/jdk.internal.net.http.Exchange.checkFor407(Exchange.java:447)
+	at java.net.http/jdk.internal.net.http.Exchange.lambda$responseAsyncImpl0$9(Exchange.java:571)
+	at java.base/java.util.concurrent.CompletableFuture.uniHandle(CompletableFuture.java:934)
+	at java.base/java.util.concurrent.CompletableFuture.uniHandleStage(CompletableFuture.java:950)
+	at java.base/java.util.concurrent.CompletableFuture.handle(CompletableFuture.java:2372)
+	at java.net.http/jdk.internal.net.http.Exchange.responseAsyncImpl0(Exchange.java:571)
+	at java.net.http/jdk.internal.net.http.Exchange.responseAsyncImpl(Exchange.java:423)
+	at java.net.http/jdk.internal.net.http.Exchange.responseAsync(Exchange.java:415)
+	at java.net.http/jdk.internal.net.http.MultiExchange.responseAsyncImpl(MultiExchange.java:413)
+	at java.net.http/jdk.internal.net.http.MultiExchange.lambda$responseAsyncImpl$7(MultiExchange.java:454)
+	at java.base/java.util.concurrent.CompletableFuture.uniHandle(CompletableFuture.java:934)
+	at java.base/java.util.concurrent.CompletableFuture.uniHandleStage(CompletableFuture.java:950)
+	at java.base/java.util.concurrent.CompletableFuture.handle(CompletableFuture.java:2372)
+	at java.net.http/jdk.internal.net.http.MultiExchange.responseAsyncImpl(MultiExchange.java:444)
+	at java.net.http/jdk.internal.net.http.MultiExchange.lambda$responseAsync0$2(MultiExchange.java:346)
+	at java.base/java.util.concurrent.CompletableFuture$UniCompose.tryFire(CompletableFuture.java:1150)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1773)
+	at java.net.http/jdk.internal.net.http.HttpClientImpl$DelegatingExecutor.execute(HttpClientImpl.java:177)
+	at java.base/java.util.concurrent.CompletableFuture.completeAsync(CompletableFuture.java:2719)
+	at java.net.http/jdk.internal.net.http.MultiExchange.responseAsync(MultiExchange.java:299)
+	at java.net.http/jdk.internal.net.http.HttpClientImpl.sendAsync(HttpClientImpl.java:1047)
+	at java.net.http/jdk.internal.net.http.HttpClientImpl.send(HttpClientImpl.java:930)
+	at java.net.http/jdk.internal.net.http.HttpClientFacade.send(HttpClientFacade.java:133)
+	at org.springframework.http.client.JdkClientHttpRequest.executeInternal(JdkClientHttpRequest.java:102)
+	at org.springframework.http.client.AbstractStreamingClientHttpRequest.executeInternal(AbstractStreamingClientHttpRequest.java:70)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66)
+	at org.springframework.web.client.DefaultRestClient$DefaultRequestBodyUriSpec.exchangeInternal(DefaultRestClient.java:495)
+	at org.springframework.web.client.DefaultRestClient$DefaultRequestBodyUriSpec.retrieve(DefaultRestClient.java:463)
+	at com.example.servicea.remote.ApiServiceB.callServiceB(ApiServiceB.java:52)
+	at com.example.servicea.controller.HelloCont.callServiceB(HelloCont.java:26)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:926)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:831)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:109)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+
+2025-07-10T19:12:47.856+07:00  INFO 57122 --- [http-nio-6001-exec-2] [8f9554e44083493f1861774c474ed151-314b977ee76ffe43] c.example.servicea.controller.HelloCont  : >>> START
+2025-07-10T19:12:47.869+07:00  INFO 57122 --- [http-nio-6001-exec-2] [8f9554e44083493f1861774c474ed151-314b977ee76ffe43] c.example.servicea.remote.ApiServiceB    : > calling service B
+2025-07-10T19:12:47.872+07:00  INFO 57122 --- [http-nio-6001-exec-2] [8f9554e44083493f1861774c474ed151-314b977ee76ffe43] c.example.servicea.remote.ApiServiceB    : > uriComponentsBuilder: http://b-app:6002/service-b
+2025-07-10T19:12:47.891+07:00 ERROR 57122 --- [http-nio-6001-exec-2] [                                                 ] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://b-app:6002/service-b": null] with root cause
+
+java.nio.channels.UnresolvedAddressException: null
+	at java.base/sun.nio.ch.Net.checkAddress(Net.java:137)
+	at java.base/sun.nio.ch.Net.checkAddress(Net.java:145)
+	at java.base/sun.nio.ch.SocketChannelImpl.checkRemote(SocketChannelImpl.java:842)
+	at java.base/sun.nio.ch.SocketChannelImpl.connect(SocketChannelImpl.java:865)
+	at java.net.http/jdk.internal.net.http.PlainHttpConnection.lambda$connectAsync$1(PlainHttpConnection.java:210)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:571)
+	at java.net.http/jdk.internal.net.http.PlainHttpConnection.connectAsync(PlainHttpConnection.java:212)
+	at java.net.http/jdk.internal.net.http.Http1Exchange.sendHeadersAsync(Http1Exchange.java:312)
+	at java.net.http/jdk.internal.net.http.Exchange.lambda$responseAsyncImpl0$8(Exchange.java:567)
+	at java.net.http/jdk.internal.net.http.Exchange.checkFor407(Exchange.java:447)
+	at java.net.http/jdk.internal.net.http.Exchange.lambda$responseAsyncImpl0$9(Exchange.java:571)
+	at java.base/java.util.concurrent.CompletableFuture.uniHandle(CompletableFuture.java:934)
+	at java.base/java.util.concurrent.CompletableFuture.uniHandleStage(CompletableFuture.java:950)
+	at java.base/java.util.concurrent.CompletableFuture.handle(CompletableFuture.java:2372)
+	at java.net.http/jdk.internal.net.http.Exchange.responseAsyncImpl0(Exchange.java:571)
+	at java.net.http/jdk.internal.net.http.Exchange.responseAsyncImpl(Exchange.java:423)
+	at java.net.http/jdk.internal.net.http.Exchange.responseAsync(Exchange.java:415)
+	at java.net.http/jdk.internal.net.http.MultiExchange.responseAsyncImpl(MultiExchange.java:413)
+	at java.net.http/jdk.internal.net.http.MultiExchange.lambda$responseAsyncImpl$7(MultiExchange.java:454)
+	at java.base/java.util.concurrent.CompletableFuture.uniHandle(CompletableFuture.java:934)
+	at java.base/java.util.concurrent.CompletableFuture.uniHandleStage(CompletableFuture.java:950)
+	at java.base/java.util.concurrent.CompletableFuture.handle(CompletableFuture.java:2372)
+	at java.net.http/jdk.internal.net.http.MultiExchange.responseAsyncImpl(MultiExchange.java:444)
+	at java.net.http/jdk.internal.net.http.MultiExchange.lambda$responseAsync0$2(MultiExchange.java:346)
+	at java.base/java.util.concurrent.CompletableFuture$UniCompose.tryFire(CompletableFuture.java:1150)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1773)
+	at java.net.http/jdk.internal.net.http.HttpClientImpl$DelegatingExecutor.execute(HttpClientImpl.java:177)
+	at java.base/java.util.concurrent.CompletableFuture.completeAsync(CompletableFuture.java:2719)
+	at java.net.http/jdk.internal.net.http.MultiExchange.responseAsync(MultiExchange.java:299)
+	at java.net.http/jdk.internal.net.http.HttpClientImpl.sendAsync(HttpClientImpl.java:1047)
+	at java.net.http/jdk.internal.net.http.HttpClientImpl.send(HttpClientImpl.java:930)
+	at java.net.http/jdk.internal.net.http.HttpClientFacade.send(HttpClientFacade.java:133)
+	at org.springframework.http.client.JdkClientHttpRequest.executeInternal(JdkClientHttpRequest.java:102)
+	at org.springframework.http.client.AbstractStreamingClientHttpRequest.executeInternal(AbstractStreamingClientHttpRequest.java:70)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66)
+	at org.springframework.web.client.DefaultRestClient$DefaultRequestBodyUriSpec.exchangeInternal(DefaultRestClient.java:495)
+	at org.springframework.web.client.DefaultRestClient$DefaultRequestBodyUriSpec.retrieve(DefaultRestClient.java:463)
+	at com.example.servicea.remote.ApiServiceB.callServiceB(ApiServiceB.java:52)
+	at com.example.servicea.controller.HelloCont.callServiceB(HelloCont.java:26)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:926)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:831)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:109)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+

@@ -1,0 +1,74 @@
+2022-08-26 08:24:21.244  INFO [service2,5e06846fafa8d6ac,95c3c3432d032ab6] 71659 --- [http-nio-8082-exec-1] com.noh.service2.controller.HomeCont     : Inside microservice#2
+2022-08-26 08:28:52.602  INFO [service2,,] 71659 --- [Thread-4] o.s.c.s.a.z.ZipkinAutoConfiguration      : Flushing remaining spans on shutdown
+2022-08-26 08:28:56.275  INFO [service2,,] 76728 --- [main] com.noh.service2.Service2Application     : Starting Service2Application using Java 1.8.0_312 on Anoudeths-MacBook-Pro.local with PID 76728 (/Users/nohder/dev/spring/spring-boot-tutorial/service2/target/classes started by nohder in /Users/nohder/dev/spring/spring-boot-tutorial/service2)
+2022-08-26 08:28:56.277 DEBUG [service2,,] 76728 --- [main] com.noh.service2.Service2Application     : Running with Spring Boot v2.6.11, Spring v5.3.22
+2022-08-26 08:28:56.277  INFO [service2,,] 76728 --- [main] com.noh.service2.Service2Application     : The following 1 profile is active: "dev"
+2022-08-26 08:28:56.612  INFO [service2,,] 76728 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=f751c000-28ed-371b-8c13-dd9cd211553e
+2022-08-26 08:28:56.842  INFO [service2,,] 76728 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8082 (http)
+2022-08-26 08:28:56.846  INFO [service2,,] 76728 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-08-26 08:28:56.846  INFO [service2,,] 76728 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-08-26 08:28:56.889  INFO [service2,,] 76728 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-08-26 08:28:56.890  INFO [service2,,] 76728 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 591 ms
+2022-08-26 08:28:57.369  INFO [service2,,] 76728 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8082 (http) with context path ''
+2022-08-26 08:28:57.381  INFO [service2,,] 76728 --- [main] com.noh.service2.Service2Application     : Started Service2Application in 1.313 seconds (JVM running for 1.718)
+2022-08-26 08:28:57.991  WARN [service2,,] 76728 --- [pool-1-thread-1] o.s.c.s.a.z.ZipkinAutoConfiguration      : Check result of the [RestTemplateSender{http://127.0.0.9:9411/api/v2/spans}] contains an error [CheckResult{ok=false, error=org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://127.0.0.9:9411/api/v2/spans": connect timed out; nested exception is java.net.SocketTimeoutException: connect timed out}]
+2022-08-26 08:29:14.192  INFO [service2,938c02a8b83f4d88,8ff3cb26f870202b] 76728 --- [http-nio-8082-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-08-26 08:29:14.192  INFO [service2,938c02a8b83f4d88,8ff3cb26f870202b] 76728 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-08-26 08:29:14.193  INFO [service2,938c02a8b83f4d88,8ff3cb26f870202b] 76728 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-08-26 08:29:14.205  INFO [service2,938c02a8b83f4d88,8ff3cb26f870202b] 76728 --- [http-nio-8082-exec-1] com.noh.service2.controller.HomeCont     : Inside microservice#2
+2022-08-26 08:29:14.774  INFO [service2,9e2e52bfd9febb51,e12b084644442499] 76728 --- [http-nio-8082-exec-2] com.noh.service2.controller.HomeCont     : Inside microservice#2
+2022-08-26 08:29:16.233  WARN [service2,,] 76728 --- [AsyncReporter{RestTemplateSender{http://127.0.0.9:9411/api/v2/spans}}] z.r.AsyncReporter$BoundedAsyncReporter   : Spans were dropped due to exceptions. All subsequent errors will be logged at FINE level.
+2022-08-26 08:29:16.237  WARN [service2,,] 76728 --- [AsyncReporter{RestTemplateSender{http://127.0.0.9:9411/api/v2/spans}}] z.r.AsyncReporter$BoundedAsyncReporter   : Dropped 2 spans due to ResourceAccessException(I/O error on POST request for "http://127.0.0.9:9411/api/v2/spans": connect timed out; nested exception is java.net.SocketTimeoutException: connect timed out)
+
+org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://127.0.0.9:9411/api/v2/spans": connect timed out; nested exception is java.net.SocketTimeoutException: connect timed out
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:785)
+	at org.springframework.cloud.sleuth.zipkin2.ZipkinRestTemplateWrapper.doExecute(ZipkinRestTemplateWrapper.java:67)
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:660)
+	at org.springframework.cloud.sleuth.zipkin2.RestTemplateSender.post(RestTemplateSender.java:51)
+	at org.springframework.cloud.sleuth.zipkin2.RestTemplateSender.lambda$new$0(RestTemplateSender.java:44)
+	at org.springframework.cloud.sleuth.zipkin2.HttpSender.post(HttpSender.java:137)
+	at org.springframework.cloud.sleuth.zipkin2.HttpSender$HttpPostCall.doExecute(HttpSender.java:150)
+	at org.springframework.cloud.sleuth.zipkin2.HttpSender$HttpPostCall.doExecute(HttpSender.java:140)
+	at zipkin2.Call$Base.execute(Call.java:391)
+	at zipkin2.reporter.AsyncReporter$BoundedAsyncReporter.flush(AsyncReporter.java:299)
+	at zipkin2.reporter.AsyncReporter$Flusher.run(AsyncReporter.java:378)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.net.SocketTimeoutException: connect timed out
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:607)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:242)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:339)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:357)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1228)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1162)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1056)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:990)
+	at org.springframework.http.client.SimpleBufferingClientHttpRequest.executeInternal(SimpleBufferingClientHttpRequest.java:76)
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:776)
+	... 11 common frames omitted
+
+2022-08-26 08:30:14.356  INFO [service2,,] 76728 --- [Thread-4] o.s.c.s.a.z.ZipkinAutoConfiguration      : Flushing remaining spans on shutdown
+2022-08-26 08:30:19.301  INFO [service2,,] 76893 --- [main] com.noh.service2.Service2Application     : Starting Service2Application using Java 1.8.0_312 on Anoudeths-MacBook-Pro.local with PID 76893 (/Users/nohder/dev/spring/spring-boot-tutorial/service2/target/classes started by nohder in /Users/nohder/dev/spring/spring-boot-tutorial/service2)
+2022-08-26 08:30:19.302 DEBUG [service2,,] 76893 --- [main] com.noh.service2.Service2Application     : Running with Spring Boot v2.6.11, Spring v5.3.22
+2022-08-26 08:30:19.302  INFO [service2,,] 76893 --- [main] com.noh.service2.Service2Application     : The following 1 profile is active: "dev"
+2022-08-26 08:30:19.679  INFO [service2,,] 76893 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=f751c000-28ed-371b-8c13-dd9cd211553e
+2022-08-26 08:30:19.896  INFO [service2,,] 76893 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8082 (http)
+2022-08-26 08:30:19.899  INFO [service2,,] 76893 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-08-26 08:30:19.900  INFO [service2,,] 76893 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-08-26 08:30:19.946  INFO [service2,,] 76893 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-08-26 08:30:19.946  INFO [service2,,] 76893 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 622 ms
+2022-08-26 08:30:20.423  INFO [service2,,] 76893 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8082 (http) with context path ''
+2022-08-26 08:30:20.432  INFO [service2,,] 76893 --- [main] com.noh.service2.Service2Application     : Started Service2Application in 1.369 seconds (JVM running for 1.6)
+2022-08-26 08:30:32.830  INFO [service2,a1f3c4e29c36aadb,34e4794e0ed53e91] 76893 --- [http-nio-8082-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-08-26 08:30:32.830  INFO [service2,a1f3c4e29c36aadb,34e4794e0ed53e91] 76893 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-08-26 08:30:32.831  INFO [service2,a1f3c4e29c36aadb,34e4794e0ed53e91] 76893 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-08-26 08:30:32.842  INFO [service2,a1f3c4e29c36aadb,34e4794e0ed53e91] 76893 --- [http-nio-8082-exec-1] com.noh.service2.controller.HomeCont     : Inside microservice#2

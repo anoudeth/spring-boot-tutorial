@@ -1,0 +1,1 @@
+2022-09-13 13:57:50.084  INFO [service2,,] 76893 --- [Thread-4] o.s.c.s.a.z.ZipkinAutoConfiguration      : Flushing remaining spans on shutdown

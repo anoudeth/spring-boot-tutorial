@@ -1,0 +1,35 @@
+2025-07-08T20:21:20.858+07:00  INFO 9171 --- [main] [                                                 ] c.example.servicea.ServiceAApplication   : Starting ServiceAApplication using Java 21.0.2 with PID 9171 (/Users/nohder/dev/spring/spring-boot-tutorial/service-a/target/classes started by nohder in /Users/nohder/dev/spring/spring-boot-tutorial/service-a)
+2025-07-08T20:21:20.861+07:00 DEBUG 9171 --- [main] [                                                 ] c.example.servicea.ServiceAApplication   : Running with Spring Boot v3.3.0, Spring v6.1.8
+2025-07-08T20:21:20.861+07:00  INFO 9171 --- [main] [                                                 ] c.example.servicea.ServiceAApplication   : The following 1 profile is active: "dev"
+2025-07-08T20:21:21.990+07:00  INFO 9171 --- [main] [                                                 ] o.s.cloud.context.scope.GenericScope     : BeanFactory id=22d10854-1c6a-3cb4-b5b7-1084dc5d6c67
+2025-07-08T20:21:22.468+07:00  INFO 9171 --- [main] [                                                 ] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 6001 (http)
+2025-07-08T20:21:22.480+07:00  INFO 9171 --- [main] [                                                 ] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-07-08T20:21:22.481+07:00  INFO 9171 --- [main] [                                                 ] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.24]
+2025-07-08T20:21:22.507+07:00  INFO 9171 --- [main] [                                                 ] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-07-08T20:21:22.507+07:00  INFO 9171 --- [main] [                                                 ] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1601 ms
+2025-07-08T20:21:23.442+07:00  INFO 9171 --- [main] [                                                 ] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2025-07-08T20:21:23.512+07:00  INFO 9171 --- [main] [                                                 ] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 6001 (http) with context path '/'
+2025-07-08T20:21:23.525+07:00  INFO 9171 --- [main] [                                                 ] c.example.servicea.ServiceAApplication   : Started ServiceAApplication in 3.069 seconds (process running for 3.481)
+2025-07-08T20:21:24.274+07:00  INFO 9171 --- [RMI TCP Connection(2)-127.0.0.1] [                                                 ] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-07-08T20:21:24.274+07:00  INFO 9171 --- [RMI TCP Connection(2)-127.0.0.1] [                                                 ] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-07-08T20:21:24.276+07:00  INFO 9171 --- [RMI TCP Connection(2)-127.0.0.1] [                                                 ] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-07-08T20:22:06.044+07:00  INFO 9171 --- [http-nio-6001-exec-1] [eec0347e272acc961c14565216fd4239-a2710e194d9922b9] c.example.servicea.controller.HelloCont  : >>> START
+2025-07-08T20:22:06.045+07:00  INFO 9171 --- [http-nio-6001-exec-1] [eec0347e272acc961c14565216fd4239-a2710e194d9922b9] c.example.servicea.remote.ApiServiceB    : > calling service B
+2025-07-08T20:22:06.101+07:00  INFO 9171 --- [http-nio-6001-exec-1] [eec0347e272acc961c14565216fd4239-a2710e194d9922b9] c.example.servicea.remote.ApiServiceB    : resServiceB: Service B from host: Anoudeths-MacBook-Pro.local
+2025-07-08T20:22:06.102+07:00  INFO 9171 --- [http-nio-6001-exec-1] [eec0347e272acc961c14565216fd4239-a2710e194d9922b9] c.example.servicea.controller.HelloCont  : > final response: Service B from host: Anoudeths-MacBook-Pro.local
+2025-07-08T20:22:06.102+07:00  INFO 9171 --- [http-nio-6001-exec-1] [eec0347e272acc961c14565216fd4239-a2710e194d9922b9] c.example.servicea.controller.HelloCont  : >>> END
+2025-07-08T20:22:36.545+07:00  INFO 9171 --- [http-nio-6001-exec-2] [d1e200101b9c1a13c1c4857fd04bb79a-99e867d35cd04b01] c.example.servicea.controller.HelloCont  : >>> START
+2025-07-08T20:22:36.547+07:00  INFO 9171 --- [http-nio-6001-exec-2] [d1e200101b9c1a13c1c4857fd04bb79a-99e867d35cd04b01] c.example.servicea.remote.ApiServiceB    : > calling service B
+2025-07-08T20:22:36.584+07:00  INFO 9171 --- [http-nio-6001-exec-2] [d1e200101b9c1a13c1c4857fd04bb79a-99e867d35cd04b01] c.example.servicea.remote.ApiServiceB    : resServiceB: Service B from host: Anoudeths-MacBook-Pro.local
+2025-07-08T20:22:36.585+07:00  INFO 9171 --- [http-nio-6001-exec-2] [d1e200101b9c1a13c1c4857fd04bb79a-99e867d35cd04b01] c.example.servicea.controller.HelloCont  : > final response: Service B from host: Anoudeths-MacBook-Pro.local
+2025-07-08T20:22:36.585+07:00  INFO 9171 --- [http-nio-6001-exec-2] [d1e200101b9c1a13c1c4857fd04bb79a-99e867d35cd04b01] c.example.servicea.controller.HelloCont  : >>> END
+2025-07-08T20:22:49.646+07:00  INFO 9171 --- [http-nio-6001-exec-3] [0fa9e061214fa7127da5f3a5af78e892-3dec3edf536a6480] c.example.servicea.controller.HelloCont  : >>> START
+2025-07-08T20:22:49.649+07:00  INFO 9171 --- [http-nio-6001-exec-3] [0fa9e061214fa7127da5f3a5af78e892-3dec3edf536a6480] c.example.servicea.remote.ApiServiceB    : > calling service B
+2025-07-08T20:22:49.676+07:00  INFO 9171 --- [http-nio-6001-exec-3] [0fa9e061214fa7127da5f3a5af78e892-3dec3edf536a6480] c.example.servicea.remote.ApiServiceB    : resServiceB: Service B from host: Anoudeths-MacBook-Pro.local
+2025-07-08T20:22:49.677+07:00  INFO 9171 --- [http-nio-6001-exec-3] [0fa9e061214fa7127da5f3a5af78e892-3dec3edf536a6480] c.example.servicea.controller.HelloCont  : > final response: Service B from host: Anoudeths-MacBook-Pro.local
+2025-07-08T20:22:49.677+07:00  INFO 9171 --- [http-nio-6001-exec-3] [0fa9e061214fa7127da5f3a5af78e892-3dec3edf536a6480] c.example.servicea.controller.HelloCont  : >>> END
+2025-07-08T20:22:57.936+07:00  INFO 9171 --- [http-nio-6001-exec-4] [ce663730f7f8bdbe20e11360e29acab6-cd0bcdf25c84d612] c.example.servicea.controller.HelloCont  : >>> START
+2025-07-08T20:22:57.939+07:00  INFO 9171 --- [http-nio-6001-exec-4] [ce663730f7f8bdbe20e11360e29acab6-cd0bcdf25c84d612] c.example.servicea.remote.ApiServiceB    : > calling service B
+2025-07-08T20:22:57.973+07:00  INFO 9171 --- [http-nio-6001-exec-4] [ce663730f7f8bdbe20e11360e29acab6-cd0bcdf25c84d612] c.example.servicea.remote.ApiServiceB    : resServiceB: Service B from host: Anoudeths-MacBook-Pro.local
+2025-07-08T20:22:57.974+07:00  INFO 9171 --- [http-nio-6001-exec-4] [ce663730f7f8bdbe20e11360e29acab6-cd0bcdf25c84d612] c.example.servicea.controller.HelloCont  : > final response: Service B from host: Anoudeths-MacBook-Pro.local
+2025-07-08T20:22:57.974+07:00  INFO 9171 --- [http-nio-6001-exec-4] [ce663730f7f8bdbe20e11360e29acab6-cd0bcdf25c84d612] c.example.servicea.controller.HelloCont  : >>> END

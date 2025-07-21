@@ -1,0 +1,75 @@
+2024-02-29T05:24:07.270+07:00  INFO 29744 --- [main] c.example.servicea.ServiceAApplication   : Starting ServiceAApplication using Java 17.0.3-ea with PID 29744 (/Users/nohder/dev/spring/spring-boot-tutorial/service-a/target/classes started by nohder in /Users/nohder/dev/spring/spring-boot-tutorial/service-a)
+2024-02-29T05:24:07.272+07:00 DEBUG 29744 --- [main] c.example.servicea.ServiceAApplication   : Running with Spring Boot v3.1.0, Spring v6.0.9
+2024-02-29T05:24:07.273+07:00  INFO 29744 --- [main] c.example.servicea.ServiceAApplication   : The following 1 profile is active: "dev"
+2024-02-29T05:24:07.917+07:00  INFO 29744 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=7e8910c5-0993-3490-a669-434429112590
+2024-02-29T05:24:07.972+07:00  INFO 29744 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'com.example.servicea.remote.ApiServiceBInterface' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-02-29T05:24:08.120+07:00  INFO 29744 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 6001 (http)
+2024-02-29T05:24:08.125+07:00  INFO 29744 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-02-29T05:24:08.125+07:00  INFO 29744 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.8]
+2024-02-29T05:24:08.197+07:00  INFO 29744 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-02-29T05:24:08.198+07:00  INFO 29744 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 878 ms
+2024-02-29T05:24:08.798+07:00  INFO 29744 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2024-02-29T05:24:08.844+07:00  INFO 29744 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 6001 (http) with context path ''
+2024-02-29T05:24:08.857+07:00  INFO 29744 --- [main] c.example.servicea.ServiceAApplication   : Started ServiceAApplication in 1.996 seconds (process running for 2.337)
+2024-02-29T05:24:26.588+07:00  INFO 29744 --- [http-nio-6001-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-02-29T05:24:26.589+07:00  INFO 29744 --- [http-nio-6001-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-02-29T05:24:26.591+07:00  INFO 29744 --- [http-nio-6001-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2024-02-29T05:24:26.638+07:00  INFO 29744 --- [http-nio-6001-exec-1] c.example.servicea.ServiceAApplication   : Service A from host: Anoudeths-MacBook-Pro.local
+2024-02-29T05:24:28.877+07:00  INFO 29744 --- [http-nio-6001-exec-2] c.example.servicea.ServiceAApplication   : Service A from host: Anoudeths-MacBook-Pro.local
+2024-02-29T05:24:30.634+07:00  INFO 29744 --- [http-nio-6001-exec-4] c.example.servicea.ServiceAApplication   : Service A from host: Anoudeths-MacBook-Pro.local
+2024-02-29T05:24:31.504+07:00  INFO 29744 --- [http-nio-6001-exec-5] c.example.servicea.ServiceAApplication   : Service A from host: Anoudeths-MacBook-Pro.local
+2024-02-29T05:26:58.028+07:00  INFO 30180 --- [main] c.example.servicea.ServiceAApplication   : Starting ServiceAApplication using Java 17.0.3-ea with PID 30180 (/Users/nohder/dev/spring/spring-boot-tutorial/service-a/target/classes started by nohder in /Users/nohder/dev/spring/spring-boot-tutorial/service-a)
+2024-02-29T05:26:58.030+07:00 DEBUG 30180 --- [main] c.example.servicea.ServiceAApplication   : Running with Spring Boot v3.1.0, Spring v6.0.9
+2024-02-29T05:26:58.031+07:00  INFO 30180 --- [main] c.example.servicea.ServiceAApplication   : The following 1 profile is active: "dev"
+2024-02-29T05:26:58.677+07:00  INFO 30180 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=7e8910c5-0993-3490-a669-434429112590
+2024-02-29T05:26:58.725+07:00  INFO 30180 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'com.example.servicea.remote.ApiServiceBInterface' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-02-29T05:26:58.863+07:00  INFO 30180 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 6001 (http)
+2024-02-29T05:26:58.867+07:00  INFO 30180 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-02-29T05:26:58.867+07:00  INFO 30180 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.8]
+2024-02-29T05:26:58.924+07:00  INFO 30180 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-02-29T05:26:58.925+07:00  INFO 30180 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 847 ms
+2024-02-29T05:26:59.507+07:00  INFO 30180 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2024-02-29T05:26:59.554+07:00  INFO 30180 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 6001 (http) with context path ''
+2024-02-29T05:26:59.567+07:00  INFO 30180 --- [main] c.example.servicea.ServiceAApplication   : Started ServiceAApplication in 1.899 seconds (process running for 2.364)
+2024-02-29T05:27:08.180+07:00  INFO 30180 --- [http-nio-6001-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-02-29T05:27:08.180+07:00  INFO 30180 --- [http-nio-6001-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-02-29T05:27:08.181+07:00  INFO 30180 --- [http-nio-6001-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-02-29T05:27:08.213+07:00  INFO 30180 --- [http-nio-6001-exec-1] c.example.servicea.controller.HelloCont  : >>> START
+2024-02-29T05:27:08.213+07:00  INFO 30180 --- [http-nio-6001-exec-1] c.example.servicea.controller.HelloCont  :  my world
+2024-02-29T05:27:08.213+07:00  INFO 30180 --- [http-nio-6001-exec-1] c.example.servicea.controller.HelloCont  : Thread: http-nio-6001-exec-1
+2024-02-29T05:27:08.213+07:00  INFO 30180 --- [http-nio-6001-exec-1] c.example.servicea.controller.HelloCont  : Thread ID: 39
+2024-02-29T05:27:08.213+07:00  INFO 30180 --- [http-nio-6001-exec-1] c.example.servicea.controller.HelloCont  : Thread Priority: 5
+2024-02-29T05:27:08.214+07:00  INFO 30180 --- [http-nio-6001-exec-1] c.example.servicea.controller.HelloCont  : Thread State: RUNNABLE
+2024-02-29T05:27:08.214+07:00  INFO 30180 --- [http-nio-6001-exec-1] c.example.servicea.controller.HelloCont  : Date: Thu Feb 29 05:27:08 ICT 2024
+2024-02-29T05:27:08.214+07:00  INFO 30180 --- [http-nio-6001-exec-1] c.example.servicea.controller.HelloCont  : >>> END
+2024-02-29T05:29:48.049+07:00  INFO 30264 --- [main] [                                                 ] c.example.servicea.ServiceAApplication   : Starting ServiceAApplication using Java 17.0.3-ea with PID 30264 (/Users/nohder/dev/spring/spring-boot-tutorial/service-a/target/classes started by nohder in /Users/nohder/dev/spring/spring-boot-tutorial/service-a)
+2024-02-29T05:29:48.051+07:00 DEBUG 30264 --- [main] [                                                 ] c.example.servicea.ServiceAApplication   : Running with Spring Boot v3.2.2, Spring v6.1.3
+2024-02-29T05:29:48.051+07:00  INFO 30264 --- [main] [                                                 ] c.example.servicea.ServiceAApplication   : The following 1 profile is active: "dev"
+2024-02-29T05:29:48.786+07:00  INFO 30264 --- [main] [                                                 ] o.s.cloud.context.scope.GenericScope     : BeanFactory id=df9688d3-32e1-3213-9f6b-b7e63ed41e54
+2024-02-29T05:29:49.094+07:00  INFO 30264 --- [main] [                                                 ] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 6001 (http)
+2024-02-29T05:29:49.100+07:00  INFO 30264 --- [main] [                                                 ] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-02-29T05:29:49.100+07:00  INFO 30264 --- [main] [                                                 ] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.18]
+2024-02-29T05:29:49.135+07:00  INFO 30264 --- [main] [                                                 ] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-02-29T05:29:49.136+07:00  INFO 30264 --- [main] [                                                 ] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1045 ms
+2024-02-29T05:29:49.998+07:00  INFO 30264 --- [main] [                                                 ] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2024-02-29T05:29:50.061+07:00  INFO 30264 --- [main] [                                                 ] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 6001 (http) with context path ''
+2024-02-29T05:29:50.075+07:00  INFO 30264 --- [main] [                                                 ] c.example.servicea.ServiceAApplication   : Started ServiceAApplication in 2.412 seconds (process running for 2.891)
+2024-02-29T05:30:08.037+07:00  INFO 30264 --- [http-nio-6001-exec-1] [                                                 ] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-02-29T05:30:08.037+07:00  INFO 30264 --- [http-nio-6001-exec-1] [                                                 ] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-02-29T05:30:08.039+07:00  INFO 30264 --- [http-nio-6001-exec-1] [                                                 ] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2024-02-29T05:30:08.085+07:00  INFO 30264 --- [http-nio-6001-exec-1] [73b54bcb9f686cb68110035165aece56-ae78de5174614cd5] c.example.servicea.controller.HelloCont  : >>> START
+2024-02-29T05:30:08.085+07:00  INFO 30264 --- [http-nio-6001-exec-1] [73b54bcb9f686cb68110035165aece56-ae78de5174614cd5] c.example.servicea.controller.HelloCont  :  my world
+2024-02-29T05:30:08.085+07:00  INFO 30264 --- [http-nio-6001-exec-1] [73b54bcb9f686cb68110035165aece56-ae78de5174614cd5] c.example.servicea.controller.HelloCont  : Thread: http-nio-6001-exec-1
+2024-02-29T05:30:08.085+07:00  INFO 30264 --- [http-nio-6001-exec-1] [73b54bcb9f686cb68110035165aece56-ae78de5174614cd5] c.example.servicea.controller.HelloCont  : Thread ID: 39
+2024-02-29T05:30:08.085+07:00  INFO 30264 --- [http-nio-6001-exec-1] [73b54bcb9f686cb68110035165aece56-ae78de5174614cd5] c.example.servicea.controller.HelloCont  : Thread Priority: 5
+2024-02-29T05:30:08.085+07:00  INFO 30264 --- [http-nio-6001-exec-1] [73b54bcb9f686cb68110035165aece56-ae78de5174614cd5] c.example.servicea.controller.HelloCont  : Thread State: RUNNABLE
+2024-02-29T05:30:08.086+07:00  INFO 30264 --- [http-nio-6001-exec-1] [73b54bcb9f686cb68110035165aece56-ae78de5174614cd5] c.example.servicea.controller.HelloCont  : Date: Thu Feb 29 05:30:08 ICT 2024
+2024-02-29T05:30:08.086+07:00  INFO 30264 --- [http-nio-6001-exec-1] [73b54bcb9f686cb68110035165aece56-ae78de5174614cd5] c.example.servicea.controller.HelloCont  : >>> END
+2024-02-29T05:49:50.156+07:00  INFO 30264 --- [http-nio-6001-exec-2] [d45afc4138359e2d7c4682f4e2c19fd6-b53f6adfaa921be6] c.example.servicea.controller.HelloCont  : >>> START
+2024-02-29T05:49:50.159+07:00  INFO 30264 --- [http-nio-6001-exec-2] [d45afc4138359e2d7c4682f4e2c19fd6-b53f6adfaa921be6] c.example.servicea.controller.HelloCont  :  my world
+2024-02-29T05:49:50.159+07:00  INFO 30264 --- [http-nio-6001-exec-2] [d45afc4138359e2d7c4682f4e2c19fd6-b53f6adfaa921be6] c.example.servicea.controller.HelloCont  : Thread: http-nio-6001-exec-2
+2024-02-29T05:49:50.160+07:00  INFO 30264 --- [http-nio-6001-exec-2] [d45afc4138359e2d7c4682f4e2c19fd6-b53f6adfaa921be6] c.example.servicea.controller.HelloCont  : Thread ID: 40
+2024-02-29T05:49:50.160+07:00  INFO 30264 --- [http-nio-6001-exec-2] [d45afc4138359e2d7c4682f4e2c19fd6-b53f6adfaa921be6] c.example.servicea.controller.HelloCont  : Thread Priority: 5
+2024-02-29T05:49:50.160+07:00  INFO 30264 --- [http-nio-6001-exec-2] [d45afc4138359e2d7c4682f4e2c19fd6-b53f6adfaa921be6] c.example.servicea.controller.HelloCont  : Thread State: RUNNABLE
+2024-02-29T05:49:50.160+07:00  INFO 30264 --- [http-nio-6001-exec-2] [d45afc4138359e2d7c4682f4e2c19fd6-b53f6adfaa921be6] c.example.servicea.controller.HelloCont  : Date: Thu Feb 29 05:49:50 ICT 2024
+2024-02-29T05:49:50.160+07:00  INFO 30264 --- [http-nio-6001-exec-2] [d45afc4138359e2d7c4682f4e2c19fd6-b53f6adfaa921be6] c.example.servicea.controller.HelloCont  : >>> END
